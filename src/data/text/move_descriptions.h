@@ -1547,7 +1547,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_EGG_BOMB - 1] = sEggBombDescription,
     [MOVE_LICK - 1] = sLickDescription,
     [MOVE_SMOG - 1] = sSmogDescription,
-    [MOVE_BLUNT_PASS - 1] = sBluntPassDescription,
     [MOVE_SLUDGE - 1] = sSludgeDescription,
     [MOVE_BONE_CLUB - 1] = sBoneClubDescription,
     [MOVE_FIRE_BLAST - 1] = sFireBlastDescription,
@@ -1779,4 +1778,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_WATER_PULSE - 1] = sWaterPulseDescription,
     [MOVE_DOOM_DESIRE - 1] = sDoomDesireDescription,
     [MOVE_PSYCHO_BOOST - 1] = sPsychoBoostDescription,
+    [MOVE_BLUNT_PASS - 1] = sBluntPassDescription,
 };

@@ -138,7 +138,6 @@ static const s8 sMindRatings[MOVES_COUNT] =
     [MOVE_EGG_BOMB] = 1,
     [MOVE_LICK] = 1,
     [MOVE_SMOG] = 1,
-    [MOVE_BLUNT_PASS] = 1,
     [MOVE_SLUDGE] = 1,
     [MOVE_BONE_CLUB] = 1,
     [MOVE_FIRE_BLAST] = 1,
@@ -274,6 +273,7 @@ static const s8 sMindRatings[MOVES_COUNT] =
     [MOVE_WATER_PULSE] = 1,
     [MOVE_DOOM_DESIRE] = 1,
     [MOVE_PSYCHO_BOOST] = 1,
+    [MOVE_BLUNT_PASS] = 1,
 };
 
 static const struct OamData sOam_JudgmentIcon =

@@ -68,7 +68,6 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectFocusEnergy            @ EFFECT_FOCUS_ENERGY
 	.4byte BattleScript_EffectRecoil                 @ EFFECT_RECOIL
 	.4byte BattleScript_EffectConfuse                @ EFFECT_CONFUSE
-	.4byte BattleScript_EffectBaked             	 @ EFFECT_BAKED
 	.4byte BattleScript_EffectAttackUp2              @ EFFECT_ATTACK_UP_2
 	.4byte BattleScript_EffectDefenseUp2             @ EFFECT_DEFENSE_UP_2
 	.4byte BattleScript_EffectSpeedUp2               @ EFFECT_SPEED_UP_2
@@ -96,7 +95,6 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHit                    @ EFFECT_EVASION_DOWN_HIT
 	.4byte BattleScript_EffectSkyAttack              @ EFFECT_SKY_ATTACK
 	.4byte BattleScript_EffectConfuseHit             @ EFFECT_CONFUSE_HIT
-	.4byte BattleScript_EffectBakedHit               @ EFFECT_BAKED_HIT
 	.4byte BattleScript_EffectTwineedle              @ EFFECT_TWINEEDLE
 	.4byte BattleScript_EffectHit                    @ EFFECT_VITAL_THROW
 	.4byte BattleScript_EffectSubstitute             @ EFFECT_SUBSTITUTE
@@ -234,6 +232,8 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCalmMind               @ EFFECT_CALM_MIND
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
+	.4byte BattleScript_EffectBaked             	 @ EFFECT_BAKED
+	.4byte BattleScript_EffectBakedHit               @ EFFECT_BAKED_HIT
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler

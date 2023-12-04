@@ -900,6 +900,7 @@ AI_CV_MirrorMove_EncouragedMovesToMirror:
 	.2byte MOVE_TRICK
 	.2byte MOVE_SUPERPOWER
 	.2byte MOVE_SKILL_SWAP
+	.2byte MOVE_BLUNT_PASS
 	.2byte -1
 
 AI_CV_AttackUp:

@@ -998,14 +998,6 @@ static const struct BardSoundTemplate sBardSoundTemplates_Moves[MOVES_COUNT][MAX
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
-    [MOVE_BLUNT_PASS] = {
-        { .songLengthId = 27 },
-        { .songLengthId = 51 },
-        { .songLengthId = 51 },
-        NULL_BARD_SOUND,
-        NULL_BARD_SOUND,
-        NULL_BARD_SOUND,
-    },
     [MOVE_SLUDGE] = {
         { .songId = PHONEME_ID(PH_STRUT_SOLO) },
         PREV_BARD_SOUND,
@@ -2853,7 +2845,15 @@ static const struct BardSoundTemplate sBardSoundTemplates_Moves[MOVES_COUNT][MAX
         { .songId = PHONEME_ID(PH_GOOSE_BLEND) },
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
-    }
+    },
+    [MOVE_BLUNT_PASS] = {
+        { .songLengthId = 27 },
+        { .songLengthId = 51 },
+        { .songLengthId = 51 },
+        NULL_BARD_SOUND,
+        NULL_BARD_SOUND,
+        NULL_BARD_SOUND,
+    },
 };
 
 #endif //GUARD_DATA_BARD_MUSIC_MOVES_H

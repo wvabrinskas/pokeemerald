@@ -140,7 +140,6 @@ gBattleAnims_Moves::
 	.4byte Move_EGG_BOMB
 	.4byte Move_LICK
 	.4byte Move_SMOG
-	.4byte Move_BLUNT_PASS
 	.4byte Move_SLUDGE
 	.4byte Move_BONE_CLUB
 	.4byte Move_FIRE_BLAST
@@ -372,6 +371,7 @@ gBattleAnims_Moves::
 	.4byte Move_WATER_PULSE
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
+	.4byte Move_BLUNT_PASS
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -385,6 +385,7 @@ gBattleAnims_StatusConditions::
 	.4byte Status_Freeze                    @ B_ANIM_STATUS_FRZ
 	.4byte Status_Curse                     @ B_ANIM_STATUS_CURSED
 	.4byte Status_Nightmare                 @ B_ANIM_STATUS_NIGHTMARE
+	.4byte Status_Baked					    @ B_ANIM_STATUS_BAKED
 
 	.align 2
 gBattleAnims_General::
@@ -5121,9 +5122,6 @@ Move_BUBBLE:
 	blendoff
 	end
 
-Move_BLUNT_PASS:
-	call Move_SMOG
-
 Move_SMOG:
 	loadspritegfx ANIM_TAG_PURPLE_GAS_CLOUD
 	monbg ANIM_DEF_PARTNER
@@ -9554,6 +9552,26 @@ Move_PSYCHO_BOOST:
 	call UnsetPsychicBackground
 	end
 
+Move_BLUNT_PASS:
+	loadspritegfx ANIM_TAG_YELLOW_BALL
+	monbg ANIM_DEF_PARTNER
+	fadetobg BG_GHOST
+	waitbgfadein
+	createvisualtask SoundTask_AdjustPanningVar, 2, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 2, 0
+	createvisualtask AnimTask_BlendColorCycleByTag, 2, ANIM_TAG_YELLOW_BALL, 0, 6, 0, 14, RGB(31, 10, 0)
+	createsprite gConfuseRayBallBounceSpriteTemplate, ANIM_TARGET, 2, 28, 0, 288
+	waitforvisualfinish
+	setalpha 8, 8
+	playsewithpan SE_M_STRING_SHOT2, SOUND_PAN_TARGET
+	createsprite gConfuseRayBallSpiralSpriteTemplate, ANIM_TARGET, 2, 0, -16
+	waitforvisualfinish
+	delay 0
+	blendoff
+	clearmonbg ANIM_DEF_PARTNER
+	restorebg
+	waitbgfadein
+	end
+
 Move_KNOCK_OFF:
 	loadspritegfx ANIM_TAG_SLAM_HIT_2
 	loadspritegfx ANIM_TAG_IMPACT
@@ -10226,6 +10244,11 @@ Status_Poison:
 	end
 
 Status_Confusion:
+	loadspritegfx ANIM_TAG_DUCK
+	call ConfusionEffect
+	end
+
+Status_Baked:
 	loadspritegfx ANIM_TAG_DUCK
 	call ConfusionEffect
 	end
