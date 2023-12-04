@@ -130,6 +130,7 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_MIST, AI_CBM_Mist
 	if_effect EFFECT_FOCUS_ENERGY, AI_CBM_FocusEnergy
 	if_effect EFFECT_CONFUSE, AI_CBM_Confuse
+	if_effect EFFECT_BAKED, AI_CBM_Bake
 	if_effect EFFECT_ATTACK_UP_2, AI_CBM_AttackUp
 	if_effect EFFECT_DEFENSE_UP_2, AI_CBM_DefenseUp
 	if_effect EFFECT_SPEED_UP_2, AI_CBM_SpeedUp
@@ -385,6 +386,13 @@ AI_CBM_FocusEnergy:
 
 AI_CBM_Confuse:
 	if_status2 AI_TARGET, STATUS2_CONFUSION, Score_Minus5
+	get_ability AI_TARGET
+	if_equal ABILITY_OWN_TEMPO, Score_Minus10
+	if_side_affecting AI_TARGET, SIDE_STATUS_SAFEGUARD, Score_Minus10
+	end
+
+AI_CBM_Bake:
+	if_status2 AI_TARGET, STATUS2_BAKED, Score_Minus5
 	get_ability AI_TARGET
 	if_equal ABILITY_OWN_TEMPO, Score_Minus10
 	if_side_affecting AI_TARGET, SIDE_STATUS_SAFEGUARD, Score_Minus10
@@ -685,6 +693,7 @@ AI_CheckViability:
 	if_effect EFFECT_TRAP, AI_CV_Trap
 	if_effect EFFECT_HIGH_CRITICAL, AI_CV_HighCrit
 	if_effect EFFECT_CONFUSE, AI_CV_Confuse
+	if_effect EFFECT_BAKED, AI_CV_Bake
 	if_effect EFFECT_ATTACK_UP_2, AI_CV_AttackUp
 	if_effect EFFECT_DEFENSE_UP_2, AI_CV_DefenseUp
 	if_effect EFFECT_SPEED_UP_2, AI_CV_SpeedUp
@@ -1476,6 +1485,18 @@ AI_CV_Confuse2:
 AI_CV_Confuse_End:
 	end
 
+AI_CV_Bake:
+	if_hp_more_than AI_TARGET, 70, AI_CV_Bake_End
+	if_random_less_than 128, AI_CV_Baked2
+	score -1
+AI_CV_Bake2:
+	if_hp_more_than AI_TARGET, 50, AI_CV_Bake_End
+	score -1
+	if_hp_more_than AI_TARGET, 30, AI_CV_Bake_End
+	score -1
+AI_CV_Bake_End:
+	end
+
 AI_CV_SwaggerHasPsychUp:
 	if_stat_level_more_than AI_TARGET, STAT_ATK, 3, AI_CV_SwaggerHasPsychUp_Minus5
 	score +3
@@ -1567,6 +1588,7 @@ AI_CV_Substitute4:
 	if_equal EFFECT_WILL_O_WISP, AI_CV_Substitute5
 	if_equal EFFECT_CONFUSE, AI_CV_Substitute6
 	if_equal EFFECT_LEECH_SEED, AI_CV_Substitute7
+	if_equal EFFECT_BAKED, AI_CV_Substitute9
 	goto AI_CV_Substitute_End
 
 AI_CV_Substitute5:
@@ -1575,6 +1597,10 @@ AI_CV_Substitute5:
 
 AI_CV_Substitute6:
 	if_not_status2 AI_TARGET, STATUS2_CONFUSION, AI_CV_Substitute8
+	goto AI_CV_Substitute_End
+
+AI_CV_Substitute9:
+	if_not_status2 AI_TARGET, STATUS2_BAKED, AI_CV_Substitute8
 	goto AI_CV_Substitute_End
 
 AI_CV_Substitute7:
@@ -1715,6 +1741,7 @@ AI_CV_Encore_EncouragedMovesToEncore:
 	.byte EFFECT_SUPER_FANG
 	.byte EFFECT_SPECIAL_DEFENSE_UP_2
 	.byte EFFECT_CONFUSE
+	.byte EFFECT_BAKED
 	.byte EFFECT_POISON
 	.byte EFFECT_PARALYZE
 	.byte EFFECT_LEECH_SEED
@@ -2666,6 +2693,7 @@ AI_SetupFirstTurn_SetupEffectsToEncourage:
 	.byte EFFECT_SPECIAL_DEFENSE_UP_2
 	.byte EFFECT_FOCUS_ENERGY
 	.byte EFFECT_CONFUSE
+	.byte EFFECT_BAKED
 	.byte EFFECT_ATTACK_UP_2
 	.byte EFFECT_DEFENSE_UP_2
 	.byte EFFECT_SPEED_UP_2
@@ -2731,6 +2759,7 @@ AI_Risky_EffectsToEncourage:
 	.byte EFFECT_OHKO
 	.byte EFFECT_HIGH_CRITICAL
 	.byte EFFECT_CONFUSE
+	.byte EFFECT_BAKED
 	.byte EFFECT_METRONOME
 	.byte EFFECT_PSYWAVE
 	.byte EFFECT_COUNTER
@@ -3159,6 +3188,7 @@ AI_HPAware_DiscouragedEffectsWhenTargetLowHP:
 	.byte EFFECT_MIST
 	.byte EFFECT_FOCUS_ENERGY
 	.byte EFFECT_CONFUSE
+	.byte EFFECT_BAKED
 	.byte EFFECT_ATTACK_UP_2
 	.byte EFFECT_DEFENSE_UP_2
 	.byte EFFECT_SPEED_UP_2

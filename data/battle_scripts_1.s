@@ -68,6 +68,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectFocusEnergy            @ EFFECT_FOCUS_ENERGY
 	.4byte BattleScript_EffectRecoil                 @ EFFECT_RECOIL
 	.4byte BattleScript_EffectConfuse                @ EFFECT_CONFUSE
+	.4byte BattleScript_EffectBaked             	 @ EFFECT_BAKED
 	.4byte BattleScript_EffectAttackUp2              @ EFFECT_ATTACK_UP_2
 	.4byte BattleScript_EffectDefenseUp2             @ EFFECT_DEFENSE_UP_2
 	.4byte BattleScript_EffectSpeedUp2               @ EFFECT_SPEED_UP_2
