@@ -220,7 +220,7 @@ void BtlController_EmitChooseItem(u8 bufferId, u8 *battlePartyOrder);
 void BtlController_EmitChoosePokemon(u8 bufferId, u8 caseId, u8 slotId, u8 abilityId, u8 *data);
 void BtlController_EmitHealthBarUpdate(u8 bufferId, u16 hpValue);
 void BtlController_EmitExpUpdate(u8 bufferId, u8 partyId, u16 expPoints);
-void BtlController_EmitStatusIconUpdate(u8 bufferId, u32 status1, u32 status2);
+void BtlController_EmitStatusIconUpdate(u8 bufferId, u32 status1, u32 status2, u32 statusExtra);
 void BtlController_EmitStatusAnimation(u8 bufferId, bool8 status2, u32 status);
 void BtlController_EmitDataTransfer(u8 bufferId, u16 size, void *data);
 void BtlController_EmitTwoReturnValues(u8 bufferId, u8 ret8, u16 ret16);

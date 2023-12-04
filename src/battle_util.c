@@ -1991,8 +1991,12 @@ u8 AtkCanceller_UnableToUseMove(void)
 {
     u8 effect = 0;
     s32 *bideDmg = &gBattleScripting.bideDmg;
+    DebugPrintf("here attacking %lu", (unsigned long)(gBattleMons[gBattlerAttacker].statusExtra & STATUSEXTRA_BAKED));
+    DebugPrintf("STATUSEXTRA_BAKED %lu", (unsigned long)STATUSEXTRA_BAKED);
+
     do
     {
+        DebugPrintf("checking canceler %lu", (unsigned long)gBattleStruct->atkCancellerTracker);
         switch (gBattleStruct->atkCancellerTracker)
         {
         case CANCELLER_FLAGS: // flags clear
@@ -2174,11 +2178,14 @@ u8 AtkCanceller_UnableToUseMove(void)
             gBattleStruct->atkCancellerTracker++;
             break;
         case CANCELLER_BAKED: // baked
+
             if (gBattleMons[gBattlerAttacker].statusExtra & STATUSEXTRA_BAKED)
             {
                 gBattleMons[gBattlerAttacker].statusExtra -= STATUSEXTRA_BAKED_TURN(1);
+
                 if (gBattleMons[gBattlerAttacker].statusExtra & STATUSEXTRA_BAKED)
                 {
+                    DebugPrintf("here baked");
                     if (Random() & 1)
                     {
                         // The MULTISTRING_CHOOSER is used here as a bool to signal
@@ -2279,6 +2286,7 @@ u8 AtkCanceller_UnableToUseMove(void)
             gBattleStruct->atkCancellerTracker++;
             break;
         case CANCELLER_END:
+            DebugPrintf("here end");
             break;
         }
 
@@ -2905,6 +2913,12 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         StringCopy(gBattleTextBuff1, gStatusConditionString_ConfusionJpn);
                         effect = 2;
                     }
+
+                    if (gBattleMons[battler].statusExtra & STATUSEXTRA_BAKED)
+                    {
+                        //StringCopy(gBattleTextBuff1, gStatusConditionString_TauntJpn); TODO: japan translation
+                        effect = 4;
+                    }
                     break;
                 case ABILITY_LIMBER:
                     if (gBattleMons[battler].status1 & STATUS1_PARALYSIS)
@@ -2956,6 +2970,9 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         break;
                     case 3: // get rid of infatuation
                         gBattleMons[battler].status2 &= ~STATUS2_INFATUATION;
+                        break;
+                    case 4: // get rid of baked
+                        gBattleMons[battler].statusExtra &= ~STATUSEXTRA_BAKED;
                         break;
                     }
 

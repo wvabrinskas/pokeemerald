@@ -114,6 +114,7 @@
 #define STATUS1_ANY              (STATUS1_SLEEP | STATUS1_POISON | STATUS1_BURN | STATUS1_FREEZE | STATUS1_PARALYSIS | STATUS1_TOXIC_POISON)
 
 // Volatile extra status ailments. Follow the status2 pattern.
+// basically extra status2 ailments but status2 is a 32bit int and it's full
 #define STATUSEXTRA_BAKED                 (1 << 0 | 1 << 1 | 1 << 2)
 #define STATUSEXTRA_BAKED_TURN(num)       ((num) << 0)
 
@@ -124,6 +125,7 @@
 #define STATUS2_FLINCHED              (1 << 3)
 #define STATUS2_UPROAR                (1 << 4 | 1 << 5 | 1 << 6)
 #define STATUS2_UPROAR_TURN(num)      ((num) << 4)
+#define STATUS2_UNUSED                (1 << 7)
 #define STATUS2_BIDE                  (1 << 8 | 1 << 9)
 #define STATUS2_BIDE_TURN(num)        (((num) << 8) & STATUS2_BIDE)
 #define STATUS2_LOCK_CONFUSE          (1 << 10 | 1 << 11) // e.g. Thrash
@@ -294,7 +296,9 @@
 #define MOVE_EFFECT_NOTHING_39          57
 #define MOVE_EFFECT_NOTHING_3A          58
 #define MOVE_EFFECT_SP_ATK_TWO_DOWN     59
+// new status effect in statusExtra
 #define MOVE_EFFECT_BAKED               60
+#define MOVE_EFFECT_EXTRA_START         MOVE_EFFECT_BAKED
 #define NUM_MOVE_EFFECTS                61
 
 #define MOVE_EFFECT_AFFECTS_USER        (1 << 6) // 64

@@ -2971,10 +2971,14 @@ static void Cmd_clearstatusfromeffect(void)
 {
     gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
 
-    if (gBattleCommunication[MOVE_EFFECT_BYTE] <= PRIMARY_STATUS_MOVE_EFFECT)
+    if (gBattleCommunication[MOVE_EFFECT_BYTE] <= PRIMARY_STATUS_MOVE_EFFECT) {
         gBattleMons[gActiveBattler].status1 &= (~sStatusFlagsForMoveEffects[gBattleCommunication[MOVE_EFFECT_BYTE]]);
-    else
+    } else {
         gBattleMons[gActiveBattler].status2 &= (~sStatusFlagsForMoveEffects[gBattleCommunication[MOVE_EFFECT_BYTE]]);
+
+        if (gBattleCommunication[MOVE_EFFECT_BYTE] >= MOVE_EFFECT_EXTRA_START)
+            gBattleMons[gActiveBattler].statusExtra &= (~sStatusFlagsForMoveEffects[gBattleCommunication[MOVE_EFFECT_BYTE]]);
+    }
 
     gBattleCommunication[MOVE_EFFECT_BYTE] = 0;
     gBattlescriptCurrInstr += 2;
@@ -4683,6 +4687,7 @@ static void Cmd_switchindataupdate(void)
             gBattleMons[gActiveBattler].statStages[i] = oldData.statStages[i];
         }
         gBattleMons[gActiveBattler].status2 = oldData.status2;
+        gBattleMons[gActiveBattler].statusExtra = oldData.statusExtra;
     }
 
     SwitchInClearSetData();
@@ -7708,7 +7713,7 @@ static void Cmd_updatestatusicon(void)
     if (gBattlescriptCurrInstr[1] != BS_ATTACKER_WITH_PARTNER)
     {
         gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
-        BtlController_EmitStatusIconUpdate(BUFFER_A, gBattleMons[gActiveBattler].status1, gBattleMons[gActiveBattler].status2);
+        BtlController_EmitStatusIconUpdate(BUFFER_A, gBattleMons[gActiveBattler].status1, gBattleMons[gActiveBattler].status2, gBattleMons[gActiveBattler].statusExtra);
         MarkBattlerForControllerExec(gActiveBattler);
         gBattlescriptCurrInstr += 2;
     }
@@ -7717,7 +7722,7 @@ static void Cmd_updatestatusicon(void)
         gActiveBattler = gBattlerAttacker;
         if (!(gAbsentBattlerFlags & gBitTable[gActiveBattler]))
         {
-            BtlController_EmitStatusIconUpdate(BUFFER_A, gBattleMons[gActiveBattler].status1, gBattleMons[gActiveBattler].status2);
+            BtlController_EmitStatusIconUpdate(BUFFER_A, gBattleMons[gActiveBattler].status1, gBattleMons[gActiveBattler].status2, gBattleMons[gActiveBattler].statusExtra);
             MarkBattlerForControllerExec(gActiveBattler);
         }
         if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
@@ -7725,7 +7730,7 @@ static void Cmd_updatestatusicon(void)
             gActiveBattler = GetBattlerAtPosition(BATTLE_PARTNER(GetBattlerPosition(gBattlerAttacker)));
             if (!(gAbsentBattlerFlags & gBitTable[gActiveBattler]))
             {
-                BtlController_EmitStatusIconUpdate(BUFFER_A, gBattleMons[gActiveBattler].status1, gBattleMons[gActiveBattler].status2);
+                BtlController_EmitStatusIconUpdate(BUFFER_A, gBattleMons[gActiveBattler].status1, gBattleMons[gActiveBattler].status2, gBattleMons[gActiveBattler].statusExtra);
                 MarkBattlerForControllerExec(gActiveBattler);
             }
         }
