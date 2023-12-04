@@ -1591,6 +1591,7 @@ const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
     {gBattleAnimSpritePal_Slash2, ANIM_TAG_SLASH_2},
     {gBattleAnimSpritePal_WhipHit, ANIM_TAG_WHIP_HIT},
     {gBattleAnimSpritePal_BlueRing2, ANIM_TAG_BLUE_RING_2},
+    {gBattleAnimSpritePal_GreenGasCloud, ANIM_TAG_GREEN_GAS_CLOUD},
 };
 
 const struct BattleAnimBackground gBattleAnimBackgroundTable[] =

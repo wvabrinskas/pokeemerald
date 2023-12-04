@@ -560,6 +560,7 @@ const u32 gBattleAnimSpriteGfx_BlackBall2[] = INCBIN_U32("graphics/battle_anims/
 const u32 gBattleAnimSpritePal_BlackBall2[] = INCBIN_U32("graphics/battle_anims/sprites/black_ball_2.gbapal.lz");
 
 const u32 gBattleAnimSpritePal_PurpleGasCloud[] = INCBIN_U32("graphics/battle_anims/sprites/purple_gas_cloud.gbapal.lz");
+const u32 gBattleAnimSpritePal_GreenGasCloud[] = INCBIN_U32("graphics/battle_anims/sprites/green_gas_cloud.gbapal.lz");
 
 const u32 gContestJudgeGfx[] = INCBIN_U32("graphics/contest/judge.4bpp.lz");
 const u32 gContest2Pal[] = INCBIN_U32("graphics/contest/judge.gbapal.lz");
