@@ -7173,7 +7173,7 @@ static void Cmd_setbide(void)
     gBattleMons[gBattlerAttacker].status2 |= STATUS2_MULTIPLETURNS;
     gLockedMoves[gBattlerAttacker] = gCurrentMove;
     gBideDmg[gBattlerAttacker] = 0;
-    //gBattleMons[gBattlerAttacker].status2 |= STATUS2_BIDE_TURN(2);
+    gBattleMons[gBattlerAttacker].status2 |= STATUS2_BIDE_TURN(2);
 
     gBattlescriptCurrInstr++;
 }
