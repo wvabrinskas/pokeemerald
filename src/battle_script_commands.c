@@ -2547,6 +2547,8 @@ void SetMoveEffect(bool8 primary, u8 certain)
                     gBattleMons[gEffectBattler].statusExtra |= STATUSEXTRA_BAKED_TURN(((Random()) % 4) + 2); // 2-5 turns
                     BattleScriptPush(gBattlescriptCurrInstr + 1);
                     gBattlescriptCurrInstr = sMoveEffectBS_Ptrs[gBattleCommunication[MOVE_EFFECT_BYTE]];
+                    DebugPrintf("here setting status %lu", (unsigned long)(gBattleMons[gEffectBattler].statusExtra));
+
                 }
                 break;
             case MOVE_EFFECT_CONFUSION:

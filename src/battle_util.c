@@ -1970,6 +1970,7 @@ void TryClearRageStatuses(void)
 enum
 {
     CANCELLER_FLAGS,
+    CANCELLER_BAKED,
     CANCELLER_ASLEEP,
     CANCELLER_FROZEN,
     CANCELLER_TRUANT,
@@ -1983,20 +1984,16 @@ enum
     CANCELLER_IN_LOVE,
     CANCELLER_BIDE,
     CANCELLER_THAW,
-    CANCELLER_END,
-    CANCELLER_BAKED
+    CANCELLER_END
 };
 
 u8 AtkCanceller_UnableToUseMove(void)
 {
     u8 effect = 0;
     s32 *bideDmg = &gBattleScripting.bideDmg;
-    DebugPrintf("here attacking %lu", (unsigned long)(gBattleMons[gBattlerAttacker].statusExtra & STATUSEXTRA_BAKED));
-    DebugPrintf("STATUSEXTRA_BAKED %lu", (unsigned long)STATUSEXTRA_BAKED);
 
     do
     {
-        DebugPrintf("checking canceler %lu", (unsigned long)gBattleStruct->atkCancellerTracker);
         switch (gBattleStruct->atkCancellerTracker)
         {
         case CANCELLER_FLAGS: // flags clear
@@ -2004,6 +2001,37 @@ u8 AtkCanceller_UnableToUseMove(void)
             gStatuses3[gBattlerAttacker] &= ~STATUS3_GRUDGE;
             gBattleStruct->atkCancellerTracker++;
             break;
+        case CANCELLER_BAKED: // baked
+
+            if ((gBattleMons[gBattlerAttacker].statusExtra & STATUSEXTRA_BAKED))
+            {
+                gBattleMons[gBattlerAttacker].statusExtra -= STATUSEXTRA_BAKED_TURN(1);
+
+                if ((gBattleMons[gBattlerAttacker].statusExtra & STATUSEXTRA_BAKED))
+                {
+                    if (Random() & 1)
+                    {
+                        // The MULTISTRING_CHOOSER is used here as a bool to signal
+                        // to BattleScript_MoveUsedIsBaked whether or not damage was taken
+                       // gBattleCommunication[MULTISTRING_CHOOSER] = FALSE;
+                        BattleScriptPushCursor();
+                    }
+                    else // nothing happens when a pokemon is too baked
+                    {
+                        //gBattleCommunication[MULTISTRING_CHOOSER] = TRUE;
+                        gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
+                    }
+                    gBattlescriptCurrInstr = BattleScript_MoveUsedIsBaked;
+                }
+                else // snapped out of bakedness
+                {
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_MoveUsedIsBakedNoMore;
+                }
+                effect = 1;
+            }
+            gBattleStruct->atkCancellerTracker++;
+            break; 
         case CANCELLER_ASLEEP: // check being asleep
             if (gBattleMons[gBattlerAttacker].status1 & STATUS1_SLEEP)
             {
@@ -2177,38 +2205,6 @@ u8 AtkCanceller_UnableToUseMove(void)
             }
             gBattleStruct->atkCancellerTracker++;
             break;
-        case CANCELLER_BAKED: // baked
-
-            if (gBattleMons[gBattlerAttacker].statusExtra & STATUSEXTRA_BAKED)
-            {
-                gBattleMons[gBattlerAttacker].statusExtra -= STATUSEXTRA_BAKED_TURN(1);
-
-                if (gBattleMons[gBattlerAttacker].statusExtra & STATUSEXTRA_BAKED)
-                {
-                    DebugPrintf("here baked");
-                    if (Random() & 1)
-                    {
-                        // The MULTISTRING_CHOOSER is used here as a bool to signal
-                        // to BattleScript_MoveUsedIsBaked whether or not damage was taken
-                       // gBattleCommunication[MULTISTRING_CHOOSER] = FALSE;
-                        BattleScriptPushCursor();
-                    }
-                    else // nothing happens when a pokemon is too baked
-                    {
-                        //gBattleCommunication[MULTISTRING_CHOOSER] = TRUE;
-                        gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
-                    }
-                    gBattlescriptCurrInstr = BattleScript_MoveUsedIsBaked;
-                }
-                else // snapped out of bakedness
-                {
-                    BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_MoveUsedIsBakedNoMore;
-                }
-                effect = 1;
-            }
-            gBattleStruct->atkCancellerTracker++;
-            break; 
         case CANCELLER_PARALYSED: // paralysis
             if ((gBattleMons[gBattlerAttacker].status1 & STATUS1_PARALYSIS) && (Random() % 4) == 0)
             {
