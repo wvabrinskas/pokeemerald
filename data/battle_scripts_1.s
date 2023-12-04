@@ -3830,9 +3830,9 @@ BattleScript_MoveUsedIsBaked::
 	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, FALSE, BattleScript_MoveUsedIsBakedRet
 BattleScript_DoTooBaked::
 	cancelmultiturnmoves BS_ATTACKER
-	adjustnormaldamage2
 	printstring STRINGID_ITSTOOBAKED
 	waitmessage B_WAIT_TIME_LONG
+	effectivenesssound
 	waitstate
 	datahpupdate BS_ATTACKER
 	resultmessage

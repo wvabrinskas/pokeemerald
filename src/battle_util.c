@@ -2013,12 +2013,13 @@ u8 AtkCanceller_UnableToUseMove(void)
                     {
                         // The MULTISTRING_CHOOSER is used here as a bool to signal
                         // to BattleScript_MoveUsedIsBaked whether or not damage was taken
-                       // gBattleCommunication[MULTISTRING_CHOOSER] = FALSE;
+                        gBattleCommunication[MULTISTRING_CHOOSER] = FALSE;
                         BattleScriptPushCursor();
                     }
                     else // nothing happens when a pokemon is too baked
                     {
-                        //gBattleCommunication[MULTISTRING_CHOOSER] = TRUE;
+                        PREPARE_MON_NICK_BUFFER(gBattleTextBuff1, gBattlerAttacker, gBattlerPartyIndexes[gBattlerAttacker]);
+                        gBattleCommunication[MULTISTRING_CHOOSER] = TRUE;
                         gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
                     }
                     gBattlescriptCurrInstr = BattleScript_MoveUsedIsBaked;
