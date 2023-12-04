@@ -873,6 +873,14 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
+    [MOVE_BLUNT_PASS] =
+    {
+        .effect = CONTEST_EFFECT_SCRAMBLE_NEXT_TURN_ORDER,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .comboStarterId = 0,
+        .comboMoves = {0},
+    },
+
     [MOVE_WITHDRAW] =
     {
         .effect = CONTEST_EFFECT_AVOID_STARTLE,

@@ -998,6 +998,14 @@ static const struct BardSoundTemplate sBardSoundTemplates_Moves[MOVES_COUNT][MAX
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
+    [MOVE_BLUNT_PASS] = {
+        { .songLengthId = 27 },
+        { .songLengthId = 51 },
+        { .songLengthId = 51 },
+        NULL_BARD_SOUND,
+        NULL_BARD_SOUND,
+        NULL_BARD_SOUND,
+    },
     [MOVE_SLUDGE] = {
         { .songId = PHONEME_ID(PH_STRUT_SOLO) },
         PREV_BARD_SOUND,

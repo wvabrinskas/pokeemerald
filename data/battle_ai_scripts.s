@@ -1487,7 +1487,7 @@ AI_CV_Confuse_End:
 
 AI_CV_Bake:
 	if_hp_more_than AI_TARGET, 70, AI_CV_Bake_End
-	if_random_less_than 128, AI_CV_Baked2
+	if_random_less_than 128, AI_CV_Bake2
 	score -1
 AI_CV_Bake2:
 	if_hp_more_than AI_TARGET, 50, AI_CV_Bake_End

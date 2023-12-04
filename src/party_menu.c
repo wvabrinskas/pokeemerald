@@ -5288,7 +5288,7 @@ u8 GetItemEffectType(u16 item)
             return ITEM_EFFECT_CURE_CONFUSION;
         else if (itemEffect[0] >> 7 && !statusCure)
             return ITEM_EFFECT_CURE_INFATUATION;
-        else if (itemCure == ITEM3_BAKED)
+        else if (statusCure == ITEM3_BAKED)
             return ITEM_EFFECT_CURE_BAKED;
         else
             return ITEM_EFFECT_CURE_ALL_STATUS;

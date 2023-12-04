@@ -140,6 +140,7 @@ gBattleAnims_Moves::
 	.4byte Move_EGG_BOMB
 	.4byte Move_LICK
 	.4byte Move_SMOG
+	.4byte Move_BLUNT_PASS
 	.4byte Move_SLUDGE
 	.4byte Move_BONE_CLUB
 	.4byte Move_FIRE_BLAST
@@ -5119,6 +5120,9 @@ Move_BUBBLE:
 	clearmonbg ANIM_TARGET
 	blendoff
 	end
+
+Move_BLUNT_PASS:
+	call Move_SMOG
 
 Move_SMOG:
 	loadspritegfx ANIM_TAG_PURPLE_GAS_CLOUD

@@ -124,6 +124,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_EGG_BOMB] = _("EGG BOMB"),
     [MOVE_LICK] = _("LICK"),
     [MOVE_SMOG] = _("SMOG"),
+    [MOVE_BLUNT_PASS] = _("BLUNT PASS"),
     [MOVE_SLUDGE] = _("SLUDGE"),
     [MOVE_BONE_CLUB] = _("BONE CLUB"),
     [MOVE_FIRE_BLAST] = _("FIRE BLAST"),

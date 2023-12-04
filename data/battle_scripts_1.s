@@ -3988,6 +3988,12 @@ BattleScript_MoveEffectConfusion::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_MoveEffectBaked::
+	chosenstatus2animation BS_EFFECT_BATTLER, STATUS2_BAKED
+	printstring STRINGID_PKMNWASBAKED
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_MoveEffectRecoil::
 	jumpifmove MOVE_STRUGGLE, BattleScript_DoRecoil
 	jumpifability BS_ATTACKER, ABILITY_ROCK_HEAD, BattleScript_RecoilEnd
@@ -4307,11 +4313,10 @@ BattleScript_IgnoresAndHitsItself::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_DoSelfConfusionDmg
 
-BattleScript_IgnoresAndHitsItself::
+BattleScript_IgnoresAndIsTooBaked::
 	printstring STRINGID_PKMNWONTOBEY
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_DoTooBaked
-
 
 BattleScript_SubstituteFade::
 	playanimation BS_TARGET, B_ANIM_SUBSTITUTE_FADE

@@ -696,6 +696,7 @@ static const bool8 sValidApprenticeMoves[MOVES_COUNT] =
     [MOVE_EGG_BOMB] = TRUE,
     [MOVE_LICK] = TRUE,
     [MOVE_SMOG] = FALSE,
+    [MOVE_BLUNT_PASS] = TRUE,
     [MOVE_SLUDGE] = FALSE,
     [MOVE_BONE_CLUB] = FALSE,
     [MOVE_FIRE_BLAST] = TRUE,

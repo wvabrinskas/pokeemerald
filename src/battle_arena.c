@@ -138,6 +138,7 @@ static const s8 sMindRatings[MOVES_COUNT] =
     [MOVE_EGG_BOMB] = 1,
     [MOVE_LICK] = 1,
     [MOVE_SMOG] = 1,
+    [MOVE_BLUNT_PASS] = 1,
     [MOVE_SLUDGE] = 1,
     [MOVE_BONE_CLUB] = 1,
     [MOVE_FIRE_BLAST] = 1,
