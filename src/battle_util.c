@@ -2174,21 +2174,21 @@ u8 AtkCanceller_UnableToUseMove(void)
             gBattleStruct->atkCancellerTracker++;
             break;
         case CANCELLER_BAKED: // baked
-            if (gBattleMons[gBattlerAttacker].status2 & STATUS2_BAKED)
+            if (gBattleMons[gBattlerAttacker].statusExtra & STATUSEXTRA_BAKED)
             {
-                gBattleMons[gBattlerAttacker].status2 -= STATUS2_BAKED_TURN(1);
-                if (gBattleMons[gBattlerAttacker].status2 & STATUS2_BAKED)
+                gBattleMons[gBattlerAttacker].statusExtra -= STATUSEXTRA_BAKED_TURN(1);
+                if (gBattleMons[gBattlerAttacker].statusExtra & STATUSEXTRA_BAKED)
                 {
                     if (Random() & 1)
                     {
                         // The MULTISTRING_CHOOSER is used here as a bool to signal
                         // to BattleScript_MoveUsedIsBaked whether or not damage was taken
-                        gBattleCommunication[MULTISTRING_CHOOSER] = FALSE;
+                       // gBattleCommunication[MULTISTRING_CHOOSER] = FALSE;
                         BattleScriptPushCursor();
                     }
                     else // nothing happens when a pokemon is too baked
                     {
-                        gBattleCommunication[MULTISTRING_CHOOSER] = TRUE;
+                        //gBattleCommunication[MULTISTRING_CHOOSER] = TRUE;
                         gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
                     }
                     gBattlescriptCurrInstr = BattleScript_MoveUsedIsBaked;

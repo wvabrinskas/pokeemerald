@@ -925,7 +925,7 @@ BattleScript_EffectBaked::
 	ppreduce
 	jumpifability BS_TARGET, ABILITY_OWN_TEMPO, BattleScript_OwnTempoPrevents
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
-	jumpifstatus2 BS_TARGET, STATUS2_BAKED, BattleScript_AlreadyBaked
+	jumpifstatusExtra BS_TARGET, STATUSEXTRA_BAKED, BattleScript_AlreadyBaked
 	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
 	jumpifsideaffecting BS_TARGET, SIDE_STATUS_SAFEGUARD, BattleScript_SafeguardProtected
 	attackanimation
@@ -3826,7 +3826,7 @@ BattleScript_ThrashConfuses::
 BattleScript_MoveUsedIsBaked::
 	printstring STRINGID_PKMNISBAKED
 	waitmessage B_WAIT_TIME_LONG
-	status2animation BS_ATTACKER, STATUS2_CONFUSION
+	statusExtraAnimation BS_ATTACKER, STATUSEXTRA_BAKED
 	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, FALSE, BattleScript_MoveUsedIsBakedRet
 BattleScript_DoTooBaked::
 	cancelmultiturnmoves BS_ATTACKER
@@ -3989,7 +3989,7 @@ BattleScript_MoveEffectConfusion::
 	return
 
 BattleScript_MoveEffectBaked::
-	chosenstatus2animation BS_EFFECT_BATTLER, STATUS2_BAKED
+	chosenstatusExtraAnimation BS_EFFECT_BATTLER, STATUSEXTRA_BAKED
 	printstring STRINGID_PKMNWASBAKED
 	waitmessage B_WAIT_TIME_LONG
 	return

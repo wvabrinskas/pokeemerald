@@ -83,7 +83,7 @@ static const u16 sVariableDmgMoves[] =
     // those are handled by the function itself
     MOVE_MAGNITUDE, MOVE_PSYWAVE, TABLE_END
 };
-
+// the order has to match the order in `battle_move_effects.h`
 static const u16 sPoints_MoveEffect[NUM_BATTLE_MOVE_EFFECTS] =
 {
     [EFFECT_HIT] = 1,

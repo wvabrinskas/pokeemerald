@@ -112,6 +112,7 @@ static const u8 sText_StatsWontDecrease[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_BUF
 static const u8 sText_TeamStoppedWorking[] = _("Your team's {B_BUFF1}\nstopped working!");
 static const u8 sText_FoeStoppedWorking[] = _("The foe's {B_BUFF1}\nstopped working!");
 static const u8 sText_PkmnIsConfused[] = _("{B_ATK_NAME_WITH_PREFIX} is\nconfused!");
+static const u8 sText_PkmnIsBaked[] = _("{B_ATK_NAME_WITH_PREFIX} is\nbaked!");
 static const u8 sText_PkmnHealedConfusion[] = _("{B_ATK_NAME_WITH_PREFIX} snapped\nout of confusion!");
 static const u8 sText_PkmnSoberedUp[] = _("{B_ATK_NAME_WITH_PREFIX} stoppped buggin'\nand sobered up!");
 static const u8 sText_PkmnWasConfused[] = _("{B_EFF_NAME_WITH_PREFIX} became\nconfused!");
@@ -577,10 +578,6 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_S
     [STRINGID_PKMNHEALEDCONFUSION - BATTLESTRINGS_TABLE_START] = sText_PkmnHealedConfusion,
     [STRINGID_PKMNWASCONFUSED - BATTLESTRINGS_TABLE_START] = sText_PkmnWasConfused,
     [STRINGID_PKMNALREADYCONFUSED - BATTLESTRINGS_TABLE_START] = sText_PkmnAlreadyConfused,
-    [STRINGID_PKMNISBAKED - BATTLESTRINGS_TABLE_START] = sText_PkmnIsConfused,
-    [STRINGID_PKMNHEALEDBAKED - BATTLESTRINGS_TABLE_START] = sText_PkmnSoberedUp,
-    [STRINGID_PKMNWASBAKED - BATTLESTRINGS_TABLE_START] = sText_PkmnWasBaked,
-    [STRINGID_PKMNALREADYBAKED - BATTLESTRINGS_TABLE_START] = sText_PkmnAlreadyBaked,
     [STRINGID_PKMNFELLINLOVE - BATTLESTRINGS_TABLE_START] = sText_PkmnFellInLove,
     [STRINGID_PKMNINLOVE - BATTLESTRINGS_TABLE_START] = sText_PkmnInLove,
     [STRINGID_PKMNIMMOBILIZEDBYLOVE - BATTLESTRINGS_TABLE_START] = sText_PkmnImmobilizedByLove,
@@ -743,7 +740,6 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_S
     [STRINGID_BUTNOTHINGHAPPENED - BATTLESTRINGS_TABLE_START] = sText_ButNothingHappened,
     [STRINGID_BUTITFAILED - BATTLESTRINGS_TABLE_START] = sText_ButItFailed,
     [STRINGID_ITHURTCONFUSION - BATTLESTRINGS_TABLE_START] = sText_ItHurtConfusion,
-    [STRINGID_ITSTOOBAKED - BATTLESTRINGS_TABLE_START] = sText_ItsTooBaked,
     [STRINGID_MIRRORMOVEFAILED - BATTLESTRINGS_TABLE_START] = sText_MirrorMoveFailed,
     [STRINGID_STARTEDTORAIN - BATTLESTRINGS_TABLE_START] = sText_StartedToRain,
     [STRINGID_DOWNPOURSTARTED - BATTLESTRINGS_TABLE_START] = sText_DownpourStarted,
@@ -894,6 +890,12 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_S
     [STRINGID_PKMNBOXLANETTESPCFULL - BATTLESTRINGS_TABLE_START] = gText_PkmnTransferredLanettesPCBoxFull,
     [STRINGID_TRAINER1WINTEXT - BATTLESTRINGS_TABLE_START] = sText_Trainer1WinText,
     [STRINGID_TRAINER2WINTEXT - BATTLESTRINGS_TABLE_START] = sText_Trainer2WinText,
+    [STRINGID_PKMNALREADYBAKED - BATTLESTRINGS_TABLE_START] = sText_PkmnAlreadyBaked,
+    [STRINGID_ITSTOOBAKED - BATTLESTRINGS_TABLE_START] = sText_ItsTooBaked,
+    [STRINGID_PKMNHEALEDBAKED - BATTLESTRINGS_TABLE_START] = sText_PkmnSoberedUp,
+    [STRINGID_PKMNWASBAKED - BATTLESTRINGS_TABLE_START] = sText_PkmnWasBaked,
+    [STRINGID_PKMNSITEMSOBERED - BATTLESTRINGS_TABLE_START] = sText_PkmnSoberedUp,
+    [STRINGID_PKMNISBAKED - BATTLESTRINGS_TABLE_START] = sText_PkmnIsBaked,
 };
 
 const u16 gMissStringIds[] =

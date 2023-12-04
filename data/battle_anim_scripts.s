@@ -9553,23 +9553,7 @@ Move_PSYCHO_BOOST:
 	end
 
 Move_BLUNT_PASS:
-	loadspritegfx ANIM_TAG_YELLOW_BALL
-	monbg ANIM_DEF_PARTNER
-	fadetobg BG_GHOST
-	waitbgfadein
-	createvisualtask SoundTask_AdjustPanningVar, 2, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 2, 0
-	createvisualtask AnimTask_BlendColorCycleByTag, 2, ANIM_TAG_YELLOW_BALL, 0, 6, 0, 14, RGB(31, 10, 0)
-	createsprite gConfuseRayBallBounceSpriteTemplate, ANIM_TARGET, 2, 28, 0, 288
-	waitforvisualfinish
-	setalpha 8, 8
-	playsewithpan SE_M_STRING_SHOT2, SOUND_PAN_TARGET
-	createsprite gConfuseRayBallSpiralSpriteTemplate, ANIM_TARGET, 2, 0, -16
-	waitforvisualfinish
-	delay 0
-	blendoff
-	clearmonbg ANIM_DEF_PARTNER
-	restorebg
-	waitbgfadein
+	call Move_SMOG
 	end
 
 Move_KNOCK_OFF:

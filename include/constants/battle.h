@@ -113,6 +113,10 @@
 #define STATUS1_PSN_ANY          (STATUS1_POISON | STATUS1_TOXIC_POISON)
 #define STATUS1_ANY              (STATUS1_SLEEP | STATUS1_POISON | STATUS1_BURN | STATUS1_FREEZE | STATUS1_PARALYSIS | STATUS1_TOXIC_POISON)
 
+// Volatile extra status ailments. Follow the status2 pattern.
+#define STATUSEXTRA_BAKED                 (1 << 0 | 1 << 1 | 1 << 2)
+#define STATUSEXTRA_BAKED_TURN(num)       ((num) << 0)
+
 // Volatile status ailments
 // These are removed after exiting the battle or switching out
 #define STATUS2_CONFUSION             (1 << 0 | 1 << 1 | 1 << 2)
@@ -120,8 +124,6 @@
 #define STATUS2_FLINCHED              (1 << 3)
 #define STATUS2_UPROAR                (1 << 4 | 1 << 5 | 1 << 6)
 #define STATUS2_UPROAR_TURN(num)      ((num) << 4)
-#define STATUS2_BAKED                 (1 << 7)
-#define STATUS2_BAKED_TURN(num)       ((num) << 0)
 #define STATUS2_BIDE                  (1 << 8 | 1 << 9)
 #define STATUS2_BIDE_TURN(num)        (((num) << 8) & STATUS2_BIDE)
 #define STATUS2_LOCK_CONFUSE          (1 << 10 | 1 << 11) // e.g. Thrash

@@ -903,7 +903,7 @@ static bool8 ShouldUseItem(void)
                 *(gBattleStruct->AI_itemFlags + gActiveBattler / 2) |= (1 << AI_HEAL_CONFUSION);
                 shouldUse = TRUE;
             }
-            if (itemEffects[3] & ITEM3_BAKED && gBattleMons[gActiveBattler].status2 & STATUS2_BAKED)
+            if (itemEffects[3] & ITEM3_BAKED && gBattleMons[gActiveBattler].statusExtra & STATUSEXTRA_BAKED)
             {
                 *(gBattleStruct->AI_itemFlags + gActiveBattler / 2) |= (1 << AI_HEAL_BAKED);
                 shouldUse = TRUE;

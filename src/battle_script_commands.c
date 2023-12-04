@@ -106,6 +106,7 @@ static void Cmd_dofaintanimation(void);
 static void Cmd_cleareffectsonfaint(void);
 static void Cmd_jumpifstatus(void);
 static void Cmd_jumpifstatus2(void);
+static void Cmd_jumpifstatusExtra(void);
 static void Cmd_jumpifability(void);
 static void Cmd_jumpifsideaffecting(void);
 static void Cmd_jumpifstat(void);
@@ -178,6 +179,7 @@ static void Cmd_hidepartystatussummary(void);
 static void Cmd_jumptocalledmove(void);
 static void Cmd_statusanimation(void);
 static void Cmd_status2animation(void);
+static void Cmd_statusExtraAnimation(void);
 static void Cmd_chosenstatusanimation(void);
 static void Cmd_yesnobox(void);
 static void Cmd_cancelallactions(void);
@@ -576,7 +578,9 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_removeattackerstatus1,                   //0xF5
     Cmd_finishaction,                            //0xF6
     Cmd_finishturn,                              //0xF7
-    Cmd_trainerslideout                          //0xF8
+    Cmd_trainerslideout,                         //0xF8
+    Cmd_jumpifstatusExtra,                       //0xF9
+    Cmd_statusExtraAnimation,                        //0xFA
 };
 
 struct StatFractions
@@ -622,7 +626,7 @@ static const u32 sStatusFlagsForMoveEffects[NUM_MOVE_EFFECTS] =
     [MOVE_EFFECT_PREVENT_ESCAPE] = STATUS2_ESCAPE_PREVENTION,
     [MOVE_EFFECT_NIGHTMARE]      = STATUS2_NIGHTMARE,
     [MOVE_EFFECT_THRASH]         = STATUS2_LOCK_CONFUSE,
-    [MOVE_EFFECT_BAKED]          = STATUS2_BAKED,
+    [MOVE_EFFECT_BAKED]          = STATUSEXTRA_BAKED,
 };
 
 static const u8 *const sMoveEffectBS_Ptrs[] =
@@ -2534,14 +2538,13 @@ void SetMoveEffect(bool8 primary, u8 certain)
             {
             case MOVE_EFFECT_BAKED:
                 if (gBattleMons[gEffectBattler].ability == ABILITY_OWN_TEMPO
-                    || gBattleMons[gEffectBattler].status2 & STATUS2_BAKED)
+                    || gBattleMons[gEffectBattler].statusExtra & STATUSEXTRA_BAKED)
                 {
                     gBattlescriptCurrInstr++;
                 }
                 else
                 {
-                    gBattleMons[gEffectBattler].status2 |= STATUS2_BAKED_TURN(((Random()) % 4) + 2); // 2-5 turns
-
+                    gBattleMons[gEffectBattler].statusExtra |= STATUSEXTRA_BAKED_TURN(((Random()) % 4) + 2); // 2-5 turns
                     BattleScriptPush(gBattlescriptCurrInstr + 1);
                     gBattlescriptCurrInstr = sMoveEffectBS_Ptrs[gBattleCommunication[MOVE_EFFECT_BYTE]];
                 }
@@ -3113,6 +3116,18 @@ static void Cmd_jumpifstatus2(void)
     const u8 *jumpPtr = T2_READ_PTR(gBattlescriptCurrInstr + 6);
 
     if (gBattleMons[battlerId].status2 & flags && gBattleMons[battlerId].hp != 0)
+        gBattlescriptCurrInstr = jumpPtr;
+    else
+        gBattlescriptCurrInstr += 10;
+}
+
+static void Cmd_jumpifstatusExtra(void)
+{
+    u8 battlerId = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
+    u32 flags = T2_READ_32(gBattlescriptCurrInstr + 2);
+    const u8 *jumpPtr = T2_READ_PTR(gBattlescriptCurrInstr + 6);
+
+    if (gBattleMons[battlerId].statusExtra & flags && gBattleMons[battlerId].hp != 0)
         gBattlescriptCurrInstr = jumpPtr;
     else
         gBattlescriptCurrInstr += 10;
@@ -5801,6 +5816,25 @@ static void Cmd_status2animation(void)
     }
 }
 
+static void Cmd_statusExtraAnimation(void)
+{
+    u32 wantedToAnimate;
+
+    if (gBattleControllerExecFlags == 0)
+    {
+        gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
+        wantedToAnimate = T1_READ_32(gBattlescriptCurrInstr + 2);
+        if (!(gStatuses3[gActiveBattler] & STATUS3_SEMI_INVULNERABLE)
+            && gDisableStructs[gActiveBattler].substituteHP == 0
+            && !(gHitMarker & HITMARKER_NO_ANIMATIONS))
+        {
+            BtlController_EmitStatusAnimation(BUFFER_A, TRUE, gBattleMons[gActiveBattler].statusExtra & wantedToAnimate);
+            MarkBattlerForControllerExec(gActiveBattler);
+        }
+        gBattlescriptCurrInstr += 6;
+    }
+}
+
 static void Cmd_chosenstatusanimation(void)
 {
     u32 wantedStatus;
@@ -7139,7 +7173,7 @@ static void Cmd_setbide(void)
     gBattleMons[gBattlerAttacker].status2 |= STATUS2_MULTIPLETURNS;
     gLockedMoves[gBattlerAttacker] = gCurrentMove;
     gBideDmg[gBattlerAttacker] = 0;
-    gBattleMons[gBattlerAttacker].status2 |= STATUS2_BIDE_TURN(2);
+    //gBattleMons[gBattlerAttacker].status2 |= STATUS2_BIDE_TURN(2);
 
     gBattlescriptCurrInstr++;
 }

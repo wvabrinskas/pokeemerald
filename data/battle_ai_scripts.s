@@ -392,7 +392,7 @@ AI_CBM_Confuse:
 	end
 
 AI_CBM_Bake:
-	if_status2 AI_TARGET, STATUS2_BAKED, Score_Minus5
+	if_statusExtra AI_TARGET, STATUSEXTRA_BAKED, Score_Minus5
 	get_ability AI_TARGET
 	if_equal ABILITY_OWN_TEMPO, Score_Minus10
 	if_side_affecting AI_TARGET, SIDE_STATUS_SAFEGUARD, Score_Minus10
@@ -1601,7 +1601,7 @@ AI_CV_Substitute6:
 	goto AI_CV_Substitute_End
 
 AI_CV_Substitute9:
-	if_not_status2 AI_TARGET, STATUS2_BAKED, AI_CV_Substitute8
+	if_not_statusExtra AI_TARGET, STATUSEXTRA_BAKED, AI_CV_Substitute8
 	goto AI_CV_Substitute_End
 
 AI_CV_Substitute7:

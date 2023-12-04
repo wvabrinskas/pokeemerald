@@ -63,6 +63,8 @@ static void Cmd_if_status(void);
 static void Cmd_if_not_status(void);
 static void Cmd_if_status2(void);
 static void Cmd_if_not_status2(void);
+static void Cmd_if_statusExtra(void);
+static void Cmd_if_not_statusExtra(void);
 static void Cmd_if_status3(void);
 static void Cmd_if_not_status3(void);
 static void Cmd_if_side_affecting(void);
@@ -258,6 +260,8 @@ static const BattleAICmdFunc sBattleAICmdTable[] =
     Cmd_check_ability,                              // 0x60
     Cmd_if_flash_fired,                             // 0x61
     Cmd_if_holds_item,                              // 0x62
+    Cmd_if_statusExtra,                             // 0x63
+    Cmd_if_not_statusExtra,                         // 0x64
 };
 
 // For the purposes of determining the most powerful move in a moveset, these
@@ -837,6 +841,42 @@ static void Cmd_if_not_status2(void)
     status = T1_READ_32(gAIScriptPtr + 2);
 
     if (!(gBattleMons[battlerId].status2 & status))
+        gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 6);
+    else
+        gAIScriptPtr += 10;
+}
+
+static void Cmd_if_statusExtra(void)
+{
+    u16 battlerId;
+    u32 status;
+
+    if (gAIScriptPtr[1] == AI_USER)
+        battlerId = sBattler_AI;
+    else
+        battlerId = gBattlerTarget;
+
+    status = T1_READ_32(gAIScriptPtr + 2);
+
+    if ((gBattleMons[battlerId].statusExtra & status))
+        gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 6);
+    else
+        gAIScriptPtr += 10;
+}
+
+static void Cmd_if_not_statusExtra(void)
+{
+    u16 battlerId;
+    u32 status;
+
+    if (gAIScriptPtr[1] == AI_USER)
+        battlerId = sBattler_AI;
+    else
+        battlerId = gBattlerTarget;
+
+    status = T1_READ_32(gAIScriptPtr + 2);
+
+    if (!(gBattleMons[battlerId].statusExtra & status))
         gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 6);
     else
         gAIScriptPtr += 10;

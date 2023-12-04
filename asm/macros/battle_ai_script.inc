@@ -83,6 +83,20 @@
 	.4byte \param2
 	.endm
 
+	.macro if_statusExtra battler:req, statusExtra:req, param2:req
+	.byte 0x63
+	.byte \battler
+	.4byte \statusExtra
+	.4byte \param2
+	.endm
+
+	.macro if_not_statusExtra battler:req, statusExtra:req, param2:req
+	.byte 0x64
+	.byte \battler
+	.4byte \statusExtra
+	.4byte \param2
+	.endm
+
 	.macro if_status3 battler:req, status3:req, param2:req
 	.byte 0xd
 	.byte \battler

@@ -147,6 +147,13 @@
 	.4byte \ptr
 	.endm
 
+	.macro jumpifstatusExtra battler:req, statusExtra:req, ptr:req
+	.byte 0xF9
+	.byte \battler
+	.4byte \statusExtra
+	.4byte \ptr
+	.endm
+
 	.macro jumpifability battler:req, ability:req, ptr:req
 	.byte 0x1e
 	.byte \battler
@@ -583,6 +590,12 @@
 	.byte 0x65
 	.byte \battler
 	.4byte \status2
+	.endm
+
+	.macro statusExtraAnimation battler:req, statusExtra:req
+	.byte 0x65
+	.byte \battler
+	.4byte \statusExtra
 	.endm
 
 	.macro chosenstatusanimation battler:req, isStatus2:req, status:req
@@ -1377,6 +1390,10 @@
 
 	.macro chosenstatus2animation battler:req, status:req
 	chosenstatusanimation \battler, 0x1, \status
+	.endm
+
+	.macro chosenstatusExtraAnimation battler:req, status:req
+	chosenstatusanimation \battler, 0x2, \status
 	.endm
 
 	.macro sethword dst:req, value:req
