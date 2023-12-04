@@ -9553,7 +9553,7 @@ Move_PSYCHO_BOOST:
 	end
 
 Move_BLUNT_PASS:
-	loadspritegfx ANIM_TAG_PURPLE_GAS_CLOUD
+	loadspritegfx ANIM_TAG_GREEN_GAS_CLOUD
 	monbg ANIM_DEF_PARTNER
 	splitbgprio_all
 	setalpha 12, 8
@@ -9575,7 +9575,7 @@ Move_BLUNT_PASS:
 	blendoff
 	end
 WeedCloud:
-	createsprite gSmogCloudSpriteTemplate, ANIM_ATTACKER, 2, 0, -24, 48, 240, 1, 0
+	createsprite gGreenSmogCloudSpriteTemplate, ANIM_ATTACKER, 2, 0, -24, 48, 240, 1, 0
 	delay 7
 	return
 
