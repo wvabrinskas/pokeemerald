@@ -22,6 +22,7 @@
 #define ITEM3_BURN              0x8
 #define ITEM3_POISON            0x10
 #define ITEM3_SLEEP             0x20
+#define ITEM3_BAKED             0x21 // Not sure if this works or not but we'll see
 #define ITEM3_LEVEL_UP          0x40
 #define ITEM3_GUARD_SPEC        0x80 // Works the same way as the move Mist.
 
@@ -88,5 +89,6 @@
 #define ITEM_EFFECT_PP_MAX 20
 #define ITEM_EFFECT_HEAL_PP 21
 #define ITEM_EFFECT_NONE 22
+#define ITEM_EFFECT_CURE_BAKED 23
 
 #endif // GUARD_CONSTANTS_ITEM_EFFECTS_H

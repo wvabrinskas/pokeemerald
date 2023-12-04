@@ -614,6 +614,7 @@ static const u32 sStatusFlagsForMoveEffects[NUM_MOVE_EFFECTS] =
     [MOVE_EFFECT_PARALYSIS]      = STATUS1_PARALYSIS,
     [MOVE_EFFECT_TOXIC]          = STATUS1_TOXIC_POISON,
     [MOVE_EFFECT_CONFUSION]      = STATUS2_CONFUSION,
+    [MOVE_EFFECT_BAKED]          = STATUS2_BAKED,
     [MOVE_EFFECT_FLINCH]         = STATUS2_FLINCHED,
     [MOVE_EFFECT_UPROAR]         = STATUS2_UPROAR,
     [MOVE_EFFECT_CHARGING]       = STATUS2_MULTIPLETURNS,
@@ -634,6 +635,7 @@ static const u8 *const sMoveEffectBS_Ptrs[] =
     [MOVE_EFFECT_PARALYSIS]        = BattleScript_MoveEffectParalysis,
     [MOVE_EFFECT_TOXIC]            = BattleScript_MoveEffectToxic,
     [MOVE_EFFECT_CONFUSION]        = BattleScript_MoveEffectConfusion,
+    [MOVE_EFFECT_BAKED]            = BattleScript_MoveEffectBaked,
     [MOVE_EFFECT_FLINCH]           = BattleScript_MoveEffectSleep,
     [MOVE_EFFECT_TRI_ATTACK]       = BattleScript_MoveEffectSleep,
     [MOVE_EFFECT_UPROAR]           = BattleScript_MoveEffectUproar,
@@ -2530,6 +2532,20 @@ void SetMoveEffect(bool8 primary, u8 certain)
             u8 side;
             switch (gBattleCommunication[MOVE_EFFECT_BYTE])
             {
+            case MOVE_EFFECT_BAKED:
+                if (gBattleMons[gEffectBattler].ability == ABILITY_OWN_TEMPO
+                    || gBattleMons[gEffectBattler].status2 & STATUS2_BAKED)
+                {
+                    gBattlescriptCurrInstr++;
+                }
+                else
+                {
+                    gBattleMons[gEffectBattler].status2 |= STATUS2_BAKED_TURN(((Random()) % 4) + 2); // 2-5 turns
+
+                    BattleScriptPush(gBattlescriptCurrInstr + 1);
+                    gBattlescriptCurrInstr = sMoveEffectBS_Ptrs[gBattleCommunication[MOVE_EFFECT_BYTE]];
+                }
+                break;
             case MOVE_EFFECT_CONFUSION:
                 if (gBattleMons[gEffectBattler].ability == ABILITY_OWN_TEMPO
                     || gBattleMons[gEffectBattler].status2 & STATUS2_CONFUSION)

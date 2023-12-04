@@ -4328,6 +4328,9 @@ static void GetMedicineItemEffectMessage(u16 item)
     case ITEM_EFFECT_CURE_CONFUSION:
         StringExpandPlaceholders(gStringVar4, gText_PkmnSnappedOutOfConfusion);
         break;
+    case ITEM_EFFECT_CURE_BAKED:
+        StringExpandPlaceholders(gStringVar4, gText_PkmnSoberedUp);
+        break;
     case ITEM_EFFECT_CURE_INFATUATION:
         StringExpandPlaceholders(gStringVar4, gText_PkmnGotOverInfatuation);
         break;
@@ -5285,6 +5288,8 @@ u8 GetItemEffectType(u16 item)
             return ITEM_EFFECT_CURE_CONFUSION;
         else if (itemEffect[0] >> 7 && !statusCure)
             return ITEM_EFFECT_CURE_INFATUATION;
+        else if (itemCure == ITEM3_BAKED)
+            return ITEM_EFFECT_CURE_BAKED;
         else
             return ITEM_EFFECT_CURE_ALL_STATUS;
     }

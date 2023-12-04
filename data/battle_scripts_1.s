@@ -95,6 +95,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHit                    @ EFFECT_EVASION_DOWN_HIT
 	.4byte BattleScript_EffectSkyAttack              @ EFFECT_SKY_ATTACK
 	.4byte BattleScript_EffectConfuseHit             @ EFFECT_CONFUSE_HIT
+	.4byte BattleScript_EffectBakedHit               @ EFFECT_BAKED_HIT
 	.4byte BattleScript_EffectTwineedle              @ EFFECT_TWINEEDLE
 	.4byte BattleScript_EffectHit                    @ EFFECT_VITAL_THROW
 	.4byte BattleScript_EffectSubstitute             @ EFFECT_SUBSTITUTE
@@ -917,10 +918,34 @@ BattleScript_EffectConfuse::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectBaked::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifability BS_TARGET, ABILITY_OWN_TEMPO, BattleScript_OwnTempoPrevents
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
+	jumpifstatus2 BS_TARGET, STATUS2_BAKED, BattleScript_AlreadyBaked
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	jumpifsideaffecting BS_TARGET, SIDE_STATUS_SAFEGUARD, BattleScript_SafeguardProtected
+	attackanimation
+	waitanimation
+	setmoveeffect MOVE_EFFECT_BAKED
+	seteffectprimary
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
 BattleScript_AlreadyConfused::
 	setalreadystatusedmoveattempt BS_ATTACKER
 	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_PKMNALREADYCONFUSED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_AlreadyBaked::
+	setalreadystatusedmoveattempt BS_ATTACKER
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNALREADYBAKED
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
@@ -1070,6 +1095,10 @@ BattleScript_EffectSkyAttack::
 
 BattleScript_EffectConfuseHit::
 	setmoveeffect MOVE_EFFECT_CONFUSION
+	goto BattleScript_EffectHit
+
+BattleScript_EffectBakedHit::
+	setmoveeffect MOVE_EFFECT_BAKED
 	goto BattleScript_EffectHit
 
 BattleScript_EffectTwineedle::
@@ -3793,6 +3822,29 @@ BattleScript_ThrashConfuses::
 	waitmessage B_WAIT_TIME_LONG
 	end2
 
+BattleScript_MoveUsedIsBaked::
+	printstring STRINGID_PKMNISBAKED
+	waitmessage B_WAIT_TIME_LONG
+	status2animation BS_ATTACKER, STATUS2_CONFUSION
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, FALSE, BattleScript_MoveUsedIsBakedRet
+BattleScript_DoTooBaked::
+	cancelmultiturnmoves BS_ATTACKER
+	adjustnormaldamage2
+	printstring STRINGID_ITSTOOBAKED
+	waitmessage B_WAIT_TIME_LONG
+	waitstate
+	datahpupdate BS_ATTACKER
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+BattleScript_MoveUsedIsBakedRet::
+	return
+
+BattleScript_MoveUsedIsBakedNoMore::
+	printstring STRINGID_PKMNHEALEDBAKED
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_MoveUsedIsConfused::
 	printstring STRINGID_PKMNISCONFUSED
 	waitmessage B_WAIT_TIME_LONG
@@ -4253,6 +4305,12 @@ BattleScript_IgnoresAndHitsItself::
 	printstring STRINGID_PKMNWONTOBEY
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_DoSelfConfusionDmg
+
+BattleScript_IgnoresAndHitsItself::
+	printstring STRINGID_PKMNWONTOBEY
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_DoTooBaked
+
 
 BattleScript_SubstituteFade::
 	playanimation BS_TARGET, B_ANIM_SUBSTITUTE_FADE

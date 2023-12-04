@@ -18,6 +18,7 @@ enum {
     AI_HEAL_BURN,
     AI_HEAL_POISON,
     AI_HEAL_SLEEP,
+    AI_HEAL_BAKED,
 };
 
 enum {

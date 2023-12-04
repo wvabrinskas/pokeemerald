@@ -4921,6 +4921,12 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                 gBattleMons[battlerId].status2 &= ~STATUS2_CONFUSION;
                 retVal = FALSE;
             }
+            if ((itemEffect[i] & ITEM3_BAKED)  // heal baked
+             && gMain.inBattle && battlerId != MAX_BATTLERS_COUNT && (gBattleMons[battlerId].status2 & STATUS2_BAKED))
+            {
+                gBattleMons[battlerId].status2 &= ~STATUS2_BAKED;
+                retVal = FALSE;
+            }
             break;
 
         // Handle ITEM4 effects (Change HP/Atk EVs, HP heal, PP heal, PP up, Revive, and evolution stones)
