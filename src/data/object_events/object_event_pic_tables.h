@@ -1,3 +1,8 @@
+const struct SpriteFrameImage gObjectEventPicTable_Beedrill[] = {
+    overworld_frame(gObjectEventPic_Beedrill, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Beedrill, 8, 8, 1),
+};
+
 static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {
     overworld_frame(gObjectEventPic_BrendanNormal, 2, 4, 0),
     overworld_frame(gObjectEventPic_BrendanNormal, 2, 4, 1),
