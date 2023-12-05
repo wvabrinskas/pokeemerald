@@ -218,3 +218,24 @@ Route102_Text_RouteSignPetalburg:
 	.string "ROUTE 102\n"
 # 110 "data/maps/Route102/scripts.pory"
 	.string "{LEFT_ARROW} PETALBURG CITY$"
+
+Route102_Bees_Triggers::
+# 113 "data/maps/Route102/scripts.pory"
+	goto_if_set FLAG_ROUTE_102_BEE_BATTLE, Route102_Bees_Triggers_2
+# 117 "data/maps/Route102/scripts.pory"
+	lock
+# 119 "data/maps/Route102/scripts.pory"
+	msgbox Route102_Bees_Triggers_Text_0
+# 120 "data/maps/Route102/scripts.pory"
+	release
+	return
+
+Route102_Bees_Triggers_2:
+# 114 "data/maps/Route102/scripts.pory"
+	releaseall
+	return
+
+
+Route102_Bees_Triggers_Text_0:
+# 119 "data/maps/Route102/scripts.pory"
+	.string "A wild BEEDRILL appeared!$"
