@@ -4674,12 +4674,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Beedrill = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GenericBall = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_GENERIC_BALL,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BEEDRILL,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
     .height = 16,
-    .paletteSlot = PALSLOT_NPC_4,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
     .shadowSize = SHADOW_SIZE_S,
     .inanimate = TRUE,
     .disableReflectionPaletteLoad = FALSE,

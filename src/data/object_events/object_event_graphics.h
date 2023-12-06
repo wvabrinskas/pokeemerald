@@ -363,5 +363,4 @@ const u16 gObjectEventPal_HoOh[] = INCBIN_U16("graphics/object_events/palettes/h
 const u32 gObjectEventPic_Beedrill[] = INCBIN_U32("graphics/object_events/pics/pokemon/beedrill.4bpp");
 const u16 gObjectEventPal_Beedrill[] = INCBIN_U16("graphics/object_events/palettes/beedrill.gbapal");
 const u32 gObjectEventPic_GenericBall[] = INCBIN_U32("graphics/object_events/pics/misc/generic_ball.4bpp");
-const u16 gObjectEventPal_GenericBall[] = INCBIN_U16("graphics/object_events/palettes/generic_ball.gbapal");
 
