@@ -219,23 +219,47 @@ Route102_Text_RouteSignPetalburg:
 # 110 "data/maps/Route102/scripts.pory"
 	.string "{LEFT_ARROW} PETALBURG CITY$"
 
-Route102_Bees_Triggers::
-# 113 "data/maps/Route102/scripts.pory"
-	goto_if_set FLAG_ROUTE_102_BEE_BATTLE, Route102_Bees_Triggers_2
+Route102_Beedrill_Triggers::
 # 117 "data/maps/Route102/scripts.pory"
-	lock
+	setvar VAR_ROUTE102_BEEDRILL_BATTLE, 0
 # 119 "data/maps/Route102/scripts.pory"
-	msgbox Route102_Bees_Triggers_Text_0
-# 120 "data/maps/Route102/scripts.pory"
+	goto_if_set FLAG_ROUTE_102_BEE_BATTLE, Route102_Beedrill_Triggers_2
+# 125 "data/maps/Route102/scripts.pory"
+	lock
+# 128 "data/maps/Route102/scripts.pory"
+	msgbox Route102_Beedrill_Triggers_Text_1
+# 129 "data/maps/Route102/scripts.pory"
 	release
 	return
 
-Route102_Bees_Triggers_2:
-# 114 "data/maps/Route102/scripts.pory"
-	releaseall
+Route102_Beedrill_Triggers_2:
+# 120 "data/maps/Route102/scripts.pory"
+	lock
+# 121 "data/maps/Route102/scripts.pory"
+	msgbox Route102_Beedrill_Triggers_Text_0
+# 122 "data/maps/Route102/scripts.pory"
+	release
 	return
 
 
-Route102_Bees_Triggers_Text_0:
-# 119 "data/maps/Route102/scripts.pory"
-	.string "A wild BEEDRILL appeared!$"
+Route102_Hide_Beedrills::
+# 137 "data/maps/Route102/scripts.pory"
+	removeobject 10
+	return
+
+
+Route102_Battle_Complete::
+# 141 "data/maps/Route102/scripts.pory"
+	setflag FLAG_ROUTE_102_BEEDRILL_DISAPPEARED
+# 142 "data/maps/Route102/scripts.pory"
+	setflag FLAG_ROUTE_102_BEE_BATTLE
+	return
+
+
+Route102_Beedrill_Triggers_Text_0:
+# 121 "data/maps/Route102/scripts.pory"
+	.string "HERE!$"
+
+Route102_Beedrill_Triggers_Text_1:
+# 128 "data/maps/Route102/scripts.pory"
+	.string "BEEEEEEEESSSSSSSSSSSSSSSSSSSSSS!$"

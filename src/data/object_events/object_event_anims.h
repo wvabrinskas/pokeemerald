@@ -845,8 +845,18 @@ static const union AnimCmd *const sAnimTable_Standard[] = {
     [ANIM_STD_GO_FASTEST_EAST] = sAnim_GoFastestEast,
 };
 
+static const union AnimCmd sAnim_Beedrill[] = {
+    ANIMCMD_FRAME(0, 5),
+    ANIMCMD_FRAME(1, 35),
+    ANIMCMD_FRAME(2, 28),
+    ANIMCMD_FRAME(3, 10),
+    ANIMCMD_FRAME(2, 28),
+    ANIMCMD_FRAME(1, 35),
+    ANIMCMD_JUMP(0),
+};
+
 static const union AnimCmd *const sAnimTable_Beedrill[] = {
-    [ANIM_STAY_STILL] = sAnim_StayStill
+    sAnim_Beedrill
 };
 
 static const union AnimCmd *const sAnimTable_HoOh[] = {
