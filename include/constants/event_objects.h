@@ -241,7 +241,7 @@
 #define OBJ_EVENT_GFX_LUGIA                      237
 #define OBJ_EVENT_GFX_HOOH                       238
 #define OBJ_EVENT_GFX_BEEDRILL                   239
-#define OBJ_EVENT_GFX_GENERIC_BALL                  240
+#define OBJ_EVENT_GFX_GENERIC_BALL               240
 
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //

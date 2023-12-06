@@ -1,6 +1,7 @@
 raw `
 Route102_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, Route102_On_Resume
+	map_script MAP_SCRIPT_ON_TRANSITION, Route102_On_Transition
 	.byte 0
 
 Route102_EventScript_LittleBoy::
@@ -126,7 +127,11 @@ script Route102_Player_Kicked_Ball {
 }
 
 script Route102_On_Resume {
-	removeobject(BEEDRILL)
+	hideobjectat(BEEDRILL, MAP_ROUTE102)
+}
+
+script Route102_On_Transition {
+	hideobjectat(BEEDRILL, MAP_ROUTE102)
 }
 
 script Route102_Beedrill_Triggers {
