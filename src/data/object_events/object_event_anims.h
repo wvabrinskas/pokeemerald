@@ -846,12 +846,12 @@ static const union AnimCmd *const sAnimTable_Standard[] = {
 };
 
 static const union AnimCmd sAnim_Beedrill[] = {
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 35),
-    ANIMCMD_FRAME(2, 28),
-    ANIMCMD_FRAME(3, 10),
-    ANIMCMD_FRAME(2, 28),
-    ANIMCMD_FRAME(1, 35),
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_FRAME(1, 10),
+    ANIMCMD_FRAME(2, 10),
+    ANIMCMD_FRAME(3, 15),
+    ANIMCMD_FRAME(2, 10),
+    ANIMCMD_FRAME(1, 10),
     ANIMCMD_JUMP(0),
 };
 
