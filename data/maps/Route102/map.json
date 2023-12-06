@@ -173,7 +173,60 @@
 
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 49,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_ROUTE102_BEEDRILL_HIDE_TRIGGER",
+      "var_value": "0",
+      "script": "Route102_On_Transition"
+    },
+    {
+      "type": "trigger",
+      "x": 49,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE102_BEEDRILL_HIDE_TRIGGER",
+      "var_value": "0",
+      "script": "Route102_On_Transition"
+    },
+    {
+      "type": "trigger",
+      "x": -2,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_ROUTE102_BEEDRILL_HIDE_TRIGGER",
+      "var_value": "0",
+      "script": "Route102_On_Transition"
+    },
+    {
+      "type": "trigger",
+      "x": -2,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE102_BEEDRILL_HIDE_TRIGGER",
+      "var_value": "0",
+      "script": "Route102_On_Transition"
+    },
+    {
+      "type": "trigger",
+      "x": -2,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_ROUTE102_BEEDRILL_HIDE_TRIGGER",
+      "var_value": "0",
+      "script": "Route102_On_Transition"
+    },
+    {
+      "type": "trigger",
+      "x": -2,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_ROUTE102_BEEDRILL_HIDE_TRIGGER",
+      "var_value": "0",
+      "script": "Route102_On_Transition"
+    }
   ],
   "bg_events": [
     {
