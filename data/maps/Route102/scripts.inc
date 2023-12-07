@@ -220,17 +220,17 @@ Route102_Text_RouteSignPetalburg:
 	.string "{LEFT_ARROW} PETALBURG CITY$"
 
 Route102_Player_Kicked_Ball::
-# 116 "data/maps/Route102/scripts.pory"
+# 117 "data/maps/Route102/scripts.pory"
 	goto_if_set FLAG_ROUTE_102_BEE_BATTLE, Route102_Player_Kicked_Ball_2
-# 119 "data/maps/Route102/scripts.pory"
-	lock
 # 120 "data/maps/Route102/scripts.pory"
-	msgbox Route102_Player_Kicked_Ball_Text_0, MSGBOX_AUTOCLOSE
+	lock
 # 121 "data/maps/Route102/scripts.pory"
-	waitmessage
+	msgbox Route102_Player_Kicked_Ball_Text_0, MSGBOX_AUTOCLOSE
 # 122 "data/maps/Route102/scripts.pory"
-	call Route102_Beedrill_Triggers
+	waitmessage
 # 123 "data/maps/Route102/scripts.pory"
+	call Route102_Beedrill_Triggers
+# 124 "data/maps/Route102/scripts.pory"
 	release
 	end
 
@@ -238,99 +238,148 @@ Route102_Player_Kicked_Ball_2:
 	return
 
 
-# 127 "data/maps/Route102/scripts.pory"
-Route102_Beedrill_Movement:
 # 128 "data/maps/Route102/scripts.pory"
+Route102_Beedrill_Movement:
+# 129 "data/maps/Route102/scripts.pory"
 	lock_anim
-# 129 "data/maps/Route102/scripts.pory"
-	walk_faster_down
-# 129 "data/maps/Route102/scripts.pory"
-	walk_faster_down
-# 129 "data/maps/Route102/scripts.pory"
-	walk_faster_down
-# 129 "data/maps/Route102/scripts.pory"
-	walk_faster_down
-# 129 "data/maps/Route102/scripts.pory"
-	walk_faster_down
-# 129 "data/maps/Route102/scripts.pory"
+# 130 "data/maps/Route102/scripts.pory"
 	walk_faster_down
 # 130 "data/maps/Route102/scripts.pory"
-	unlock_anim
+	walk_faster_down
+# 130 "data/maps/Route102/scripts.pory"
+	walk_faster_down
+# 130 "data/maps/Route102/scripts.pory"
+	walk_faster_down
+# 130 "data/maps/Route102/scripts.pory"
+	walk_faster_down
+# 130 "data/maps/Route102/scripts.pory"
+	walk_faster_down
 # 131 "data/maps/Route102/scripts.pory"
+	unlock_anim
+# 132 "data/maps/Route102/scripts.pory"
+	step_end
+
+# 135 "data/maps/Route102/scripts.pory"
+Route102_Player_SeesBees_Movement:
+# 136 "data/maps/Route102/scripts.pory"
+	emote_exclamation_mark
+# 137 "data/maps/Route102/scripts.pory"
+	face_right
+# 138 "data/maps/Route102/scripts.pory"
+	jump_in_place_right
+# 139 "data/maps/Route102/scripts.pory"
+	delay_1
+# 140 "data/maps/Route102/scripts.pory"
+	player_run_right
+# 141 "data/maps/Route102/scripts.pory"
+	delay_2
+# 142 "data/maps/Route102/scripts.pory"
+	face_left
+# 143 "data/maps/Route102/scripts.pory"
+	player_run_left
+# 144 "data/maps/Route102/scripts.pory"
+	delay_2
+# 145 "data/maps/Route102/scripts.pory"
+	face_right
+# 146 "data/maps/Route102/scripts.pory"
+	player_run_right
+# 147 "data/maps/Route102/scripts.pory"
+	delay_2
+# 148 "data/maps/Route102/scripts.pory"
+	face_left
+# 149 "data/maps/Route102/scripts.pory"
+	player_run_left
+# 150 "data/maps/Route102/scripts.pory"
+	delay_1
+# 151 "data/maps/Route102/scripts.pory"
+	face_left
+# 152 "data/maps/Route102/scripts.pory"
 	step_end
 
 Route102_Beedrill_Triggers::
-# 136 "data/maps/Route102/scripts.pory"
+# 156 "data/maps/Route102/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 137 "data/maps/Route102/scripts.pory"
+# 157 "data/maps/Route102/scripts.pory"
 	applymovement 10, Route102_Beedrill_Movement
-# 138 "data/maps/Route102/scripts.pory"
+# 158 "data/maps/Route102/scripts.pory"
 	waitmovement 10
-# 139 "data/maps/Route102/scripts.pory"
-	hideobjectat 10, MAP_ROUTE102
-# 140 "data/maps/Route102/scripts.pory"
-	delay 5
-# 141 "data/maps/Route102/scripts.pory"
-	showobjectat 10, MAP_ROUTE102
-# 142 "data/maps/Route102/scripts.pory"
+# 159 "data/maps/Route102/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 143 "data/maps/Route102/scripts.pory"
+# 160 "data/maps/Route102/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Route102_Player_SeesBees_Movement
+# 161 "data/maps/Route102/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 162 "data/maps/Route102/scripts.pory"
 	msgbox Route102_Beedrill_Triggers_Text_0, MSGBOX_AUTOCLOSE
-# 144 "data/maps/Route102/scripts.pory"
+# 163 "data/maps/Route102/scripts.pory"
 	waitmessage
-# 145 "data/maps/Route102/scripts.pory"
+# 164 "data/maps/Route102/scripts.pory"
 	call Route102_Battle_Beedrills
 	return
 
 
 Route102_Battle_Beedrills::
-# 149 "data/maps/Route102/scripts.pory"
+# 168 "data/maps/Route102/scripts.pory"
 	setobjectmovementtype 10, MOVEMENT_TYPE_NONE
-# 150 "data/maps/Route102/scripts.pory"
+# 169 "data/maps/Route102/scripts.pory"
 	playmoncry SPECIES_BEEDRILL, CRY_MODE_ENCOUNTER
-# 151 "data/maps/Route102/scripts.pory"
+# 170 "data/maps/Route102/scripts.pory"
 	delay 40
-# 152 "data/maps/Route102/scripts.pory"
+# 171 "data/maps/Route102/scripts.pory"
 	waitmoncry
-# 153 "data/maps/Route102/scripts.pory"
+# 172 "data/maps/Route102/scripts.pory"
 	setwildbattle SPECIES_BEEDRILL, 15, ITEM_FULL_RESTORE
-# 154 "data/maps/Route102/scripts.pory"
+# 173 "data/maps/Route102/scripts.pory"
 	dowildbattle
-# 155 "data/maps/Route102/scripts.pory"
+# 174 "data/maps/Route102/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 175 "data/maps/Route102/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_ne Route102_Battle_Beedrills_2
+	return
+
+Route102_Battle_Beedrills_2:
+# 176 "data/maps/Route102/scripts.pory"
 	call Route102_Battle_Complete
 	return
 
 
 Route102_Hide_Beedrills::
-# 159 "data/maps/Route102/scripts.pory"
+# 183 "data/maps/Route102/scripts.pory"
 	removeobject 10
-# 160 "data/maps/Route102/scripts.pory"
+# 184 "data/maps/Route102/scripts.pory"
 	removeobject 11
+# 185 "data/maps/Route102/scripts.pory"
+	setflag FLAG_ROUTE_102_BEEDRILL_DISAPPEARED
+# 186 "data/maps/Route102/scripts.pory"
+	setflag FLAG_ROUTE_102_PLAYER_KICKED_BALL
 	return
 
 
 Route102_Battle_Complete::
-# 166 "data/maps/Route102/scripts.pory"
+# 190 "data/maps/Route102/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 167 "data/maps/Route102/scripts.pory"
+# 191 "data/maps/Route102/scripts.pory"
 	call Route102_Hide_Beedrills
-# 168 "data/maps/Route102/scripts.pory"
+# 192 "data/maps/Route102/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 170 "data/maps/Route102/scripts.pory"
+# 193 "data/maps/Route102/scripts.pory"
+	setflag FLAG_ROUTE_102_BEE_BATTLE
+# 194 "data/maps/Route102/scripts.pory"
 	msgbox Route102_Battle_Complete_Text_0, MSGBOX_AUTOCLOSE
-# 171 "data/maps/Route102/scripts.pory"
+# 195 "data/maps/Route102/scripts.pory"
 	waitmessage
 	return
 
 
 Route102_Player_Kicked_Ball_Text_0:
-# 120 "data/maps/Route102/scripts.pory"
+# 121 "data/maps/Route102/scripts.pory"
 	.string "You kicked the ball.....$"
 
 Route102_Beedrill_Triggers_Text_0:
-# 143 "data/maps/Route102/scripts.pory"
+# 162 "data/maps/Route102/scripts.pory"
 	.string "BEEEEEEEESSSSSSSSSSSSSSSSSSSSSS!$"
 
 Route102_Battle_Complete_Text_0:
-# 170 "data/maps/Route102/scripts.pory"
+# 194 "data/maps/Route102/scripts.pory"
 	.string "The Beedrills have disappeared!$"

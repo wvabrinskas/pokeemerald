@@ -111,6 +111,7 @@ Route102_Text_RouteSignPetalburg:
 `
 const BEEDRILL = 10
 const GENERICBALL = 11
+const PLAYER = OBJ_EVENT_ID_PLAYER
 
 script Route102_Player_Kicked_Ball {
 	if (flag(FLAG_ROUTE_102_BEE_BATTLE)) {
@@ -131,15 +132,33 @@ movement Route102_Beedrill_Movement {
 	step_end
 }
 
+movement Route102_Player_SeesBees_Movement {
+	emote_exclamation_mark
+	face_right
+	jump_in_place_right
+	delay_1
+	player_run_right
+	delay_2
+	face_left
+	player_run_left
+	delay_2
+	face_right
+	player_run_right
+	delay_2
+	face_left
+	player_run_left
+	delay_1
+	face_left
+	step_end
+}
+
 script Route102_Beedrill_Triggers {
-	#emote_exclamation_mark
 	fadescreen(FADE_TO_BLACK)
 	applymovement(BEEDRILL, Route102_Beedrill_Movement)
 	waitmovement(BEEDRILL)
-	hideobjectat(BEEDRILL, MAP_ROUTE102)
-	delay(5)
-	showobjectat(BEEDRILL, MAP_ROUTE102)
 	fadescreen(FADE_FROM_BLACK)
+	applymovement(PLAYER, Route102_Player_SeesBees_Movement)
+	waitmovement(PLAYER)
 	msgbox("BEEEEEEEESSSSSSSSSSSSSSSSSSSSSS!$", MSGBOX_AUTOCLOSE)
 	waitmessage
 	call(Route102_Battle_Beedrills)
@@ -152,7 +171,12 @@ script Route102_Battle_Beedrills {
 	waitmoncry
 	setwildbattle(SPECIES_BEEDRILL, 15, ITEM_FULL_RESTORE)
 	dowildbattle
-	call(Route102_Battle_Complete)
+	specialvar(VAR_RESULT, GetBattleOutcome)
+	if (var(VAR_RESULT) != B_OUTCOME_LOST) {
+		call(Route102_Battle_Complete)
+		return
+	}
+	return
 }
 
 script Route102_Hide_Beedrills {	
