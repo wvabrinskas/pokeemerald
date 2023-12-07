@@ -1,7 +1,5 @@
 raw `
 Route102_MapScripts::
-	map_script MAP_SCRIPT_ON_RESUME, Route102_On_Resume
-	map_script MAP_SCRIPT_ON_TRANSITION, Route102_On_Transition
 	.byte 0
 
 Route102_EventScript_LittleBoy::
@@ -126,20 +124,14 @@ script Route102_Player_Kicked_Ball {
 	end
 }
 
-script Route102_On_Resume {
-	hideobjectat(BEEDRILL, MAP_ROUTE102)
-}
-
-script Route102_On_Transition {
-	hideobjectat(BEEDRILL, MAP_ROUTE102)
+movement Route102_Beedrill_Movement {
+	walk_faster_down * 10
 }
 
 script Route102_Beedrill_Triggers {
-	// clearflag(FLAG_ROUTE_102_BEEDRILL_DISAPPEARED)
-	// clearflag(FLAG_ROUTE_102_BEE_BATTLE)
-
 	#emote_exclamation_mark
 	fadescreen(FADE_TO_BLACK)
+	clearflag(FLAG_ROUTE_102_BEEDRILL_DISAPPEARED)	
 	showobjectat(BEEDRILL, MAP_ROUTE102)
 	fadescreen(FADE_FROM_BLACK)
 	msgbox("BEEEEEEEESSSSSSSSSSSSSSSSSSSSSS!$")
