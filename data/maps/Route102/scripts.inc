@@ -246,6 +246,14 @@ Route102_Beedrill_Movement:
 	walk_faster_down
 # 129 "data/maps/Route102/scripts.pory"
 	walk_faster_down
+# 129 "data/maps/Route102/scripts.pory"
+	walk_faster_down
+# 129 "data/maps/Route102/scripts.pory"
+	walk_faster_down
+# 129 "data/maps/Route102/scripts.pory"
+	walk_faster_down
+# 129 "data/maps/Route102/scripts.pory"
+	walk_faster_down
 # 130 "data/maps/Route102/scripts.pory"
 	unlock_anim
 # 131 "data/maps/Route102/scripts.pory"
@@ -254,61 +262,63 @@ Route102_Beedrill_Movement:
 Route102_Beedrill_Triggers::
 # 136 "data/maps/Route102/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 139 "data/maps/Route102/scripts.pory"
+# 137 "data/maps/Route102/scripts.pory"
 	applymovement 10, Route102_Beedrill_Movement
-# 140 "data/maps/Route102/scripts.pory"
+# 138 "data/maps/Route102/scripts.pory"
 	waitmovement 10
-# 141 "data/maps/Route102/scripts.pory"
+# 139 "data/maps/Route102/scripts.pory"
 	hideobjectat 10, MAP_ROUTE102
-# 142 "data/maps/Route102/scripts.pory"
+# 140 "data/maps/Route102/scripts.pory"
 	delay 5
-# 143 "data/maps/Route102/scripts.pory"
+# 141 "data/maps/Route102/scripts.pory"
 	showobjectat 10, MAP_ROUTE102
-# 144 "data/maps/Route102/scripts.pory"
+# 142 "data/maps/Route102/scripts.pory"
 	fadescreen FADE_FROM_BLACK
+# 143 "data/maps/Route102/scripts.pory"
+	msgbox Route102_Beedrill_Triggers_Text_0, MSGBOX_AUTOCLOSE
+# 144 "data/maps/Route102/scripts.pory"
+	waitmessage
 # 145 "data/maps/Route102/scripts.pory"
-	setobjectmovementtype 10, MOVEMENT_TYPE_NONE
-# 146 "data/maps/Route102/scripts.pory"
-	msgbox Route102_Beedrill_Triggers_Text_0
-# 147 "data/maps/Route102/scripts.pory"
 	call Route102_Battle_Beedrills
 	return
 
 
 Route102_Battle_Beedrills::
-# 151 "data/maps/Route102/scripts.pory"
+# 149 "data/maps/Route102/scripts.pory"
+	setobjectmovementtype 10, MOVEMENT_TYPE_NONE
+# 150 "data/maps/Route102/scripts.pory"
 	playmoncry SPECIES_BEEDRILL, CRY_MODE_ENCOUNTER
-# 152 "data/maps/Route102/scripts.pory"
+# 151 "data/maps/Route102/scripts.pory"
 	delay 40
-# 153 "data/maps/Route102/scripts.pory"
+# 152 "data/maps/Route102/scripts.pory"
 	waitmoncry
-# 154 "data/maps/Route102/scripts.pory"
+# 153 "data/maps/Route102/scripts.pory"
 	setwildbattle SPECIES_BEEDRILL, 15, ITEM_FULL_RESTORE
-# 155 "data/maps/Route102/scripts.pory"
+# 154 "data/maps/Route102/scripts.pory"
 	dowildbattle
-# 156 "data/maps/Route102/scripts.pory"
+# 155 "data/maps/Route102/scripts.pory"
 	call Route102_Battle_Complete
 	return
 
 
 Route102_Hide_Beedrills::
-# 160 "data/maps/Route102/scripts.pory"
+# 159 "data/maps/Route102/scripts.pory"
 	removeobject 10
-# 161 "data/maps/Route102/scripts.pory"
+# 160 "data/maps/Route102/scripts.pory"
 	removeobject 11
 	return
 
 
 Route102_Battle_Complete::
-# 167 "data/maps/Route102/scripts.pory"
+# 166 "data/maps/Route102/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 168 "data/maps/Route102/scripts.pory"
+# 167 "data/maps/Route102/scripts.pory"
 	call Route102_Hide_Beedrills
-# 169 "data/maps/Route102/scripts.pory"
+# 168 "data/maps/Route102/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 171 "data/maps/Route102/scripts.pory"
+# 170 "data/maps/Route102/scripts.pory"
 	msgbox Route102_Battle_Complete_Text_0, MSGBOX_AUTOCLOSE
-# 172 "data/maps/Route102/scripts.pory"
+# 171 "data/maps/Route102/scripts.pory"
 	waitmessage
 	return
 
@@ -318,9 +328,9 @@ Route102_Player_Kicked_Ball_Text_0:
 	.string "You kicked the ball.....$"
 
 Route102_Beedrill_Triggers_Text_0:
-# 146 "data/maps/Route102/scripts.pory"
+# 143 "data/maps/Route102/scripts.pory"
 	.string "BEEEEEEEESSSSSSSSSSSSSSSSSSSSSS!$"
 
 Route102_Battle_Complete_Text_0:
-# 171 "data/maps/Route102/scripts.pory"
+# 170 "data/maps/Route102/scripts.pory"
 	.string "The Beedrills have disappeared!$"
