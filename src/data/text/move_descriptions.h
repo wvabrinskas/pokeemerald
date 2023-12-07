@@ -758,7 +758,7 @@ static const u8 sSludgeBombDescription[] = _(
     "damage. May also poison.");
 
 static const u8 sMudSlapDescription[] = _(
-    "Hurls mud in the foe's face\n"
+    "Hurls shit in the foe's face\n"
     "to reduce its accuracy.");
 
 static const u8 sOctazookaDescription[] = _(
@@ -1612,7 +1612,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SWEET_KISS - 1] = sSweetKissDescription,
     [MOVE_BELLY_DRUM - 1] = sBellyDrumDescription,
     [MOVE_SLUDGE_BOMB - 1] = sSludgeBombDescription,
-    [MOVE_MUD_SLAP - 1] = sMudSlapDescription,
+    [MOVE_SHIT_ATTACK - 1] = sMudSlapDescription,
     [MOVE_OCTAZOOKA - 1] = sOctazookaDescription,
     [MOVE_SPIKES - 1] = sSpikesDescription,
     [MOVE_ZAP_CANNON - 1] = sZapCannonDescription,

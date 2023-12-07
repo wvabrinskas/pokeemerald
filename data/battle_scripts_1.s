@@ -3832,7 +3832,6 @@ BattleScript_DoTooBaked::
 	cancelmultiturnmoves BS_ATTACKER
 	printstring STRINGID_ITSTOOBAKED
 	waitmessage B_WAIT_TIME_LONG
-	effectivenesssound
 	waitstate
 	datahpupdate BS_ATTACKER
 	resultmessage

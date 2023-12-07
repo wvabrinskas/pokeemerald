@@ -240,7 +240,7 @@ static const struct TrainerHillFloor sFloors_JPDefault[] = {
                     [2] = {
                         .species = SPECIES_BALTOY,
                         .heldItem = ITEM_PERSIM_BERRY,
-                        .moves = { MOVE_PSYBEAM, MOVE_ROCK_TOMB, MOVE_MUD_SLAP, MOVE_HARDEN },
+                        .moves = { MOVE_PSYBEAM, MOVE_ROCK_TOMB, MOVE_SHIT_ATTACK, MOVE_HARDEN },
                         .hpEV = 100,
                         .attackEV = 100,
                         .defenseEV = 100,
@@ -554,7 +554,7 @@ static const struct TrainerHillFloor sFloors_Normal[] =
                     {
                         .species = SPECIES_MACHOKE,
                         .heldItem = ITEM_BLACK_BELT,
-                        .moves = {MOVE_DYNAMIC_PUNCH, MOVE_MUD_SLAP, MOVE_COUNTER, MOVE_SCARY_FACE},
+                        .moves = {MOVE_DYNAMIC_PUNCH, MOVE_SHIT_ATTACK, MOVE_COUNTER, MOVE_SCARY_FACE},
                         .hpEV = 255,
                         .attackEV = 255,
                         .otId = TRAINER_HILL_OTID,
@@ -997,7 +997,7 @@ static const struct TrainerHillFloor sFloors_Normal[] =
                     {
                         .species = SPECIES_LICKITUNG,
                         .heldItem = ITEM_CHESTO_BERRY,
-                        .moves = {MOVE_BELLY_DRUM, MOVE_REST, MOVE_MUD_SLAP, MOVE_SWAGGER},
+                        .moves = {MOVE_BELLY_DRUM, MOVE_REST, MOVE_SHIT_ATTACK, MOVE_SWAGGER},
                         .hpEV = 250,
                         .defenseEV = 130,
                         .spDefenseEV = 130,
@@ -1017,7 +1017,7 @@ static const struct TrainerHillFloor sFloors_Normal[] =
                     {
                         .species = SPECIES_SLOWBRO,
                         .heldItem = ITEM_LEFTOVERS,
-                        .moves = {MOVE_BELLY_DRUM, MOVE_MUD_SLAP, MOVE_SWAGGER, MOVE_AMNESIA},
+                        .moves = {MOVE_BELLY_DRUM, MOVE_SHIT_ATTACK, MOVE_SWAGGER, MOVE_AMNESIA},
                         .hpEV = 250,
                         .defenseEV = 130,
                         .spDefenseEV = 130,
@@ -1037,7 +1037,7 @@ static const struct TrainerHillFloor sFloors_Normal[] =
                     {
                         .species = SPECIES_LINOONE,
                         .heldItem = ITEM_LUM_BERRY,
-                        .moves = {MOVE_BELLY_DRUM, MOVE_REST, MOVE_MUD_SLAP, MOVE_SWAGGER},
+                        .moves = {MOVE_BELLY_DRUM, MOVE_REST, MOVE_SHIT_ATTACK, MOVE_SWAGGER},
                         .hpEV = 250,
                         .defenseEV = 130,
                         .spDefenseEV = 130,

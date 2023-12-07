@@ -3074,7 +3074,7 @@ static const u16 sBattleFrontier_TutorMoves2[] =
 {
     MOVE_DEFENSE_CURL,
     MOVE_SNORE,
-    MOVE_MUD_SLAP,
+    MOVE_SHIT_ATTACK,
     MOVE_SWIFT,
     MOVE_ICY_WIND,
     MOVE_ENDURE,

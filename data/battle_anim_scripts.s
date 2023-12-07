@@ -205,7 +205,7 @@ gBattleAnims_Moves::
 	.4byte Move_SWEET_KISS
 	.4byte Move_BELLY_DRUM
 	.4byte Move_SLUDGE_BOMB
-	.4byte Move_MUD_SLAP
+	.4byte Move_SHIT_ATTACK
 	.4byte Move_OCTAZOOKA
 	.4byte Move_SPIKES
 	.4byte Move_ZAP_CANNON
@@ -5213,7 +5213,7 @@ SandAttackDirt:
 	delay 2
 	return
 
-Move_MUD_SLAP:
+Move_SHIT_ATTACK:
 	loadspritegfx ANIM_TAG_MUD_SAND
 	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_ATTACKER
 	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, -10, 0, 0, 3

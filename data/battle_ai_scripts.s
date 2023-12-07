@@ -1742,7 +1742,6 @@ AI_CV_Encore_EncouragedMovesToEncore:
 	.byte EFFECT_SUPER_FANG
 	.byte EFFECT_SPECIAL_DEFENSE_UP_2
 	.byte EFFECT_CONFUSE
-	.byte EFFECT_BAKED
 	.byte EFFECT_POISON
 	.byte EFFECT_PARALYZE
 	.byte EFFECT_LEECH_SEED
@@ -1791,6 +1790,7 @@ AI_CV_Encore_EncouragedMovesToEncore:
 	.byte EFFECT_WATER_SPORT
 	.byte EFFECT_DRAGON_DANCE
 	.byte EFFECT_CAMOUFLAGE
+	.byte EFFECT_BAKED
 	.byte -1
 
 AI_CV_PainSplit:
@@ -2694,7 +2694,6 @@ AI_SetupFirstTurn_SetupEffectsToEncourage:
 	.byte EFFECT_SPECIAL_DEFENSE_UP_2
 	.byte EFFECT_FOCUS_ENERGY
 	.byte EFFECT_CONFUSE
-	.byte EFFECT_BAKED
 	.byte EFFECT_ATTACK_UP_2
 	.byte EFFECT_DEFENSE_UP_2
 	.byte EFFECT_SPEED_UP_2
@@ -2731,6 +2730,7 @@ AI_SetupFirstTurn_SetupEffectsToEncourage:
 	.byte EFFECT_BULK_UP
 	.byte EFFECT_CALM_MIND
 	.byte EFFECT_CAMOUFLAGE
+	.byte EFFECT_BAKED
 	.byte -1
 
 @ ~60% chance to prefer moves that do 0 or 1 damage, or are in sIgnoredPowerfulMoveEffects
@@ -2760,7 +2760,6 @@ AI_Risky_EffectsToEncourage:
 	.byte EFFECT_OHKO
 	.byte EFFECT_HIGH_CRITICAL
 	.byte EFFECT_CONFUSE
-	.byte EFFECT_BAKED
 	.byte EFFECT_METRONOME
 	.byte EFFECT_PSYWAVE
 	.byte EFFECT_COUNTER
@@ -2774,6 +2773,7 @@ AI_Risky_EffectsToEncourage:
 	.byte EFFECT_FOCUS_PUNCH
 	.byte EFFECT_REVENGE
 	.byte EFFECT_TEETER_DANCE
+	.byte EFFECT_BAKED
 	.byte -1
 
 AI_PreferBatonPass:
@@ -3189,7 +3189,6 @@ AI_HPAware_DiscouragedEffectsWhenTargetLowHP:
 	.byte EFFECT_MIST
 	.byte EFFECT_FOCUS_ENERGY
 	.byte EFFECT_CONFUSE
-	.byte EFFECT_BAKED
 	.byte EFFECT_ATTACK_UP_2
 	.byte EFFECT_DEFENSE_UP_2
 	.byte EFFECT_SPEED_UP_2
@@ -3223,6 +3222,7 @@ AI_HPAware_DiscouragedEffectsWhenTargetLowHP:
 	.byte EFFECT_BULK_UP
 	.byte EFFECT_CALM_MIND
 	.byte EFFECT_DRAGON_DANCE
+	.byte EFFECT_BAKED
 	.byte -1
 
 @ Given the AI_TryOnAlly at the beginning it's possible that this was the start of a more

@@ -1518,7 +1518,7 @@ static const struct BardSoundTemplate sBardSoundTemplates_Moves[MOVES_COUNT][MAX
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
-    [MOVE_MUD_SLAP] = {
+    [MOVE_SHIT_ATTACK] = {
         { .songId = PHONEME_ID(PH_STRUT_SOLO) },
         { .songId = PHONEME_ID(PH_TRAP_BLEND) },
         PREV_BARD_SOUND,
