@@ -125,20 +125,27 @@ script Route102_Player_Kicked_Ball {
 }
 
 movement Route102_Beedrill_Movement {
-	walk_faster_down * 10
+	lock_anim
+	walk_faster_down * 2
+	unlock_anim
+	step_end
 }
 
 script Route102_Beedrill_Triggers {
 	#emote_exclamation_mark
 	fadescreen(FADE_TO_BLACK)
-	clearflag(FLAG_ROUTE_102_BEEDRILL_DISAPPEARED)	
+	applymovement(BEEDRILL, Route102_Beedrill_Movement)
+	waitmovement(BEEDRILL)
+	hideobjectat(BEEDRILL, MAP_ROUTE102)
+	delay(5)
 	showobjectat(BEEDRILL, MAP_ROUTE102)
 	fadescreen(FADE_FROM_BLACK)
-	msgbox("BEEEEEEEESSSSSSSSSSSSSSSSSSSSSS!$")
+	msgbox("BEEEEEEEESSSSSSSSSSSSSSSSSSSSSS!$", MSGBOX_AUTOCLOSE)
 	call(Route102_Battle_Beedrills)
 }
 
 script Route102_Battle_Beedrills {
+	setobjectmovementtype(BEEDRILL, MOVEMENT_TYPE_NONE)
 	playmoncry(SPECIES_BEEDRILL, CRY_MODE_ENCOUNTER)
 	delay(40)
 	waitmoncry
