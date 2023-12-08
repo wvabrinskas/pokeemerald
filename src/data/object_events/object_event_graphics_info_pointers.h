@@ -247,6 +247,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvi
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Beedrill;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GenericBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SevenElevenSign;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Luke;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -491,6 +492,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BEEDRILL] =                 &gObjectEventGraphicsInfo_Beedrill,
     [OBJ_EVENT_GFX_GENERIC_BALL] =             &gObjectEventGraphicsInfo_GenericBall,
     [OBJ_EVENT_GFX_SEVEN_ELEVEN_SIGN] =        &gObjectEventGraphicsInfo_SevenElevenSign,
+    [OBJ_EVENT_GFX_LUKE] =                     &gObjectEventGraphicsInfo_Luke,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
