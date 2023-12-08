@@ -7,7 +7,7 @@ ALIGNED(4)
 // Custom
 const u8 gText_Luke_MetFirstTime[] = _("I'm Luke!! I got that FIRE TRUMPET FIRE!\nCome look at my stuff!");
 const u8 gText_Luke_InMart[] = _("Welcome back!! Come look at my \nTRUMPET FIRE stuff!");
-const u8 gText_Luke_InMart_End[] = _("Come again for that BLACK MAMBA FIRE!!!");
+const u8 gText_Luke_InMart_End[] = _("Come again for that FIRE BLACK MAMBA!!!");
 
 const u8 gText_ExpandedPlaceholder_Empty[] = _("");
 const u8 gText_ExpandedPlaceholder_Kun[] = _("");
