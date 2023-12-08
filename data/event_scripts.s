@@ -654,6 +654,7 @@ EventScript_SetBrineyLocation_Route109::
 	.include "data/scripts/record_mix.inc"
 	.include "data/scripts/pc.inc"
 
+
 @ scripts/notices.inc? signs.inc? See comment about text/notices.inc
 Common_EventScript_ShowPokemartSign::
 	msgbox gText_PokemartSign, MSGBOX_SIGN

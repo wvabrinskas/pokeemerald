@@ -3,7 +3,7 @@
 
 // Custom
 extern const u8 gText_Luke_MetFirstTime[];
-extern const u8 gText_Luke_InMart[];
+extern const u8 gText_Luke_Littleroot[];
 extern const u8 gText_Luke_InMart_End[];
 // Placeholders
 extern const u8 gText_ExpandedPlaceholder_Empty[];

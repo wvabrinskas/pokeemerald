@@ -1,3 +1,13 @@
+Common_EventScript_Luke::
+	call_if_unset FLAG_MET_LUKE EventScript_LukeFirstMet
+	return
+
+
+EventScript_LukeFirstMet:
+	msgbox gText_Luke_MetFirstTime, MSGBOX_DEFAULT
+	return
+
+
 Common_EventScript_PkmnCenterNurse::
 	lock
 	faceplayer

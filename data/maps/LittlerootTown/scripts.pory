@@ -1023,8 +1023,8 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 `
 
 script LittlerootTown_Luke {
-    openluke(Littleroot_Luke_Items)
-    end
+	openluke(Littleroot_Luke_Items, gText_Luke_Littleroot)
+  end
 }
 
 mart Littleroot_Luke_Items {

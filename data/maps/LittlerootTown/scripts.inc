@@ -2043,7 +2043,7 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 
 LittlerootTown_Luke::
 # 1026 "data/maps/LittlerootTown/scripts.pory"
-	openluke Littleroot_Luke_Items
+	openluke Littleroot_Luke_Items, gText_Luke_Littleroot
 	end
 
 
