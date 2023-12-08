@@ -758,6 +758,10 @@ static const struct SpriteFrameImage sPicTable_GenericBall[] = {
     obj_frame_tiles(gObjectEventPic_GenericBall),
 };
 
+static const struct SpriteFrameImage sPicTable_SevenElevenSign[] = {
+    obj_frame_tiles(gObjectEventPic_SevenElevenSign),
+};
+
 static const struct SpriteFrameImage sPicTable_ProfBirch[] = {
     overworld_frame(gObjectEventPic_ProfBirch, 2, 4, 0),
     overworld_frame(gObjectEventPic_ProfBirch, 2, 4, 1),
