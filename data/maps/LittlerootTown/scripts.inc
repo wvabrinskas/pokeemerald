@@ -2040,3 +2040,24 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 # 1021 "data/maps/LittlerootTown/scripts.pory"
 	.string "Let's go to my LAB.$"
+
+LittlerootTown_Luke::
+# 1026 "data/maps/LittlerootTown/scripts.pory"
+	openluke Littleroot_Luke_Items
+	end
+
+
+	.align 2
+# 1030 "data/maps/LittlerootTown/scripts.pory"
+Littleroot_Luke_Items:
+# 1031 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_LAVA_COOKIE
+# 1032 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_MOOMOO_MILK
+# 1033 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_RARE_CANDY
+# 1034 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_LEMONADE
+# 1035 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_BERRY_JUICE
+	.2byte ITEM_NONE

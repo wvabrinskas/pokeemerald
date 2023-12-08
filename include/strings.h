@@ -1,6 +1,10 @@
 #ifndef GUARD_STRINGS_H
 #define GUARD_STRINGS_H
 
+// Custom
+extern const u8 gText_Luke_MetFirstTime[];
+extern const u8 gText_Luke_InMart[];
+extern const u8 gText_Luke_InMart_End[];
 // Placeholders
 extern const u8 gText_ExpandedPlaceholder_Empty[];
 extern const u8 gText_ExpandedPlaceholder_Kun[];

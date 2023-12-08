@@ -1021,3 +1021,16 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "Let's go to my LAB.$"
 
 `
+
+script LittlerootTown_Luke {
+    openluke(Littleroot_Luke_Items)
+    end
+}
+
+mart Littleroot_Luke_Items {
+	ITEM_LAVA_COOKIE
+	ITEM_MOOMOO_MILK
+	ITEM_RARE_CANDY
+	ITEM_LEMONADE
+	ITEM_BERRY_JUICE
+}

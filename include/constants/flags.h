@@ -740,7 +740,7 @@
 #define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
 #define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
 #define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
-#define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
+#define FLAG_MET_LUKE      0x2B8 // Unused Flag
 #define FLAG_ROUTE_102_BEE_BATTLE                                   0x2B9 // Determines if youve encountered the beedrills in Route 102
 #define FLAG_ROUTE_102_BEEDRILL_DISAPPEARED                         0x2BA // Unused Flag
 #define FLAG_ROUTE_102_PLAYER_KICKED_BALL                           0x2BB

@@ -1104,6 +1104,16 @@
 	.4byte \text
 	.endm
 
+	@ Opens the Luke Pokemart system, offering the specified products for sale.
+	@ Products should be a list of .2byte item values preceded by an .align 2
+	.macro openluke products:req
+	lock
+	msgbox gText_Luke_InMart
+	pokemart \products
+	msgbox gText_Luke_InMart_End
+	release
+	.endm
+
 	@ Opens the Pokemart system, offering the specified products for sale.
 	@ Products should be a list of .2byte item values preceded by an .align 2
 	.macro pokemart products:req
