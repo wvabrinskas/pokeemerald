@@ -657,3 +657,11 @@ MagmaHideout_4F_EventScript_ItemMaxRevive::
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
 	end
+
+PAHome_UpperFirePit_ItemBall::
+	finditem ITEM_TM_EARTHQUAKE
+	end
+
+PAHome_LowerFirePit_ItemBall::
+	finditem ITEM_FIRE_STONE
+	end

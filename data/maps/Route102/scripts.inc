@@ -229,8 +229,10 @@ Route102_Player_Kicked_Ball::
 # 122 "data/maps/Route102/scripts.pory"
 	waitmessage
 # 123 "data/maps/Route102/scripts.pory"
-	call Route102_Beedrill_Triggers
+	removeobject 11
 # 124 "data/maps/Route102/scripts.pory"
+	call Route102_Beedrill_Triggers
+# 125 "data/maps/Route102/scripts.pory"
 	release
 	end
 
@@ -238,61 +240,59 @@ Route102_Player_Kicked_Ball_2:
 	return
 
 
-# 128 "data/maps/Route102/scripts.pory"
-Route102_Beedrill_Movement:
 # 129 "data/maps/Route102/scripts.pory"
+Route102_Beedrill_Movement:
+# 130 "data/maps/Route102/scripts.pory"
 	lock_anim
-# 130 "data/maps/Route102/scripts.pory"
-	walk_faster_down
-# 130 "data/maps/Route102/scripts.pory"
-	walk_faster_down
-# 130 "data/maps/Route102/scripts.pory"
-	walk_faster_down
-# 130 "data/maps/Route102/scripts.pory"
-	walk_faster_down
-# 130 "data/maps/Route102/scripts.pory"
-	walk_faster_down
-# 130 "data/maps/Route102/scripts.pory"
+# 131 "data/maps/Route102/scripts.pory"
 	walk_faster_down
 # 131 "data/maps/Route102/scripts.pory"
-	unlock_anim
+	walk_faster_down
+# 131 "data/maps/Route102/scripts.pory"
+	walk_faster_down
+# 131 "data/maps/Route102/scripts.pory"
+	walk_faster_down
+# 131 "data/maps/Route102/scripts.pory"
+	walk_faster_down
+# 131 "data/maps/Route102/scripts.pory"
+	walk_faster_down
 # 132 "data/maps/Route102/scripts.pory"
+	unlock_anim
+# 133 "data/maps/Route102/scripts.pory"
 	step_end
 
-# 135 "data/maps/Route102/scripts.pory"
-Route102_Player_SeesBees_Movement:
 # 136 "data/maps/Route102/scripts.pory"
-	emote_exclamation_mark
+Route102_Player_SeesBees_Movement:
 # 137 "data/maps/Route102/scripts.pory"
-	face_right
+	emote_exclamation_mark
 # 138 "data/maps/Route102/scripts.pory"
-	jump_in_place_right
+	jump_in_place_down
 # 139 "data/maps/Route102/scripts.pory"
 	delay_1
 # 140 "data/maps/Route102/scripts.pory"
-	player_run_right
+	player_run_down
 # 141 "data/maps/Route102/scripts.pory"
 	delay_2
 # 142 "data/maps/Route102/scripts.pory"
 	face_left
 # 143 "data/maps/Route102/scripts.pory"
-	player_run_left
+	player_run_up
 # 144 "data/maps/Route102/scripts.pory"
 	delay_2
 # 145 "data/maps/Route102/scripts.pory"
 	face_right
 # 146 "data/maps/Route102/scripts.pory"
-	player_run_right
+	player_run_down
 # 147 "data/maps/Route102/scripts.pory"
 	delay_2
 # 148 "data/maps/Route102/scripts.pory"
 	face_left
 # 149 "data/maps/Route102/scripts.pory"
-	player_run_left
+	player_run_up
 # 150 "data/maps/Route102/scripts.pory"
 	delay_1
 # 151 "data/maps/Route102/scripts.pory"
-	face_left
+	face_original_direction
 # 152 "data/maps/Route102/scripts.pory"
 	step_end
 

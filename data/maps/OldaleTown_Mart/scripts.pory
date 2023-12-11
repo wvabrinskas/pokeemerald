@@ -71,16 +71,3 @@ OldaleTown_Mart_Text_RestoreHPWithPotion:
 	.string "To prevent your POKéMON from fainting,\n"
 	.string "restore its HP with a POTION.$"
 `
-
-script OldaleTown_Mart_Luke {
-	openluke(Littleroot_Luke_Items, gText_Luke_Littleroot)
-  end
-}
-
-mart OldaleTown_Mart_Luke_Items {
-	ITEM_LAVA_COOKIE
-	ITEM_MOOMOO_MILK
-	ITEM_RARE_CANDY
-	ITEM_LEMONADE
-	ITEM_BERRY_JUICE
-}

@@ -11491,6 +11491,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_PAHOUSE",
+          "base_label": "gPAHouse0",
+          "land_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 16,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 16,
+                "max_level": 16,
+                "species": "SPECIES_TAUROS"
+              },
+              {
+                "min_level": 5,
+                "max_level": 25,
+                "species": "SPECIES_BAGON"
+              },
+              {
+                "min_level": 15,
+                "max_level": 50,
+                "species": "SPECIES_VENOMOTH"
+              },
+              {
+                "min_level": 15,
+                "max_level": 50,
+                "species": "SPECIES_ZIGZAGOON"
+              },
+              {
+                "min_level": 25,
+                "max_level": 50,
+                "species": "SPECIES_POLITOED"
+              },
+              {
+                "min_level": 5,
+                "max_level": 16,
+                "species": "SPECIES_TREECKO"
+              },
+              {
+                "min_level": 5,
+                "max_level": 16,
+                "species": "SPECIES_MUDKIP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 16,
+                "species": "SPECIES_TORCHIC"
+              },
+              {
+                "min_level": 25,
+                "max_level": 50,
+                "species": "SPECIES_BEEDRILL"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_MEWTWO"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_MEW"
+              }
+            ]
+          }
         }
       ]
     },

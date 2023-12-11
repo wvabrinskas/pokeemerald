@@ -737,9 +737,9 @@
 #define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
 #define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
 #define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
-#define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
-#define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
-#define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
+#define FLAG_PA_HOME_PLAYER_KICKED_BALL    0x2B5 // Unused Flag
+#define FLAG_PA_HOME_BEEDRILL_DISAPPEARED  0x2B6 // Unused Flag
+#define FLAG_PA_HOME_BEE_BATTLE            0x2B7 // Unused Flag
 #define FLAG_MET_LUKE      0x2B8 // Unused Flag
 #define FLAG_ROUTE_102_BEE_BATTLE                                   0x2B9 // Determines if youve encountered the beedrills in Route 102
 #define FLAG_ROUTE_102_BEEDRILL_DISAPPEARED                         0x2BA // Unused Flag
@@ -1221,8 +1221,8 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                   0x493 // Determines if youve encountered the beedrills in Route 102
-#define FLAG_UNUSED_0x494                         0x494 // Unused Flag
+#define FLAG_ITEM_PA_HOME_EARTHQUAKE                                0x493 // Determines if youve encountered the beedrills in Route 102
+#define FLAG_ITEM_PA_HOME_FIRE_STONE                                0x494 // Unused Flag
 #define FLAG_UNUSED_0x495                           0x495 // Player kicked ball in route 102
 #define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag

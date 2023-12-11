@@ -120,6 +120,7 @@ script Route102_Player_Kicked_Ball {
 	lock
 	msgbox("You kicked the ball.....$", MSGBOX_AUTOCLOSE)
 	waitmessage
+	removeobject(GENERICBALL)
 	call(Route102_Beedrill_Triggers)
 	release
 	end
@@ -134,21 +135,20 @@ movement Route102_Beedrill_Movement {
 
 movement Route102_Player_SeesBees_Movement {
 	emote_exclamation_mark
-	face_right
-	jump_in_place_right
+	jump_in_place_down
 	delay_1
-	player_run_right
+	player_run_down
 	delay_2
 	face_left
-	player_run_left
+	player_run_up
 	delay_2
 	face_right
-	player_run_right
+	player_run_down
 	delay_2
 	face_left
-	player_run_left
+	player_run_up
 	delay_1
-	face_left
+	face_original_direction
 	step_end
 }
 

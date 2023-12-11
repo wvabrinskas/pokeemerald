@@ -1,0 +1,91 @@
+
+const BEEDRILL_PA = 2
+const GENERICBALL_PA = 1
+const PLAYER = OBJ_EVENT_ID_PLAYER
+
+mapscripts PAHouse_MapScripts {}
+
+script PAHome_Player_Kicked_Ball {
+	if (flag(FLAG_PA_HOME_BEE_BATTLE)) {
+		return
+	}
+	lock
+	msgbox("You kicked the ball.....$", MSGBOX_AUTOCLOSE)
+	waitmessage
+	removeobject(GENERICBALL_PA)
+	call(PAHome_Beedrill_Triggers)
+	release
+	end
+}
+
+movement PAHome_Beedrill_Movement {
+	lock_anim
+	walk_faster_down * 8
+	unlock_anim
+	step_end
+}
+
+movement PAHome_Player_SeesBees_Movement {
+	emote_exclamation_mark
+	jump_in_place_left
+	delay_1
+	jump_in_place_right
+	delay_2
+	jump_in_place_left
+	delay_2
+	jump_in_place_right
+	delay_2
+	jump_in_place_left
+	delay_1
+	face_original_direction
+	step_end
+}
+
+script PAHome_Beedrill_Triggers {
+	fadescreen(FADE_TO_BLACK)
+	applymovement(BEEDRILL_PA, PAHome_Beedrill_Movement)
+	waitmovement(BEEDRILL_PA)
+	fadescreen(FADE_FROM_BLACK)
+	applymovement(PLAYER, PAHome_Player_SeesBees_Movement)
+	waitmovement(PLAYER)
+	msgbox("BEEEEEEEESSSSSSSSSSSSSSSSSSSSSS!$", MSGBOX_AUTOCLOSE)
+	waitmessage
+	call(PAHome_Battle_Beedrills)
+}
+
+script PAHome_Battle_Beedrills {
+	setobjectmovementtype(BEEDRILL_PA, MOVEMENT_TYPE_NONE)
+	playmoncry(SPECIES_BEEDRILL, CRY_MODE_ENCOUNTER)
+	delay(40)
+	waitmoncry
+	setwildbattle(SPECIES_BEEDRILL, 15, ITEM_FULL_RESTORE)
+	dowildbattle
+	specialvar(VAR_RESULT, GetBattleOutcome)
+	if (var(VAR_RESULT) != B_OUTCOME_LOST) {
+		call(PAHome_Battle_Complete)
+		return
+	}
+	return
+}
+
+script PAHome_Hide_Beedrills {	
+	removeobject(BEEDRILL_PA)
+	removeobject(GENERICBALL_PA)
+	setflag(FLAG_PA_HOME_BEEDRILL_DISAPPEARED)
+	setflag(FLAG_PA_HOME_PLAYER_KICKED_BALL)
+}
+
+script PAHome_Battle_Complete {
+	fadescreen(FADE_TO_BLACK)
+	call(PAHome_Hide_Beedrills)
+	fadescreen(FADE_FROM_BLACK)
+	setflag(FLAG_PA_HOME_BEE_BATTLE)
+	msgbox("The Beedrills have disappeared!$", MSGBOX_AUTOCLOSE)
+	waitmessage
+	return
+}
+
+script PAHome_Sign {
+  msgbox("Welcome to the PA House!$", MSGBOX_SIGN)
+  return
+}
