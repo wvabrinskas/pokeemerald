@@ -563,6 +563,14 @@ void CB2_BagMenuFromStartMenu(void)
     GoToBagMenu(ITEMMENULOCATION_FIELD, POCKETS_COUNT, CB2_ReturnToFieldWithOpenMenu);
 }
 
+void CB2_PCMenuFromStartMenu(void)
+{
+    // SetMainCallback2(CB2_Bag);
+    //GoToBagMenu(ITEMMENULOCATION_FIELD, POCKETS_COUNT, CB2_ReturnToFieldWithOpenMenu);
+    SetMainCallback2(CB2_ReturnToField);
+    ScriptContext_SetupScript(EventScript_PCFromStartMenu);
+}
+
 void CB2_BagMenuFromBattle(void)
 {
     if (!InBattlePyramid())

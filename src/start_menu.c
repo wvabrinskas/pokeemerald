@@ -680,8 +680,8 @@ static bool8 StartMenuBagCallback(void)
     if (!gPaletteFade.active)
     {
         PlayRainStoppingSoundEffect();
-        RemoveExtraStartMenuWindows();
-        CleanupOverworldWindowsAndTilemaps();
+       // RemoveExtraStartMenuWindows();
+        //CleanupOverworldWindowsAndTilemaps();
         SetMainCallback2(CB2_BagMenuFromStartMenu); // Display bag menu
 
         return TRUE;
@@ -698,7 +698,7 @@ static bool8 StartMenuPCCallback(void)
         PlayRainStoppingSoundEffect();
         RemoveExtraStartMenuWindows();
         CleanupOverworldWindowsAndTilemaps();
-       // SetMainCallback2(CB2_BagMenuFromStartMenu); // Display bag menu
+        SetMainCallback2(CB2_PCMenuFromStartMenu); // Display pc menu
 
         return TRUE;
     }
