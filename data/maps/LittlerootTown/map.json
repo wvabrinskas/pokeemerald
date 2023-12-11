@@ -17,6 +17,11 @@
       "map": "MAP_ROUTE101",
       "offset": 0,
       "direction": "up"
+    },
+    {
+      "map": "MAP_PAHOUSE",
+      "offset": -4,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -126,8 +131,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LUKE",
-      "x": 19,
-      "y": 14,
+      "x": 17,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,

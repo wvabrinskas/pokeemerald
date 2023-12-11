@@ -115,6 +115,7 @@ static void SpriteCB_FlyDestIcon(struct Sprite *sprite);
 static void CB_FadeInFlyMap(void);
 static void CB_HandleFlyMapInput(void);
 static void CB_ExitFlyMap(void);
+static void addFlyTag(u16 mapSecId, u16 canFlyFlag, u16 x, u16 y, u16 width, u16 height, u16 shape, u8 spriteId);
 
 static const u16 sRegionMapCursorPal[] = INCBIN_U16("graphics/pokenav/region_map/cursor.gbapal");
 static const u32 sRegionMapCursorSmallGfxLZ[] = INCBIN_U32("graphics/pokenav/region_map/cursor_small.4bpp.lz");
@@ -1178,6 +1179,8 @@ static u8 GetMapsecType(u16 mapSecId)
     {
     case MAPSEC_NONE:
         return MAPSECTYPE_NONE;
+    case MAPSEC_PA_HOUSE:
+        return FlagGet(FLAG_VISITED_PA_HOUSE) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
     case MAPSEC_LITTLEROOT_TOWN:
         return FlagGet(FLAG_VISITED_LITTLEROOT_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
     case MAPSEC_OLDALE_TOWN:
@@ -1850,6 +1853,14 @@ static void CreateFlyDestIcons(void)
     canFlyFlag = FLAG_VISITED_LITTLEROOT_TOWN;
     for (mapSecId = MAPSEC_LITTLEROOT_TOWN; mapSecId <= MAPSEC_EVER_GRANDE_CITY; mapSecId++)
     {
+        addFlyTag(mapSecId, canFlyFlag, x, y, width, height, shape, spriteId);
+        canFlyFlag++;
+    }
+
+    addFlyTag(MAPSEC_PA_HOUSE, FLAG_VISITED_PA_HOUSE, x, y, width, height, shape, spriteId);
+}
+
+static void addFlyTag(u16 mapSecId, u16 canFlyFlag, u16 x, u16 y, u16 width, u16 height, u16 shape, u8 spriteId) {
         GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
         x = (x + MAPCURSOR_X_MIN) * 8 + 4;
         y = (y + MAPCURSOR_Y_MIN) * 8 + 4;
@@ -1874,8 +1885,6 @@ static void CreateFlyDestIcons(void)
             StartSpriteAnim(&gSprites[spriteId], shape);
             gSprites[spriteId].sIconMapSec = mapSecId;
         }
-        canFlyFlag++;
-    }
 }
 
 // Draw a red outline box on the mapsec if its corresponding flag has been set
