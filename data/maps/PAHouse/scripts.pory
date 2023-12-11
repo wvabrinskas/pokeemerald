@@ -21,7 +21,7 @@ script PAHome_Player_Kicked_Ball {
 
 movement PAHome_Beedrill_Movement {
 	lock_anim
-	walk_faster_down * 8
+	set_visible
 	unlock_anim
 	step_end
 }
