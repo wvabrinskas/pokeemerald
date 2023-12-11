@@ -95,6 +95,7 @@ EWRAM_DATA static u8 sSaveInfoWindowId = 0;
 static bool8 StartMenuPokedexCallback(void);
 static bool8 StartMenuPokemonCallback(void);
 static bool8 StartMenuBagCallback(void);
+static bool8 StartMenuPCCallback(void);
 static bool8 StartMenuPokeNavCallback(void);
 static bool8 StartMenuPlayerNameCallback(void);
 static bool8 StartMenuSaveCallback(void);
@@ -326,6 +327,11 @@ static void BuildNormalStartMenu(void)
     }
 
     AddStartMenuAction(MENU_ACTION_BAG);
+
+    if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
+    {
+        AddStartMenuAction(MENU_ACTION_PC);
+    }
 
     if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     {
