@@ -2,6 +2,7 @@
 const BEEDRILL_PA = 2
 const GENERICBALL_PA = 1
 const PLAYER = OBJ_EVENT_ID_PLAYER
+const PORCUBRO = 7
 
 mapscripts PAHouse_MapScripts {}
 
@@ -88,4 +89,16 @@ script PAHome_Battle_Complete {
 script PAHome_Sign {
   msgbox("Welcome to the PA House!$", MSGBOX_SIGN)
   return
+}
+
+movement Porcubro {
+    face_player
+    step_end
+}
+
+script PAHome_Porcubro {
+    applymovement(PORCUBRO, Porcubro)
+    waitmovement(PORCUBRO)
+    msgbox("Porcubro is always here to chill!$", MSGBOX_DEFAULT)
+    return
 }

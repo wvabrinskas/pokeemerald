@@ -11505,13 +11505,13 @@
               },
               {
                 "min_level": 16,
-                "max_level": 16,
+                "max_level": 32,
                 "species": "SPECIES_TAUROS"
               },
               {
-                "min_level": 5,
-                "max_level": 25,
-                "species": "SPECIES_BAGON"
+                "min_level": 12,
+                "max_level": 100,
+                "species": "SPECIES_BEEDRILL"
               },
               {
                 "min_level": 15,
@@ -11546,7 +11546,7 @@
               {
                 "min_level": 25,
                 "max_level": 50,
-                "species": "SPECIES_BEEDRILL"
+                "species": "SPECIES_BAGON"
               },
               {
                 "min_level": 45,
