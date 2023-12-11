@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/PAHouse/border.bin",
       "blockdata_filepath": "data/layouts/PAHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE420",
+      "name": "Route420_Layout",
+      "width": 32,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route420/border.bin",
+      "blockdata_filepath": "data/layouts/Route420/map.bin"
     }
   ]
 }

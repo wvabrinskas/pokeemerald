@@ -19,8 +19,8 @@
       "direction": "up"
     },
     {
-      "map": "MAP_PAHOUSE",
-      "offset": -4,
+      "map": "MAP_ROUTE420",
+      "offset": 0,
       "direction": "right"
     }
   ],
