@@ -3833,8 +3833,6 @@ BattleScript_DoTooBaked::
 	printstring STRINGID_ITSTOOBAKED
 	waitmessage B_WAIT_TIME_LONG
 	waitstate
-	datahpupdate BS_ATTACKER
-	resultmessage
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 BattleScript_MoveUsedIsBakedRet::

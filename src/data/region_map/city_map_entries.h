@@ -8,7 +8,7 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
     {
         .mapSecId = MAPSEC_PA_HOUSE,
         .index = 0,
-        .tilemap = gPokenavCityMap_Littleroot_0,
+        .tilemap = gPokenavCityMap_Littleroot_0, // TODO_WV: ADD TILE MAP
     },
     {
         .mapSecId = MAPSEC_OLDALE_TOWN,

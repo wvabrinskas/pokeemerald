@@ -2018,7 +2018,7 @@ u8 AtkCanceller_UnableToUseMove(void)
                     }
                     else // nothing happens when a pokemon is too baked
                     {
-                        PREPARE_MON_NICK_BUFFER(gBattleTextBuff1, gBattlerAttacker, gBattlerPartyIndexes[gBattlerAttacker]);
+                        PREPARE_MON_NICK_BUFFER(gBattleTextBuff1, gBattlerAttacker, gBattlerPartyIndexes[gBattlerAttacker]); // sets the pokemons name in the message
                         gBattleCommunication[MULTISTRING_CHOOSER] = TRUE;
                         gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
                     }

@@ -2005,6 +2005,8 @@ static void CB_ExitFlyMap(void)
             {
                 switch (sFlyMap->regionMap.mapSecId)
                 {
+                case MAPSEC_PA_HOUSE:
+                    SetWarpDestinationToHealLocation(HEAL_LOCATION_PA_HOUSE);
                 case MAPSEC_SOUTHERN_ISLAND:
                     SetWarpDestinationToHealLocation(HEAL_LOCATION_SOUTHERN_ISLAND_EXTERIOR);
                     break;
