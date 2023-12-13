@@ -78,6 +78,8 @@ enum
 // IWRAM common
 COMMON_DATA bool8 (*gMenuCallback)(void) = NULL;
 
+static const u8 menuOffsetWithPCItem = 0;
+
 // EWRAM
 EWRAM_DATA static u8 sSafariBallsWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
@@ -464,7 +466,7 @@ static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
         y = (index << 4) + 9;
 
         if (ARRAY_COUNT(sCurrentStartMenuActions) > 9) {
-            y = (index << 4) + 2;
+            y = (index << 4) + menuOffsetWithPCItem;
         }
 
         if (sStartMenuItems[sCurrentStartMenuActions[index]].func.u8_void == StartMenuPlayerNameCallback)
@@ -508,7 +510,7 @@ static bool32 InitStartMenuStep(void)
         break;
     case 2:
         LoadMessageBoxAndBorderGfx();
-        DrawStdWindowFrame(AddStartMenuWindow(sNumStartMenuActions), FALSE);
+        DrawStdWindowFrame(AddStartMenuWindow(min(8, sNumStartMenuActions)), FALSE); // sets the height of the window
         sInitStartMenuData[1] = 0;
         sInitStartMenuData[0]++;
         break;
@@ -525,7 +527,7 @@ static bool32 InitStartMenuStep(void)
         break;
     case 5:
         if (ARRAY_COUNT(sCurrentStartMenuActions) > 9) {
-            yToMove = 2;
+            yToMove = menuOffsetWithPCItem;
         }
         sStartMenuCursorPos = InitMenuNormal(GetStartMenuWindowId(), FONT_NORMAL, 0, yToMove, 16, sNumStartMenuActions, sStartMenuCursorPos);
         CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_MAP);
