@@ -360,6 +360,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_TM48] = {gItemIcon_TM, gItemIconPalette_PsychicTMHM},
     [ITEM_TM49] = {gItemIcon_TM, gItemIconPalette_DarkTMHM},
     [ITEM_TM50] = {gItemIcon_TM, gItemIconPalette_FireTMHM},
+    [ITEM_TM51] = {gItemIcon_TM, gItemIconPalette_GrassTMHM},
     [ITEM_HM01] = {gItemIcon_HM, gItemIconPalette_NormalTMHM},
     [ITEM_HM02] = {gItemIcon_HM, gItemIconPalette_FlyingTMHM},
     [ITEM_HM03] = {gItemIcon_HM, gItemIconPalette_WaterTMHM},

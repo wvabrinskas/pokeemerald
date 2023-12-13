@@ -4537,4 +4537,15 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+    
+    [ITEM_TM_BLUNT_PASS] =
+    {
+        .name = _("TM51"),
+        .itemId = ITEM_TM51,
+        .price = 420,
+        .description = sTM51Desc,
+        .pocket = POCKET_TM_HM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+    },
 };

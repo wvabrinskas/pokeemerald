@@ -1367,6 +1367,10 @@ static const u8 sTM50Desc[] = _(
     "attack, but sharply\n"
     "lowers SP. ATK.");
 
+static const u8 sTM51Desc[] = _(
+    "Passes the blunt.\n"
+    "May make the\n"
+    "foe baked.");
 
 static const u8 sHM01Desc[] = _(
     "Attacks the foe\n"

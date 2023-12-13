@@ -16,6 +16,7 @@
 FOREACH_TM(EQUIV_TM)
 	enum_start ITEM_HM01
 FOREACH_HM(EQUIV_HM)
+
 #undef EQUIV_TM
 #undef EQUIV_HM
 
