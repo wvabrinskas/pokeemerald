@@ -4430,6 +4430,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route420/border.bin",
       "blockdata_filepath": "data/layouts/Route420/map.bin"
+    },
+    {
+      "id": "LAYOUT_INDOOR_PAHOUSE",
+      "name": "IndoorPAHouse_Layout",
+      "width": 32,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/IndoorPAHouse/border.bin",
+      "blockdata_filepath": "data/layouts/IndoorPAHouse/map.bin"
     }
   ]
 }

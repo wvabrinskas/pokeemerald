@@ -35,8 +35,6 @@ movement PAHome_Player_SeesBees_Movement {
 	jump_in_place_left
 	delay_2
 	jump_in_place_right
-	delay_2
-	jump_in_place_left
 	delay_1
 	face_original_direction
 	step_end
@@ -55,7 +53,8 @@ script PAHome_Beedrill_Triggers {
 }
 
 script PAHome_Battle_Beedrills {
-	setobjectmovementtype(BEEDRILL_PA, MOVEMENT_TYPE_NONE)
+	applymovement(BEEDRILL_PA, PAHome_Beedrill_Movement)
+	waitmovement(BEEDRILL_PA)
 	playmoncry(SPECIES_BEEDRILL, CRY_MODE_ENCOUNTER)
 	delay(40)
 	waitmoncry
@@ -87,8 +86,11 @@ script PAHome_Battle_Complete {
 }
 
 script PAHome_Sign {
+	lock 
   msgbox("Welcome to the PA House!$", MSGBOX_SIGN)
-  return
+	waitmessage
+	release
+  end
 }
 
 movement Porcubro {
@@ -97,8 +99,19 @@ movement Porcubro {
 }
 
 script PAHome_Porcubro {
+		lock
     applymovement(PORCUBRO, Porcubro)
     waitmovement(PORCUBRO)
     msgbox("Porcubro is always here to chill!$", MSGBOX_DEFAULT)
-    return
+		waitmessage
+		release
+    end
+}
+
+script PAHome_Lake_Sign {
+	lock
+  msgbox("Head to the lake!$", MSGBOX_SIGN)
+	waitmessage
+	release
+  end
 }

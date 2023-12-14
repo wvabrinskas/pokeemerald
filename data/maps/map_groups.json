@@ -2,6 +2,8 @@
   "group_order": [
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
+    "gMapGroup_IndoorPAHouse",
+    "gMapGroup_OutdoorPAHouse",
     "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorDewford",
     "gMapGroup_IndoorLavaridge",
@@ -102,6 +104,12 @@
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
     "LittlerootTown_ProfessorBirchsLab"
+  ],
+  "gMapGroup_IndoorPAHouse": [
+    "IndoorPAHouse"
+  ],
+  "gMapGroup_OutdoorPAHouse": [
+
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",

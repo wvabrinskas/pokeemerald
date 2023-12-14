@@ -1,0 +1,10 @@
+
+mapscripts Route420_MapScripts {}
+
+script Route420_Sign {
+  lock
+	msgbox("Route 420 - PA House", MSGBOX_SIGN)
+  waitmessage
+  release
+	end
+}

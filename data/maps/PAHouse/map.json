@@ -17,6 +17,11 @@
       "map": "MAP_LITTLEROOT_TOWN",
       "offset": 4,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE420",
+      "offset": 6,
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -108,12 +113,25 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "PAHome_Porcubro",
       "flag": "0"
     }
   ],
   "warp_events": [
-
+    {
+      "x": 62,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_PAHOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 25,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_INDOOR_PAHOUSE",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
@@ -126,6 +144,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PAHome_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 63,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PAHome_Lake_Sign"
     }
   ]
 }

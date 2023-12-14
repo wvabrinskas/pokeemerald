@@ -1,0 +1,10 @@
+mapscripts IndoorPAHouse_MapScripts {}
+//GIANT SCHLONG STEVE!!!\n*DING*. *Steve is in disgust*.$
+
+script IndoorPAHouse_TV {
+  lock
+	msgbox("GIANT SCHLONG STEVE!!!\pDING!\p Steve is in disgust.$", MSGBOX_SIGN)
+  waitmessage
+  release
+	end
+}

@@ -1063,3 +1063,5 @@ Common_EventScript_LegendaryFlewAway::
 
 
 	.include "data/maps/Route420/scripts.inc"
+
+	.include "data/maps/IndoorPAHouse/scripts.inc"

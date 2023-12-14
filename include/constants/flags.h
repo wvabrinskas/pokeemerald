@@ -736,7 +736,7 @@
 #define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
 #define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
 #define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
-#define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
+#define FLAG_OVERRIDE_HM_REQS  0x2B4 // Unused Flag
 #define FLAG_PA_HOME_PLAYER_KICKED_BALL    0x2B5 // Unused Flag
 #define FLAG_PA_HOME_BEEDRILL_DISAPPEARED  0x2B6 // Unused Flag
 #define FLAG_PA_HOME_BEE_BATTLE            0x2B7 // Unused Flag
