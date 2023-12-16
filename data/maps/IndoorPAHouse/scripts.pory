@@ -1,10 +1,52 @@
 mapscripts IndoorPAHouse_MapScripts {}
-//GIANT SCHLONG STEVE!!!\n*DING*. *Steve is in disgust*.$
 
 script IndoorPAHouse_TV {
   lock
 	msgbox("GIANT SCHLONG STEVE!!!\pDING!\p Steve is in disgust.$", MSGBOX_SIGN)
   waitmessage
+  release
+	end
+}
+
+script IndoorPAHouse_Refrigerator {
+  lock
+	msgbox("What's the wattage\nof this microwave?$", MSGBOX_SIGN)
+  waitmessage
+  release
+	end
+}
+
+//	dofieldeffect FLDEFF_POKECENTER_HEAL
+//	waitfieldeffect FLDEFF_POKECENTER_HEAL
+//
+script IndoorPAHouse_Heal {
+  lock 
+  msgbox("Too baked? Rest up your POKEMON?$", MSGBOX_YESNO)
+  if (var(VAR_RESULT) == 1) {
+    fadescreen(FADE_TO_BLACK)
+    playbgm(MUS_HEAL, FALSE)
+	  special(HealPlayerParty)
+    delay(40)
+	  fadescreen(FADE_FROM_BLACK)
+    msgbox("Ight you got your 20min!\nAll healed!$")
+  } else {
+    msgbox("Go get more FUGGED!$")
+  }
+  release
+  end
+}
+
+script IndoorPAHouse_Gobbledorf {
+  lock
+  if (flag(FLAG_GOT_FULL_RESTORE_GOBBLEDORF)) {
+    msgbox("I'm Gobbledorf\pI protect this place.\nExplore safely.$", MSGBOX_SIGN)
+    waitmessage
+  } else {
+    msgbox("I'm Gobbledorf\pI protect this place.\pYou seem chill though\n have this.$", MSGBOX_SIGN)
+    waitmessage
+    giveitem(ITEM_FULL_RESTORE, 10)
+  }
+  setflag(FLAG_GOT_FULL_RESTORE_GOBBLEDORF)
   release
 	end
 }

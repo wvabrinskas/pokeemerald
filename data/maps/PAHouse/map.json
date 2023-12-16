@@ -2,7 +2,7 @@
   "id": "MAP_PAHOUSE",
   "name": "PAHouse",
   "layout": "LAYOUT_PAHOUSE",
-  "music": "MUS_RG_VIRIDIAN_FOREST",
+  "music": "MUS_RG_PALLET",
   "region_map_section": "MAPSEC_PA_HOUSE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
