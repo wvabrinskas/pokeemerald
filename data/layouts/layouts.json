@@ -4434,7 +4434,7 @@
     {
       "id": "LAYOUT_INDOOR_PAHOUSE",
       "name": "IndoorPAHouse_Layout",
-      "width": 32,
+      "width": 64,
       "height": 10,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",

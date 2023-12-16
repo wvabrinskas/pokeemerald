@@ -16,6 +16,14 @@ script IndoorPAHouse_Refrigerator {
 	end
 }
 
+script IndoorPAHouse_Bathroom {
+  lock
+	msgbox("I'M SHITTIN' 'ERE!!!$", MSGBOX_SIGN)
+  waitmessage
+  release
+	end
+}
+
 //	dofieldeffect FLDEFF_POKECENTER_HEAL
 //	waitfieldeffect FLDEFF_POKECENTER_HEAL
 //
@@ -35,6 +43,24 @@ script IndoorPAHouse_Heal {
   release
   end
 }
+
+script IndoorPAHouse_Heal_30 {
+  lock 
+  msgbox("Too baked? Rest up your POKEMON?$", MSGBOX_YESNO)
+  if (var(VAR_RESULT) == 1) {
+    fadescreen(FADE_TO_BLACK)
+    playbgm(MUS_HEAL, FALSE)
+	  special(HealPlayerParty)
+    delay(40)
+	  fadescreen(FADE_FROM_BLACK)
+    msgbox("Ight you got your 30min!\nAll healed!$")
+  } else {
+    msgbox("Go get more FUGGED!$")
+  }
+  release
+  end
+}
+
 
 script IndoorPAHouse_Gobbledorf {
   lock
