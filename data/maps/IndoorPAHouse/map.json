@@ -143,6 +143,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "IndoorPAHouse_Heal_30"
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "IndoorPAHouse_Window"
     }
   ]
 }

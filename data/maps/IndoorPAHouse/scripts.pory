@@ -24,9 +24,15 @@ script IndoorPAHouse_Bathroom {
 	end
 }
 
-//	dofieldeffect FLDEFF_POKECENTER_HEAL
-//	waitfieldeffect FLDEFF_POKECENTER_HEAL
-//
+script IndoorPAHouse_Window {
+  lock
+	msgbox("Ripley's belive it or\nnot he's dead!$", MSGBOX_SIGN)
+  waitmessage
+  release
+	end
+}
+
+
 script IndoorPAHouse_Heal {
   lock 
   msgbox("Too baked? Rest up your POKEMON?$", MSGBOX_YESNO)
