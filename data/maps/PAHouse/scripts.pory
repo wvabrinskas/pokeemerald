@@ -58,7 +58,7 @@ script PAHome_Battle_Beedrills {
 	playmoncry(SPECIES_BEEDRILL, CRY_MODE_ENCOUNTER)
 	delay(40)
 	waitmoncry
-	setwildbattle(SPECIES_BEEDRILL, 15, ITEM_FULL_RESTORE)
+	setwildbattle(SPECIES_BEEDRILL, 35, ITEM_ORAN_BERRY)
 	dowildbattle
 	specialvar(VAR_RESULT, GetBattleOutcome)
 	if (var(VAR_RESULT) != B_OUTCOME_LOST) {
