@@ -69,6 +69,8 @@ IndoorPAHouse_Gobbledorf::
 # 47 "data/maps/IndoorPAHouse/scripts.pory"
 	giveitem ITEM_FULL_RESTORE, 10
 IndoorPAHouse_Gobbledorf_1:
+# 49 "data/maps/IndoorPAHouse/scripts.pory"
+	setflag FLAG_GOT_FULL_RESTORE_GOBBLEDORF
 # 50 "data/maps/IndoorPAHouse/scripts.pory"
 	release
 	end
