@@ -12434,3 +12434,103 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLinkPlaceholder[] = {
     .species = SPECIES_KYOGRE,
     }
 };
+
+static const struct TrainerMonItemCustomMoves sParty_MK_Billy[] = {
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_SWELLOW,
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_QUICK_ATTACK, MOVE_WING_ATTACK, MOVE_ENDEAVOR}
+    },
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_TRAPINCH,
+    .moves = {MOVE_BITE, MOVE_DIG, MOVE_FAINT_ATTACK, MOVE_SAND_TOMB}
+    },
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_WAILMER,
+    .moves = {MOVE_ROLLOUT, MOVE_WHIRLPOOL, MOVE_ASTONISH, MOVE_WATER_PULSE}
+    },
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_MAGNETON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUPERSONIC, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM}
+    },
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_SHIFTRY,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_FAINT_ATTACK, MOVE_DOUBLE_TEAM, MOVE_SWAGGER}
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_MK_Matt[] = {
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_SWELLOW,
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_QUICK_ATTACK, MOVE_WING_ATTACK, MOVE_ENDEAVOR}
+    },
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_TRAPINCH,
+    .moves = {MOVE_BITE, MOVE_DIG, MOVE_FAINT_ATTACK, MOVE_SAND_TOMB}
+    },
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_WAILMER,
+    .moves = {MOVE_ROLLOUT, MOVE_WHIRLPOOL, MOVE_ASTONISH, MOVE_WATER_PULSE}
+    },
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_MAGNETON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUPERSONIC, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM}
+    },
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_SHIFTRY,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_FAINT_ATTACK, MOVE_DOUBLE_TEAM, MOVE_SWAGGER}
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_MK_Chunga[] = {
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_SWELLOW,
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_QUICK_ATTACK, MOVE_WING_ATTACK, MOVE_ENDEAVOR}
+    },
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_TRAPINCH,
+    .moves = {MOVE_BITE, MOVE_DIG, MOVE_FAINT_ATTACK, MOVE_SAND_TOMB}
+    },
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_WAILMER,
+    .moves = {MOVE_ROLLOUT, MOVE_WHIRLPOOL, MOVE_ASTONISH, MOVE_WATER_PULSE}
+    },
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_MAGNETON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUPERSONIC, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM}
+    },
+    {
+    .iv = 100,
+    .lvl = 28,
+    .species = SPECIES_SHIFTRY,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_FAINT_ATTACK, MOVE_DOUBLE_TEAM, MOVE_SWAGGER}
+    }
+};
+

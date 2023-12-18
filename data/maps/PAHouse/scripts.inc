@@ -93,7 +93,7 @@ PAHome_Battle_Beedrills::
 # 60 "data/maps/PAHouse/scripts.pory"
 	waitmoncry
 # 61 "data/maps/PAHouse/scripts.pory"
-	setwildbattle SPECIES_BEEDRILL, 15, ITEM_FULL_RESTORE
+	setwildbattle SPECIES_BEEDRILL, 35, ITEM_ORAN_BERRY
 # 62 "data/maps/PAHouse/scripts.pory"
 	dowildbattle
 # 63 "data/maps/PAHouse/scripts.pory"
@@ -184,6 +184,12 @@ PAHome_Lake_Sign::
 	end
 
 
+PAHome_Battle_Billy::
+# 126 "data/maps/PAHouse/scripts.pory"
+	trainerbattle_single TRAINER_MK_BILLY, PAHome_Battle_Billy_Text_0, PAHome_Battle_Billy_Text_1
+	end
+
+
 PAHome_Player_Kicked_Ball_Text_0:
 # 14 "data/maps/PAHouse/scripts.pory"
 	.string "You kicked the ball.....$"
@@ -207,3 +213,11 @@ PAHome_Porcubro_Text_0:
 PAHome_Lake_Sign_Text_0:
 # 113 "data/maps/PAHouse/scripts.pory"
 	.string "Head to the lake!$"
+
+PAHome_Battle_Billy_Text_0:
+# 126 "data/maps/PAHouse/scripts.pory"
+	.string "Welcome to the house..\nLet's battle.$"
+
+PAHome_Battle_Billy_Text_1:
+# 126 "data/maps/PAHouse/scripts.pory"
+	.string "Damn I got bodied.. $"

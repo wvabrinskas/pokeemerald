@@ -115,3 +115,14 @@ script PAHome_Lake_Sign {
 	release
   end
 }
+
+
+// Route102_EventScript_Tiana::
+// 	trainerbattle_single TRAINER_TIANA, Route102_Text_TianaIntro, Route102_Text_TianaDefeated
+// 	msgbox Route102_Text_TianaPostBattle, MSGBOX_AUTOCLOSE
+// 	end
+
+script PAHome_Battle_Billy {
+	trainerbattle_single(TRAINER_MK_BILLY, "Welcome to the house..\nLet's battle.", "Damn I got bodied.. $")
+	end
+}

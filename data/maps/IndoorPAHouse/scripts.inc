@@ -38,90 +38,102 @@ IndoorPAHouse_Bathroom::
 	end
 
 
-IndoorPAHouse_Heal::
-# 31 "data/maps/IndoorPAHouse/scripts.pory"
+IndoorPAHouse_Window::
+# 28 "data/maps/IndoorPAHouse/scripts.pory"
 	lock
-# 32 "data/maps/IndoorPAHouse/scripts.pory"
+# 29 "data/maps/IndoorPAHouse/scripts.pory"
+	msgbox IndoorPAHouse_Window_Text_0, MSGBOX_SIGN
+# 30 "data/maps/IndoorPAHouse/scripts.pory"
+	waitmessage
+# 31 "data/maps/IndoorPAHouse/scripts.pory"
+	release
+	end
+
+
+IndoorPAHouse_Heal::
+# 37 "data/maps/IndoorPAHouse/scripts.pory"
+	lock
+# 38 "data/maps/IndoorPAHouse/scripts.pory"
 	msgbox IndoorPAHouse_Heal_Text_0, MSGBOX_YESNO
-# 33 "data/maps/IndoorPAHouse/scripts.pory"
+# 39 "data/maps/IndoorPAHouse/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq IndoorPAHouse_Heal_2
-# 41 "data/maps/IndoorPAHouse/scripts.pory"
+# 47 "data/maps/IndoorPAHouse/scripts.pory"
 	msgbox IndoorPAHouse_Heal_Text_2
 IndoorPAHouse_Heal_1:
-# 43 "data/maps/IndoorPAHouse/scripts.pory"
+# 49 "data/maps/IndoorPAHouse/scripts.pory"
 	release
 	end
 
 IndoorPAHouse_Heal_2:
-# 34 "data/maps/IndoorPAHouse/scripts.pory"
+# 40 "data/maps/IndoorPAHouse/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 35 "data/maps/IndoorPAHouse/scripts.pory"
+# 41 "data/maps/IndoorPAHouse/scripts.pory"
 	playbgm MUS_HEAL, FALSE
-# 36 "data/maps/IndoorPAHouse/scripts.pory"
+# 42 "data/maps/IndoorPAHouse/scripts.pory"
 	special HealPlayerParty
-# 37 "data/maps/IndoorPAHouse/scripts.pory"
+# 43 "data/maps/IndoorPAHouse/scripts.pory"
 	delay 40
-# 38 "data/maps/IndoorPAHouse/scripts.pory"
+# 44 "data/maps/IndoorPAHouse/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 39 "data/maps/IndoorPAHouse/scripts.pory"
+# 45 "data/maps/IndoorPAHouse/scripts.pory"
 	msgbox IndoorPAHouse_Heal_Text_1
 	goto IndoorPAHouse_Heal_1
 
 
 IndoorPAHouse_Heal_30::
-# 48 "data/maps/IndoorPAHouse/scripts.pory"
+# 54 "data/maps/IndoorPAHouse/scripts.pory"
 	lock
-# 49 "data/maps/IndoorPAHouse/scripts.pory"
+# 55 "data/maps/IndoorPAHouse/scripts.pory"
 	msgbox IndoorPAHouse_Heal_Text_0, MSGBOX_YESNO
-# 50 "data/maps/IndoorPAHouse/scripts.pory"
+# 56 "data/maps/IndoorPAHouse/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq IndoorPAHouse_Heal_30_2
-# 58 "data/maps/IndoorPAHouse/scripts.pory"
+# 64 "data/maps/IndoorPAHouse/scripts.pory"
 	msgbox IndoorPAHouse_Heal_Text_2
 IndoorPAHouse_Heal_30_1:
-# 60 "data/maps/IndoorPAHouse/scripts.pory"
+# 66 "data/maps/IndoorPAHouse/scripts.pory"
 	release
 	end
 
 IndoorPAHouse_Heal_30_2:
-# 51 "data/maps/IndoorPAHouse/scripts.pory"
+# 57 "data/maps/IndoorPAHouse/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 52 "data/maps/IndoorPAHouse/scripts.pory"
+# 58 "data/maps/IndoorPAHouse/scripts.pory"
 	playbgm MUS_HEAL, FALSE
-# 53 "data/maps/IndoorPAHouse/scripts.pory"
+# 59 "data/maps/IndoorPAHouse/scripts.pory"
 	special HealPlayerParty
-# 54 "data/maps/IndoorPAHouse/scripts.pory"
+# 60 "data/maps/IndoorPAHouse/scripts.pory"
 	delay 40
-# 55 "data/maps/IndoorPAHouse/scripts.pory"
+# 61 "data/maps/IndoorPAHouse/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 56 "data/maps/IndoorPAHouse/scripts.pory"
+# 62 "data/maps/IndoorPAHouse/scripts.pory"
 	msgbox IndoorPAHouse_Heal_30_Text_0
 	goto IndoorPAHouse_Heal_30_1
 
 
 IndoorPAHouse_Gobbledorf::
-# 66 "data/maps/IndoorPAHouse/scripts.pory"
-	lock
-# 67 "data/maps/IndoorPAHouse/scripts.pory"
-	goto_if_set FLAG_GOT_FULL_RESTORE_GOBBLEDORF, IndoorPAHouse_Gobbledorf_2
-# 71 "data/maps/IndoorPAHouse/scripts.pory"
-	msgbox IndoorPAHouse_Gobbledorf_Text_1, MSGBOX_SIGN
 # 72 "data/maps/IndoorPAHouse/scripts.pory"
-	waitmessage
+	lock
 # 73 "data/maps/IndoorPAHouse/scripts.pory"
+	goto_if_set FLAG_GOT_FULL_RESTORE_GOBBLEDORF, IndoorPAHouse_Gobbledorf_2
+# 77 "data/maps/IndoorPAHouse/scripts.pory"
+	msgbox IndoorPAHouse_Gobbledorf_Text_1, MSGBOX_SIGN
+# 78 "data/maps/IndoorPAHouse/scripts.pory"
+	waitmessage
+# 79 "data/maps/IndoorPAHouse/scripts.pory"
 	giveitem ITEM_FULL_RESTORE, 10
 IndoorPAHouse_Gobbledorf_1:
-# 75 "data/maps/IndoorPAHouse/scripts.pory"
+# 81 "data/maps/IndoorPAHouse/scripts.pory"
 	setflag FLAG_GOT_FULL_RESTORE_GOBBLEDORF
-# 76 "data/maps/IndoorPAHouse/scripts.pory"
+# 82 "data/maps/IndoorPAHouse/scripts.pory"
 	release
 	end
 
 IndoorPAHouse_Gobbledorf_2:
-# 68 "data/maps/IndoorPAHouse/scripts.pory"
+# 74 "data/maps/IndoorPAHouse/scripts.pory"
 	msgbox IndoorPAHouse_Gobbledorf_Text_0, MSGBOX_SIGN
-# 69 "data/maps/IndoorPAHouse/scripts.pory"
+# 75 "data/maps/IndoorPAHouse/scripts.pory"
 	waitmessage
 	goto IndoorPAHouse_Gobbledorf_1
 
@@ -138,26 +150,30 @@ IndoorPAHouse_Bathroom_Text_0:
 # 21 "data/maps/IndoorPAHouse/scripts.pory"
 	.string "I'M SHITTIN' 'ERE!!!$"
 
+IndoorPAHouse_Window_Text_0:
+# 29 "data/maps/IndoorPAHouse/scripts.pory"
+	.string "Ripley's belive it or\nnot he's dead!$"
+
 IndoorPAHouse_Heal_Text_0:
-# 32 "data/maps/IndoorPAHouse/scripts.pory"
+# 38 "data/maps/IndoorPAHouse/scripts.pory"
 	.string "Too baked? Rest up your POKEMON?$"
 
 IndoorPAHouse_Heal_Text_1:
-# 39 "data/maps/IndoorPAHouse/scripts.pory"
+# 45 "data/maps/IndoorPAHouse/scripts.pory"
 	.string "Ight you got your 20min!\nAll healed!$"
 
 IndoorPAHouse_Heal_Text_2:
-# 41 "data/maps/IndoorPAHouse/scripts.pory"
+# 47 "data/maps/IndoorPAHouse/scripts.pory"
 	.string "Go get more FUGGED!$"
 
 IndoorPAHouse_Heal_30_Text_0:
-# 56 "data/maps/IndoorPAHouse/scripts.pory"
+# 62 "data/maps/IndoorPAHouse/scripts.pory"
 	.string "Ight you got your 30min!\nAll healed!$"
 
 IndoorPAHouse_Gobbledorf_Text_0:
-# 68 "data/maps/IndoorPAHouse/scripts.pory"
+# 74 "data/maps/IndoorPAHouse/scripts.pory"
 	.string "I'm Gobbledorf\pI protect this place.\nExplore safely.$"
 
 IndoorPAHouse_Gobbledorf_Text_1:
-# 71 "data/maps/IndoorPAHouse/scripts.pory"
+# 77 "data/maps/IndoorPAHouse/scripts.pory"
 	.string "I'm Gobbledorf\pI protect this place.\pYou seem chill though\n have this.$"
