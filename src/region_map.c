@@ -2007,6 +2007,7 @@ static void CB_ExitFlyMap(void)
                 {
                 case MAPSEC_PA_HOUSE:
                     SetWarpDestinationToHealLocation(HEAL_LOCATION_PA_HOUSE);
+                    break;
                 case MAPSEC_SOUTHERN_ISLAND:
                     SetWarpDestinationToHealLocation(HEAL_LOCATION_SOUTHERN_ISLAND_EXTERIOR);
                     break;

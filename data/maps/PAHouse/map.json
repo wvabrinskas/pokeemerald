@@ -14,11 +14,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_LITTLEROOT_TOWN",
-      "offset": 4,
-      "direction": "left"
-    },
-    {
       "map": "MAP_ROUTE420",
       "offset": 6,
       "direction": "left"
@@ -119,10 +114,10 @@
   ],
   "warp_events": [
     {
-      "x": 62,
-      "y": 10,
+      "x": 56,
+      "y": 15,
       "elevation": 0,
-      "dest_map": "MAP_PAHOUSE",
+      "dest_map": "MAP_PALAKE",
       "dest_warp_id": "0"
     },
     {
@@ -147,8 +142,8 @@
     },
     {
       "type": "sign",
-      "x": 63,
-      "y": 11,
+      "x": 57,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PAHome_Lake_Sign"

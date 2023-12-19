@@ -4,7 +4,12 @@ const GENERICBALL_PA = 1
 const PLAYER = OBJ_EVENT_ID_PLAYER
 const PORCUBRO = 7
 
-mapscripts PAHouse_MapScripts {}
+mapscripts PAHouse_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION {
+		setrespawn(HEAL_LOCATION_PA_HOUSE)
+		setflag(FLAG_VISITED_PA_HOUSE)
+	}
+}
 
 script PAHome_Player_Kicked_Ball {
 	if (flag(FLAG_PA_HOME_BEE_BATTLE)) {

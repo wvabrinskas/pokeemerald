@@ -1,21 +1,30 @@
 PAHouse_MapScripts::
+# 8 "data/maps/PAHouse/scripts.pory"
+	map_script MAP_SCRIPT_ON_TRANSITION, PAHouse_MapScripts_MAP_SCRIPT_ON_TRANSITION
 	.byte 0
+
+PAHouse_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+# 9 "data/maps/PAHouse/scripts.pory"
+	setrespawn HEAL_LOCATION_PA_HOUSE
+# 10 "data/maps/PAHouse/scripts.pory"
+	setflag FLAG_VISITED_PA_HOUSE
+	return
 
 
 PAHome_Player_Kicked_Ball::
-# 10 "data/maps/PAHouse/scripts.pory"
-	goto_if_set FLAG_PA_HOME_BEE_BATTLE, PAHome_Player_Kicked_Ball_2
-# 13 "data/maps/PAHouse/scripts.pory"
-	lock
-# 14 "data/maps/PAHouse/scripts.pory"
-	msgbox PAHome_Player_Kicked_Ball_Text_0, MSGBOX_AUTOCLOSE
 # 15 "data/maps/PAHouse/scripts.pory"
-	waitmessage
-# 16 "data/maps/PAHouse/scripts.pory"
-	removeobject 1
-# 17 "data/maps/PAHouse/scripts.pory"
-	call PAHome_Beedrill_Triggers
+	goto_if_set FLAG_PA_HOME_BEE_BATTLE, PAHome_Player_Kicked_Ball_2
 # 18 "data/maps/PAHouse/scripts.pory"
+	lock
+# 19 "data/maps/PAHouse/scripts.pory"
+	msgbox PAHome_Player_Kicked_Ball_Text_0, MSGBOX_AUTOCLOSE
+# 20 "data/maps/PAHouse/scripts.pory"
+	waitmessage
+# 21 "data/maps/PAHouse/scripts.pory"
+	removeobject 1
+# 22 "data/maps/PAHouse/scripts.pory"
+	call PAHome_Beedrill_Triggers
+# 23 "data/maps/PAHouse/scripts.pory"
 	release
 	end
 
@@ -23,201 +32,201 @@ PAHome_Player_Kicked_Ball_2:
 	return
 
 
-# 22 "data/maps/PAHouse/scripts.pory"
+# 27 "data/maps/PAHouse/scripts.pory"
 PAHome_Beedrill_Movement:
-# 23 "data/maps/PAHouse/scripts.pory"
+# 28 "data/maps/PAHouse/scripts.pory"
 	lock_anim
-# 24 "data/maps/PAHouse/scripts.pory"
+# 29 "data/maps/PAHouse/scripts.pory"
 	set_visible
-# 25 "data/maps/PAHouse/scripts.pory"
+# 30 "data/maps/PAHouse/scripts.pory"
 	unlock_anim
-# 26 "data/maps/PAHouse/scripts.pory"
+# 31 "data/maps/PAHouse/scripts.pory"
 	step_end
 
-# 29 "data/maps/PAHouse/scripts.pory"
-PAHome_Player_SeesBees_Movement:
-# 30 "data/maps/PAHouse/scripts.pory"
-	emote_exclamation_mark
-# 31 "data/maps/PAHouse/scripts.pory"
-	jump_in_place_left
-# 32 "data/maps/PAHouse/scripts.pory"
-	delay_1
-# 33 "data/maps/PAHouse/scripts.pory"
-	jump_in_place_right
 # 34 "data/maps/PAHouse/scripts.pory"
-	delay_2
+PAHome_Player_SeesBees_Movement:
 # 35 "data/maps/PAHouse/scripts.pory"
-	jump_in_place_left
+	emote_exclamation_mark
 # 36 "data/maps/PAHouse/scripts.pory"
-	delay_2
+	jump_in_place_left
 # 37 "data/maps/PAHouse/scripts.pory"
-	jump_in_place_right
-# 38 "data/maps/PAHouse/scripts.pory"
 	delay_1
+# 38 "data/maps/PAHouse/scripts.pory"
+	jump_in_place_right
 # 39 "data/maps/PAHouse/scripts.pory"
-	face_original_direction
+	delay_2
 # 40 "data/maps/PAHouse/scripts.pory"
+	jump_in_place_left
+# 41 "data/maps/PAHouse/scripts.pory"
+	delay_2
+# 42 "data/maps/PAHouse/scripts.pory"
+	jump_in_place_right
+# 43 "data/maps/PAHouse/scripts.pory"
+	delay_1
+# 44 "data/maps/PAHouse/scripts.pory"
+	face_original_direction
+# 45 "data/maps/PAHouse/scripts.pory"
 	step_end
 
 PAHome_Beedrill_Triggers::
-# 44 "data/maps/PAHouse/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 45 "data/maps/PAHouse/scripts.pory"
-	applymovement 2, PAHome_Beedrill_Movement
-# 46 "data/maps/PAHouse/scripts.pory"
-	waitmovement 2
-# 47 "data/maps/PAHouse/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 48 "data/maps/PAHouse/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PAHome_Player_SeesBees_Movement
 # 49 "data/maps/PAHouse/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
+	fadescreen FADE_TO_BLACK
 # 50 "data/maps/PAHouse/scripts.pory"
-	msgbox PAHome_Beedrill_Triggers_Text_0, MSGBOX_AUTOCLOSE
+	applymovement 2, PAHome_Beedrill_Movement
 # 51 "data/maps/PAHouse/scripts.pory"
-	waitmessage
+	waitmovement 2
 # 52 "data/maps/PAHouse/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 53 "data/maps/PAHouse/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, PAHome_Player_SeesBees_Movement
+# 54 "data/maps/PAHouse/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 55 "data/maps/PAHouse/scripts.pory"
+	msgbox PAHome_Beedrill_Triggers_Text_0, MSGBOX_AUTOCLOSE
+# 56 "data/maps/PAHouse/scripts.pory"
+	waitmessage
+# 57 "data/maps/PAHouse/scripts.pory"
 	call PAHome_Battle_Beedrills
 	return
 
 
 PAHome_Battle_Beedrills::
-# 56 "data/maps/PAHouse/scripts.pory"
-	applymovement 2, PAHome_Beedrill_Movement
-# 57 "data/maps/PAHouse/scripts.pory"
-	waitmovement 2
-# 58 "data/maps/PAHouse/scripts.pory"
-	playmoncry SPECIES_BEEDRILL, CRY_MODE_ENCOUNTER
-# 59 "data/maps/PAHouse/scripts.pory"
-	delay 40
-# 60 "data/maps/PAHouse/scripts.pory"
-	waitmoncry
 # 61 "data/maps/PAHouse/scripts.pory"
-	setwildbattle SPECIES_BEEDRILL, 35, ITEM_ORAN_BERRY
+	applymovement 2, PAHome_Beedrill_Movement
 # 62 "data/maps/PAHouse/scripts.pory"
-	dowildbattle
+	waitmovement 2
 # 63 "data/maps/PAHouse/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
+	playmoncry SPECIES_BEEDRILL, CRY_MODE_ENCOUNTER
 # 64 "data/maps/PAHouse/scripts.pory"
+	delay 40
+# 65 "data/maps/PAHouse/scripts.pory"
+	waitmoncry
+# 66 "data/maps/PAHouse/scripts.pory"
+	setwildbattle SPECIES_BEEDRILL, 35, ITEM_ORAN_BERRY
+# 67 "data/maps/PAHouse/scripts.pory"
+	dowildbattle
+# 68 "data/maps/PAHouse/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 69 "data/maps/PAHouse/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_ne PAHome_Battle_Beedrills_2
 	return
 
 PAHome_Battle_Beedrills_2:
-# 65 "data/maps/PAHouse/scripts.pory"
+# 70 "data/maps/PAHouse/scripts.pory"
 	call PAHome_Battle_Complete
 	return
 
 
 PAHome_Hide_Beedrills::
-# 72 "data/maps/PAHouse/scripts.pory"
+# 77 "data/maps/PAHouse/scripts.pory"
 	removeobject 2
-# 73 "data/maps/PAHouse/scripts.pory"
+# 78 "data/maps/PAHouse/scripts.pory"
 	removeobject 1
-# 74 "data/maps/PAHouse/scripts.pory"
+# 79 "data/maps/PAHouse/scripts.pory"
 	setflag FLAG_PA_HOME_BEEDRILL_DISAPPEARED
-# 75 "data/maps/PAHouse/scripts.pory"
+# 80 "data/maps/PAHouse/scripts.pory"
 	setflag FLAG_PA_HOME_PLAYER_KICKED_BALL
 	return
 
 
 PAHome_Battle_Complete::
-# 79 "data/maps/PAHouse/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 80 "data/maps/PAHouse/scripts.pory"
-	call PAHome_Hide_Beedrills
-# 81 "data/maps/PAHouse/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 82 "data/maps/PAHouse/scripts.pory"
-	setflag FLAG_PA_HOME_BEE_BATTLE
-# 83 "data/maps/PAHouse/scripts.pory"
-	msgbox PAHome_Battle_Complete_Text_0, MSGBOX_AUTOCLOSE
 # 84 "data/maps/PAHouse/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 85 "data/maps/PAHouse/scripts.pory"
+	call PAHome_Hide_Beedrills
+# 86 "data/maps/PAHouse/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 87 "data/maps/PAHouse/scripts.pory"
+	setflag FLAG_PA_HOME_BEE_BATTLE
+# 88 "data/maps/PAHouse/scripts.pory"
+	msgbox PAHome_Battle_Complete_Text_0, MSGBOX_AUTOCLOSE
+# 89 "data/maps/PAHouse/scripts.pory"
 	waitmessage
 	return
 
 
 PAHome_Sign::
-# 89 "data/maps/PAHouse/scripts.pory"
+# 94 "data/maps/PAHouse/scripts.pory"
 	lock
-# 90 "data/maps/PAHouse/scripts.pory"
+# 95 "data/maps/PAHouse/scripts.pory"
 	msgbox PAHome_Sign_Text_0, MSGBOX_SIGN
-# 91 "data/maps/PAHouse/scripts.pory"
+# 96 "data/maps/PAHouse/scripts.pory"
 	waitmessage
-# 92 "data/maps/PAHouse/scripts.pory"
+# 97 "data/maps/PAHouse/scripts.pory"
 	release
 	end
 
 
-# 96 "data/maps/PAHouse/scripts.pory"
+# 101 "data/maps/PAHouse/scripts.pory"
 Porcubro:
-# 97 "data/maps/PAHouse/scripts.pory"
+# 102 "data/maps/PAHouse/scripts.pory"
 	face_player
-# 98 "data/maps/PAHouse/scripts.pory"
+# 103 "data/maps/PAHouse/scripts.pory"
 	step_end
 
 PAHome_Porcubro::
-# 102 "data/maps/PAHouse/scripts.pory"
-	lock
-# 103 "data/maps/PAHouse/scripts.pory"
-	applymovement 7, Porcubro
-# 104 "data/maps/PAHouse/scripts.pory"
-	waitmovement 7
-# 105 "data/maps/PAHouse/scripts.pory"
-	msgbox PAHome_Porcubro_Text_0, MSGBOX_DEFAULT
-# 106 "data/maps/PAHouse/scripts.pory"
-	waitmessage
 # 107 "data/maps/PAHouse/scripts.pory"
+	lock
+# 108 "data/maps/PAHouse/scripts.pory"
+	applymovement 7, Porcubro
+# 109 "data/maps/PAHouse/scripts.pory"
+	waitmovement 7
+# 110 "data/maps/PAHouse/scripts.pory"
+	msgbox PAHome_Porcubro_Text_0, MSGBOX_DEFAULT
+# 111 "data/maps/PAHouse/scripts.pory"
+	waitmessage
+# 112 "data/maps/PAHouse/scripts.pory"
 	release
 	end
 
 
 PAHome_Lake_Sign::
-# 112 "data/maps/PAHouse/scripts.pory"
+# 117 "data/maps/PAHouse/scripts.pory"
 	lock
-# 113 "data/maps/PAHouse/scripts.pory"
+# 118 "data/maps/PAHouse/scripts.pory"
 	msgbox PAHome_Lake_Sign_Text_0, MSGBOX_SIGN
-# 114 "data/maps/PAHouse/scripts.pory"
+# 119 "data/maps/PAHouse/scripts.pory"
 	waitmessage
-# 115 "data/maps/PAHouse/scripts.pory"
+# 120 "data/maps/PAHouse/scripts.pory"
 	release
 	end
 
 
 PAHome_Battle_Billy::
-# 126 "data/maps/PAHouse/scripts.pory"
+# 131 "data/maps/PAHouse/scripts.pory"
 	trainerbattle_single TRAINER_MK_BILLY, PAHome_Battle_Billy_Text_0, PAHome_Battle_Billy_Text_1
 	end
 
 
 PAHome_Player_Kicked_Ball_Text_0:
-# 14 "data/maps/PAHouse/scripts.pory"
+# 19 "data/maps/PAHouse/scripts.pory"
 	.string "You kicked the ball.....$"
 
 PAHome_Beedrill_Triggers_Text_0:
-# 50 "data/maps/PAHouse/scripts.pory"
+# 55 "data/maps/PAHouse/scripts.pory"
 	.string "BEEEEEEEESSSSSSSSSSSSSSSSSSSSSS!$"
 
 PAHome_Battle_Complete_Text_0:
-# 83 "data/maps/PAHouse/scripts.pory"
+# 88 "data/maps/PAHouse/scripts.pory"
 	.string "The Beedrills have disappeared!$"
 
 PAHome_Sign_Text_0:
-# 90 "data/maps/PAHouse/scripts.pory"
+# 95 "data/maps/PAHouse/scripts.pory"
 	.string "Welcome to the PA House!$"
 
 PAHome_Porcubro_Text_0:
-# 105 "data/maps/PAHouse/scripts.pory"
+# 110 "data/maps/PAHouse/scripts.pory"
 	.string "Porcubro is always here to chill!$"
 
 PAHome_Lake_Sign_Text_0:
-# 113 "data/maps/PAHouse/scripts.pory"
+# 118 "data/maps/PAHouse/scripts.pory"
 	.string "Head to the lake!$"
 
 PAHome_Battle_Billy_Text_0:
-# 126 "data/maps/PAHouse/scripts.pory"
+# 131 "data/maps/PAHouse/scripts.pory"
 	.string "Welcome to the house..\nLet's battle.$"
 
 PAHome_Battle_Billy_Text_1:
-# 126 "data/maps/PAHouse/scripts.pory"
+# 131 "data/maps/PAHouse/scripts.pory"
 	.string "Damn I got bodied.. $"

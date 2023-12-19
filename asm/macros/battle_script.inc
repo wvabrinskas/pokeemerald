@@ -1393,7 +1393,7 @@
 	.endm
 
 	.macro chosenstatusExtraAnimation battler:req, status:req
-	chosenstatusanimation \battler, 0x2, \status
+	chosenstatusanimation \battler, 0x1, \status
 	.endm
 
 	.macro sethword dst:req, value:req

@@ -77,6 +77,7 @@
 #define MAP_INDOOR_PAHOUSE (0 | (2 << 8))
 
 // gMapGroup_OutdoorPAHouse
+#define MAP_PALAKE (0 | (3 << 8))
 
 // gMapGroup_IndoorOldale
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (4 << 8))

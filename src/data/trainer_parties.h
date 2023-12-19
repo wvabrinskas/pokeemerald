@@ -12437,34 +12437,40 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLinkPlaceholder[] = {
 
 static const struct TrainerMonItemCustomMoves sParty_MK_Billy[] = {
     {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_SWELLOW,
-    .moves = {MOVE_FOCUS_ENERGY, MOVE_QUICK_ATTACK, MOVE_WING_ATTACK, MOVE_ENDEAVOR}
+    .iv = 40,
+    .lvl = 22, // 45
+    .species = SPECIES_SWAMPERT,
+    .moves = {MOVE_ICY_WIND, MOVE_WATER_PULSE, MOVE_RAIN_DANCE, MOVE_DIG}
     },
     {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_TRAPINCH,
-    .moves = {MOVE_BITE, MOVE_DIG, MOVE_FAINT_ATTACK, MOVE_SAND_TOMB}
+    .iv = 40,
+    .lvl = 22, // 46
+    .species = SPECIES_GARDEVOIR,
+    .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_ATTRACT}
     },
     {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_WAILMER,
-    .moves = {MOVE_ROLLOUT, MOVE_WHIRLPOOL, MOVE_ASTONISH, MOVE_WATER_PULSE}
+    .iv = 40,
+    .lvl = 22, // 49
+    .species = SPECIES_SALAMENCE,
+    .moves = {MOVE_EARTHQUAKE, MOVE_DRAGON_CLAW, MOVE_DRAGON_DANCE, MOVE_FLAMETHROWER}
     },
     {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_MAGNETON,
-    .moves = {MOVE_THUNDERBOLT, MOVE_SUPERSONIC, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM}
+    .iv = 40,
+    .lvl = 22, // 45
+    .species = SPECIES_MANECTRIC,
+    .moves = {MOVE_THUNDERBOLT, MOVE_DOUBLE_TEAM, MOVE_THUNDER_WAVE, MOVE_IRON_TAIL}
     },
     {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_SHIFTRY,
-    .moves = {MOVE_GIGA_DRAIN, MOVE_FAINT_ATTACK, MOVE_DOUBLE_TEAM, MOVE_SWAGGER}
+    .iv = 40,
+    .lvl = 22, // 46
+    .species = SPECIES_NINETALES,
+    .moves = {MOVE_ATTRACT, MOVE_FLAMETHROWER, MOVE_CONFUSE_RAY, MOVE_QUICK_ATTACK}
+    },
+    {
+    .iv = 40,
+    .lvl = 22, // 48
+    .species = SPECIES_AGGRON,
+    .moves = {MOVE_IRON_TAIL, MOVE_IRON_DEFENSE, MOVE_THUNDERBOLT, MOVE_WATER_PULSE}
     }
 };
 
