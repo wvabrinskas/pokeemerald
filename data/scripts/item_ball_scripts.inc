@@ -665,3 +665,7 @@ PAHome_UpperFirePit_ItemBall::
 PAHome_LowerFirePit_ItemBall::
 	finditem ITEM_FIRE_STONE
 	end
+
+PALake_UpperIsland_ItemBall::
+	finditem ITEM_HYPER_POTION
+	end
