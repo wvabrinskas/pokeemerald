@@ -217,7 +217,8 @@
 #define MAPSEC_PA_HOUSE                     0xD5
 #define MAPSEC_ROUTE_420                    0xD6
 #define MAPSEC_PA_LAKE                      0xD7
-#define MAPSEC_NONE                         0xD8
+#define MAPSEC_UNDERWATER_PA_LAKE           0xD8
+#define MAPSEC_NONE                         0xD9
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

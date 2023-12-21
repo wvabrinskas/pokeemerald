@@ -11714,6 +11714,40 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_UNDERWATER_PALAKE",
+          "base_label": "gUnderwater_PALake0",
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 16,
+                "max_level": 25,
+                "species": "SPECIES_QWILFISH"
+              },
+              {
+                "min_level": 16,
+                "max_level": 20,
+                "species": "SPECIES_CLAMPERL"
+              },
+              {
+                "min_level": 15,
+                "max_level": 50,
+                "species": "SPECIES_BEEDRILL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 35,
+                "species": "SPECIES_RELICANTH"
+              }
+            ]
+          }
         }
       ]
     },

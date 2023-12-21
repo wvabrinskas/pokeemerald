@@ -1067,3 +1067,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/IndoorPAHouse/scripts.inc"
 
 	.include "data/maps/PALake/scripts.inc"
+
+	.include "data/maps/Underwater_PALake/scripts.inc"

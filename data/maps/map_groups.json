@@ -109,7 +109,8 @@
     "IndoorPAHouse"
   ],
   "gMapGroup_OutdoorPAHouse": [
-    "PALake"
+    "PALake",
+    "Underwater_PALake"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",

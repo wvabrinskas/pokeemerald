@@ -4450,6 +4450,16 @@
       "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/PALake/border.bin",
       "blockdata_filepath": "data/layouts/PALake/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER_PALAKE",
+      "name": "Underwater_PALake_Layout",
+      "width": 64,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Underwater_PALake/border.bin",
+      "blockdata_filepath": "data/layouts/Underwater_PALake/map.bin"
     }
   ]
 }
