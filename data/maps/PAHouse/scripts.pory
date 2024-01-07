@@ -12,6 +12,7 @@ mapscripts PAHouse_MapScripts {
 }
 
 script PAHome_Player_Kicked_Ball {
+
 	if (flag(FLAG_PA_HOME_BEE_BATTLE)) {
 		return
 	}
