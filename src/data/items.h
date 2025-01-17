@@ -4548,4 +4548,43 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
+
+    [ITEM_CHUNGA_HAT] =
+    {
+        .name = _("CHUNGA'S HAT"),
+        .itemId = ITEM_CHUNGA_HAT,
+        .price = 100,
+        .holdEffect = HOLD_EFFECT_GRASS_POWER,
+        .holdEffectParam = 10,
+        .description = sChungaHatDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_MATT_PHONE] =
+    {
+        .name = _("MATT'S PHONE"),
+        .itemId = ITEM_MATT_PHONE,
+        .price = 100,
+        .holdEffect = HOLD_EFFECT_FIRE_POWER,
+        .holdEffectParam = 10,
+        .description = sMattPhoneDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_BILLY_RAYBANS] =
+    {
+        .name = _("BILLY'S RAYBANS"),
+        .itemId = ITEM_BILLY_RAYBANS,
+        .price = 100,
+        .holdEffect = HOLD_EFFECT_WATER_POWER,
+        .holdEffectParam = 10,
+        .description = sBillyRaybansDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 };

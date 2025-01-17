@@ -1553,3 +1553,18 @@ static const u8 sOldSeaMapDesc[] = _(
     "A faded sea chart\n"
     "that shows the way\n"
     "to a certain island.");
+
+static const u8 sChungaHatDesc[] = _(
+    "A hold item that\n"
+    "raises the power of\n"
+    "GRASS-type moves.");
+
+static const u8 sMattPhoneDesc[] = _(
+    "A hold item that\n"
+    "raises the power of\n"
+    "FIRE-type moves.");
+
+static const u8 sBillyRaybansDesc[] = _(
+    "A hold item that\n"
+    "raises the power of\n"
+    "WATER-type moves.");
