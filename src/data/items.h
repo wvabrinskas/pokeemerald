@@ -2774,34 +2774,41 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0E2] =
+    
+    [ITEM_CHUNGA_HAT] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("CHUNGAS HAT"),
+        .itemId = ITEM_CHUNGA_HAT,
+        .price = 100,
+        .holdEffect = HOLD_EFFECT_DARK_POWER,
+        .holdEffectParam = 10,
+        .description = sChungaHatDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0E3] =
+    [ITEM_MATT_PHONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("MATTS PHONE"),
+        .itemId = ITEM_MATT_PHONE,
+        .price = 100,
+        .holdEffect = HOLD_EFFECT_FIRE_POWER,
+        .holdEffectParam = 10,
+        .description = sMattPhoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_0E4] =
+    [ITEM_BILLY_RAYBANS] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("BILLYS RAYBAN"),
+        .itemId = ITEM_BILLY_RAYBANS,
+        .price = 100,
+        .holdEffect = HOLD_EFFECT_WATER_POWER,
+        .holdEffectParam = 10,
+        .description = sBillyRaybansDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -4547,44 +4554,5 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-    },
-
-    [ITEM_CHUNGA_HAT] =
-    {
-        .name = _("CHUNGA'S HAT"),
-        .itemId = ITEM_CHUNGA_HAT,
-        .price = 100,
-        .holdEffect = HOLD_EFFECT_GRASS_POWER,
-        .holdEffectParam = 10,
-        .description = sChungaHatDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-    },
-
-    [ITEM_MATT_PHONE] =
-    {
-        .name = _("MATT'S PHONE"),
-        .itemId = ITEM_MATT_PHONE,
-        .price = 100,
-        .holdEffect = HOLD_EFFECT_FIRE_POWER,
-        .holdEffectParam = 10,
-        .description = sMattPhoneDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-    },
-
-    [ITEM_BILLY_RAYBANS] =
-    {
-        .name = _("BILLY'S RAYBANS"),
-        .itemId = ITEM_BILLY_RAYBANS,
-        .price = 100,
-        .holdEffect = HOLD_EFFECT_WATER_POWER,
-        .holdEffectParam = 10,
-        .description = sBillyRaybansDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-    },
+    }
 };
