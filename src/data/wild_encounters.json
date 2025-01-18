@@ -11738,8 +11738,8 @@
               },
               {
                 "min_level": 15,
-                "max_level": 50,
-                "species": "SPECIES_BEEDRILL"
+                "max_level": 25,
+                "species": "SPECIES_CORSOLA"
               },
               {
                 "min_level": 20,

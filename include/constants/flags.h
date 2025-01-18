@@ -13,8 +13,8 @@
 #define FLAG_TEMP_2      (TEMP_FLAGS_START + 0x2)
 #define FLAG_TEMP_3      (TEMP_FLAGS_START + 0x3)
 #define FLAG_TEMP_4      (TEMP_FLAGS_START + 0x4)
-#define FLAG_TEMP_5      (TEMP_FLAGS_START + 0x5)  // Unused Flag
-#define FLAG_TEMP_6      (TEMP_FLAGS_START + 0x6)  // Unused Flag
+#define FLAG_TEMP_5      (TEMP_FLAGS_START + 0x5)  // boulder left PA under water
+#define FLAG_TEMP_6      (TEMP_FLAGS_START + 0x6)  // boulder right PA under water
 #define FLAG_TEMP_7      (TEMP_FLAGS_START + 0x7)  // Unused Flag
 #define FLAG_TEMP_8      (TEMP_FLAGS_START + 0x8)  // Unused Flag
 #define FLAG_TEMP_9      (TEMP_FLAGS_START + 0x9)  // Unused Flag
@@ -1224,9 +1224,9 @@
 #define FLAG_ITEM_PA_HOME_EARTHQUAKE                                0x493 // Determines if youve encountered the beedrills in Route 102
 #define FLAG_ITEM_PA_HOME_FIRE_STONE                                0x494 // Unused Flag
 #define FLAG_ITEM_PA_LAKE_HYPER_POTION                              0x495 // Player kicked ball in route 102
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
+#define FLAG_ITEM_PA_LAKE_BILLY_RAYBANS                             0x496 // Picked up Billy's Raybans
+#define FLAG_ITEM_PA_LAKE_CHUNGAS_HAT                               0x497 // Picked up Chunga's Hat
+#define FLAG_ITEM_PA_LAKE_MATT_PHONE                                0x498 // Picked up Matt's Phone
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag

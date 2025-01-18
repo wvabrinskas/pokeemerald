@@ -669,3 +669,15 @@ PAHome_LowerFirePit_ItemBall::
 PALake_UpperIsland_ItemBall::
 	finditem ITEM_HYPER_POTION
 	end
+
+PALake_BillGlasses_Underwater_ItemBall::
+	finditem ITEM_BILLY_RAYBANS
+	end
+
+PALake_ChungasHat_Underwater_ItemBall::
+	finditem ITEM_CHUNGAS_HAT
+	end
+
+PALake_MattPhone_Underwater_ItemBall::
+	finditem ITEM_MATT_PHONE
+	end
