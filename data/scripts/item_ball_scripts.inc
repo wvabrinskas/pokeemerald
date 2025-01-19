@@ -675,7 +675,7 @@ PALake_BillGlasses_Underwater_ItemBall::
 	end
 
 PALake_ChungasHat_Underwater_ItemBall::
-	finditem ITEM_CHUNGAS_HAT
+	finditem ITEM_CHUNGA_HAT
 	end
 
 PALake_MattPhone_Underwater_ItemBall::
