@@ -69,12 +69,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PALake_UpperIsland_ItemBall",
+      "script": "PALake_ChungasHat_UpperIsland_ItemBall",
       "flag": "FLAG_ITEM_PA_LAKE_CHUNGAS_HAT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 28,
+      "x": 26,
       "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -88,7 +88,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
       "x": 32,
-      "y": 24,
+      "y": 23,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 5,

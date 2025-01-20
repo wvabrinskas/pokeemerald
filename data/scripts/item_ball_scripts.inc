@@ -670,16 +670,12 @@ PAHome_FullHeal_ItemBall::
 	finditem ITEM_FULL_HEAL
 	end
 
-PALake_UpperIsland_ItemBall::
-	finditem ITEM_HYPER_POTION
+PALake_ChungasHat_UpperIsland_ItemBall::
+	finditem ITEM_CHUNGA_HAT
 	end
 
 PALake_BillGlasses_Underwater_ItemBall::
 	finditem ITEM_BILLY_RAYBANS
-	end
-
-PALake_ChungasHat_Underwater_ItemBall::
-	finditem ITEM_CHUNGA_HAT
 	end
 
 PALake_MattPhone_Underwater_ItemBall::
