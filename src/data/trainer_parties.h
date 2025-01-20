@@ -12582,5 +12582,23 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MK_Jake[] = {
     }
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_MK_John[] = {
+    {
+    .iv = 0,
+    .lvl = 20,
+    .species = SPECIES_CASCOON,
+    },
+    {
+    .iv = 0,
+    .lvl = 17,
+    .species = SPECIES_KAKUNA,
+    },
+    {
+    .iv = 0,
+    .lvl = 28,
+    .species = SPECIES_BEEDRILL,
+    }
+};
+
 
 

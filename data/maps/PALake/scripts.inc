@@ -17,3 +17,11 @@ PALake_EventScript_Jake::
 	msgbox PALake_Text_JakePostBattle, MSGBOX_AUTOCLOSE
 	end
 
+
+PALake_EventScript_John::
+# 16 "data/maps/PALake/scripts.pory"
+	trainerbattle_single TRAINER_MK_JOHN, PALake_Text_JohnIntro, PALake_Text_JohnDefeat
+# 17 "data/maps/PALake/scripts.pory"
+	msgbox PALake_Text_JohnPostBattle, MSGBOX_AUTOCLOSE
+	end
+

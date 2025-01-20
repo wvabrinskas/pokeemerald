@@ -12,3 +12,9 @@ script PALake_EventScript_Jake {
 	end
 }
 
+script PALake_EventScript_John {
+	trainerbattle_single(TRAINER_MK_JOHN, PALake_Text_JohnIntro, PALake_Text_JohnDefeat)
+	msgbox(PALake_Text_JohnPostBattle, MSGBOX_AUTOCLOSE)
+	end
+}
+

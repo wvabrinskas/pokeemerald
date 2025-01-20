@@ -2060,20 +2060,22 @@ Littleroot_Luke_Items:
 	.2byte ITEM_LEMONADE
 # 1035 "data/maps/LittlerootTown/scripts.pory"
 	.2byte ITEM_BERRY_JUICE
+# 1036 "data/maps/LittlerootTown/scripts.pory"
+	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_NONE
 
 Littleroot_Route420_Sign::
-# 1039 "data/maps/LittlerootTown/scripts.pory"
-	lock
 # 1040 "data/maps/LittlerootTown/scripts.pory"
-	msgbox Littleroot_Route420_Sign_Text_0, MSGBOX_SIGN
+	lock
 # 1041 "data/maps/LittlerootTown/scripts.pory"
-	waitmessage
+	msgbox Littleroot_Route420_Sign_Text_0, MSGBOX_SIGN
 # 1042 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 1043 "data/maps/LittlerootTown/scripts.pory"
 	release
 	end
 
 
 Littleroot_Route420_Sign_Text_0:
-# 1040 "data/maps/LittlerootTown/scripts.pory"
+# 1041 "data/maps/LittlerootTown/scripts.pory"
 	.string "Littleroot - Route 420$"

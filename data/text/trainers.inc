@@ -4808,7 +4808,8 @@ PAHouse_Text_ChungaDefeat:
 
 
 PALake_Text_TianaIntro:
-	.string "I hear there's a town under this lake.\n"
+	.string "I hear there's a town \n"
+	.string "under this lake.\p"
 	.string "I'm going to find it.$"
 
 PALake_Text_TianaDefeat:
@@ -4819,13 +4820,25 @@ PALake_Text_TianaPostBattle:
 
 
 PALake_Text_JakeIntro:
-	.string "Watch out for the SHARPEDO's in the water.$"
+	.string "Watch out for the SHARPEDO's \n"
+	.string "in the water.$"
 
 PALake_Text_JakeDefeat:
 	.string "Sigh...$"
 
 PALake_Text_JakePostBattle:
-	.string "Make sure to carry around strong POKéMON.$"
+	.string "Make sure to carry around \n"
+	.string "strong POKéMON.$"
+
+PALake_Text_JohnIntro:
+	.string "Be on the lookout for \n"
+	.string "the pointy BUG POKéMON.$"
+
+PALake_Text_JohnDefeat:
+	.string "The bugs will get you!$"
+
+PALake_Text_JohnPostBattle:
+	.string "Bug POKéMON are everywhere!$"
 
 
 

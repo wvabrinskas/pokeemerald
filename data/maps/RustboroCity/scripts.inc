@@ -2620,4 +2620,6 @@ RustboroCity_Luke_Items:
 	.2byte ITEM_LEMONADE
 # 1314 "data/maps/RustboroCity/scripts.pory"
 	.2byte ITEM_BERRY_JUICE
+# 1315 "data/maps/RustboroCity/scripts.pory"
+	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_NONE

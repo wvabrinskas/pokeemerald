@@ -820,4 +820,6 @@ OldaleTown_Luke_Items:
 	.2byte ITEM_LEMONADE
 # 414 "data/maps/OldaleTown/scripts.pory"
 	.2byte ITEM_BERRY_JUICE
+# 415 "data/maps/OldaleTown/scripts.pory"
+	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_NONE
