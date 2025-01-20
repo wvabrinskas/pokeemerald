@@ -1,0 +1,59 @@
+{
+  "id": "MAP_UNDERWATER_PALAKE_LEVEL_3",
+  "name": "Underwater_PALake_Level_3",
+  "layout": "LAYOUT_UNDERWATER_PALAKE_LEVEL_3",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_UNDERWATER_PA_LAKE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERWATER",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 4,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PALake_MattPhone_Underwater_ItemBall",
+      "flag": "FLAG_ITEM_PA_LAKE_MATT_PHONE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BIG_WAILMER_DOLL",
+      "x": 4,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PAUnderwater_Wailmer_Triggers",
+      "flag": "FLAG_DEFEATED_WALMER_PA"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERWATER_PALAKE_LEVEL_2",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

@@ -110,7 +110,9 @@
   ],
   "gMapGroup_OutdoorPAHouse": [
     "PALake",
-    "Underwater_PALake"
+    "Underwater_PALake",
+    "Underwater_PALake_Level_2",
+    "Underwater_PALake_Level_3"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",

@@ -4460,6 +4460,26 @@
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/Underwater_PALake/border.bin",
       "blockdata_filepath": "data/layouts/Underwater_PALake/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER_PALAKE_LEVEL_2",
+      "name": "Underwater_PALake_Level_2_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Underwater_PALake_Level_2/border.bin",
+      "blockdata_filepath": "data/layouts/Underwater_PALake_Level_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER_PALAKE_LEVEL_3",
+      "name": "Underwater_PALake_Level_3_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Underwater_PALake_Level_3/border.bin",
+      "blockdata_filepath": "data/layouts/Underwater_PALake_Level_3/map.bin"
     }
   ]
 }

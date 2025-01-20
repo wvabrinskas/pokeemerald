@@ -1,0 +1,35 @@
+const WAILMER_PA = 2
+
+mapscripts Underwater_PALake_Level_3_MapScripts {}
+
+script PAUnderwater_Wailmer_Triggers {
+	msgbox("The...lost...phone...$", MSGBOX_AUTOCLOSE)
+	waitmessage
+	call(PAUnderwater_Wailmer_Battle)
+}
+
+script PAUnderwater_Wailmer_Battle {
+	playmoncry(SPECIES_WAILMER, CRY_MODE_ENCOUNTER)
+	delay(40)
+	waitmoncry
+	setwildbattle(SPECIES_WAILMER, 25, ITEM_ORAN_BERRY)
+	dowildbattle
+	specialvar(VAR_RESULT, GetBattleOutcome)
+	if (var(VAR_RESULT) == B_OUTCOME_CAUGHT || var(VAR_RESULT) == B_OUTCOME_WON) {
+		call(PAUnderwater_Battle_Complete)
+		return
+	}
+	return
+}
+
+script PAUnderwater_Battle_Complete {
+  call(PAHome_Hide_Wailmers)
+	msgbox("You may obtain the lost phone..$", MSGBOX_AUTOCLOSE)
+	waitmessage
+	return
+}
+
+script PAHome_Hide_Wailmers {	
+	removeobject(WAILMER_PA)
+	setflag(FLAG_DEFEATED_WALMER_PA)
+}

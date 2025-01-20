@@ -77,8 +77,10 @@
 #define MAP_INDOOR_PAHOUSE (0 | (2 << 8))
 
 // gMapGroup_OutdoorPAHouse
-#define MAP_PALAKE            (0 | (3 << 8))
-#define MAP_UNDERWATER_PALAKE (1 | (3 << 8))
+#define MAP_PALAKE                    (0 | (3 << 8))
+#define MAP_UNDERWATER_PALAKE         (1 | (3 << 8))
+#define MAP_UNDERWATER_PALAKE_LEVEL_2 (2 | (3 << 8))
+#define MAP_UNDERWATER_PALAKE_LEVEL_3 (3 | (3 << 8))
 
 // gMapGroup_IndoorOldale
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (4 << 8))
