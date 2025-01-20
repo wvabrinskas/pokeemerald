@@ -1033,6 +1033,7 @@ mart Littleroot_Luke_Items {
 	ITEM_RARE_CANDY
 	ITEM_LEMONADE
 	ITEM_BERRY_JUICE
+	ITEM_FULL_HEAL
 }
 
 script Littleroot_Route420_Sign {
