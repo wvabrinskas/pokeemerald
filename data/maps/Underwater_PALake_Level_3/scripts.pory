@@ -31,5 +31,5 @@ script PAUnderwater_Battle_Complete {
 
 script PAHome_Hide_Wailmers {	
 	removeobject(WAILMER_PA)
-	setflag(FLAG_DEFEATED_WALMER_PA)
+	setflag(FLAG_DEFEATED_WAILMER_PA)
 }
