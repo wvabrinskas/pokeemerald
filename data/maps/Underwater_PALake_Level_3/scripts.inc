@@ -53,7 +53,7 @@ PAHome_Hide_Wailmers::
 # 33 "data/maps/Underwater_PALake_Level_3/scripts.pory"
 	removeobject 2
 # 34 "data/maps/Underwater_PALake_Level_3/scripts.pory"
-	setflag FLAG_DEFEATED_WALMER_PA
+	setflag FLAG_DEFEATED_WAILMER_PA
 	return
 
 
