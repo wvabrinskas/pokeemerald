@@ -194,9 +194,54 @@ PAHome_Lake_Sign::
 
 
 PAHome_Battle_Billy::
-# 132 "data/maps/PAHouse/scripts.pory"
-	trainerbattle_single TRAINER_MK_BILLY, PAHome_Battle_Billy_Text_0, PAHome_Battle_Billy_Text_1
+# 127 "data/maps/PAHouse/scripts.pory"
+	trainerbattle_single TRAINER_MK_BILLY, PAHouse_Text_BillyIntro, PAHouse_Text_BillyDefeat
+# 128 "data/maps/PAHouse/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 130 "data/maps/PAHouse/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq PAHome_Battle_Billy_2
+PAHome_Battle_Billy_1:
 	end
+
+PAHome_Battle_Billy_2:
+# 131 "data/maps/PAHouse/scripts.pory"
+	setflag FLAG_BEAT_PA_BILLY
+	goto PAHome_Battle_Billy_1
+
+
+PAHome_Battle_Matt::
+# 139 "data/maps/PAHouse/scripts.pory"
+	trainerbattle_single TRAINER_MK_MATT, PAHouse_Text_MattIntro, PAHouse_Text_MattDefeat
+# 141 "data/maps/PAHouse/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 143 "data/maps/PAHouse/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq PAHome_Battle_Matt_2
+PAHome_Battle_Matt_1:
+	end
+
+PAHome_Battle_Matt_2:
+# 144 "data/maps/PAHouse/scripts.pory"
+	setflag FLAG_BEAT_PA_MATT
+	goto PAHome_Battle_Matt_1
+
+
+PAHome_Battle_Chunga::
+# 151 "data/maps/PAHouse/scripts.pory"
+	trainerbattle_single TRAINER_MK_CHUNGA, PAHouse_Text_ChungaIntro, PAHouse_Text_ChungaDefeat
+# 153 "data/maps/PAHouse/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 155 "data/maps/PAHouse/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq PAHome_Battle_Chunga_2
+PAHome_Battle_Chunga_1:
+	end
+
+PAHome_Battle_Chunga_2:
+# 156 "data/maps/PAHouse/scripts.pory"
+	setflag FLAG_BEAT_PA_CHUNGA
+	goto PAHome_Battle_Chunga_1
 
 
 PAHome_Player_Kicked_Ball_Text_0:
@@ -222,11 +267,3 @@ PAHome_Porcubro_Text_0:
 PAHome_Lake_Sign_Text_0:
 # 119 "data/maps/PAHouse/scripts.pory"
 	.string "Head to the lake!$"
-
-PAHome_Battle_Billy_Text_0:
-# 132 "data/maps/PAHouse/scripts.pory"
-	.string "Welcome to the house..\nLet's battle.$"
-
-PAHome_Battle_Billy_Text_1:
-# 132 "data/maps/PAHouse/scripts.pory"
-	.string "Damn I got bodied.. $"

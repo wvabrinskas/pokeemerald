@@ -1,1 +1,14 @@
 mapscripts PALake_MapScripts {}
+
+script PALake_Battle_Tiana {
+	trainerbattle_single(TRAINER_MK_TIANA, PALake_Text_TianaIntro, PALake_Text_TianaDefeat)
+	msgbox(PALake_Text_TianaPostBattle, MSGBOX_AUTOCLOSE)
+	end
+}
+
+script PALake_EventScript_Jake {
+	trainerbattle_single(TRAINER_MK_JAKE, PALake_Text_JakeIntro, PALake_Text_JakeDefeat)
+	msgbox(PALake_Text_JakePostBattle, MSGBOX_AUTOCLOSE)
+	end
+}
+

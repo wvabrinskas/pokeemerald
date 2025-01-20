@@ -4779,3 +4779,55 @@ Route134_Text_HudsonPostBattle:
 	.string "Our boat drifted out to sea.\p"
 	.string "My buddy's a timid fellow, so I'm\n"
 	.string "worried about him.$"
+
+
+
+/// CUSTOM TRAINERS
+
+PAHouse_Text_BillyIntro:
+	.string "Welcome to the house..\n"
+	.string "Let's battle.$"
+
+PAHouse_Text_BillyDefeat:
+	.string "Damn I got bodied.. $"
+
+
+PAHouse_Text_MattIntro:
+	.string "Welcome to the house..\n"
+	.string "Let's battle.$"
+
+PAHouse_Text_MattDefeat:
+	.string "Damn I got bodied.. $"
+
+
+PAHouse_Text_ChungaIntro:
+	.string "Welcome to the house..\n"
+	.string "Let's battle.$"
+PAHouse_Text_ChungaDefeat:
+	.string "Damn I got bodied.. $"
+
+
+PALake_Text_TianaIntro:
+	.string "I hear there's a town under this lake.\n"
+	.string "I'm going to find it.$"
+
+PALake_Text_TianaDefeat:
+	.string "I lost...$"
+
+PALake_Text_TianaPostBattle:
+	.string "I'll keep searching...$"
+
+
+PALake_Text_JakeIntro:
+	.string "Watch out for the SHARPEDO's in the water.$"
+
+PALake_Text_JakeDefeat:
+	.string "Sigh...$"
+
+PALake_Text_JakePostBattle:
+	.string "Make sure to carry around strong POKéMON.$"
+
+
+
+
+

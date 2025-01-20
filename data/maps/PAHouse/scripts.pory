@@ -123,13 +123,8 @@ script PAHome_Lake_Sign {
 }
 
 
-// Route102_EventScript_Tiana::
-// 	trainerbattle_single TRAINER_TIANA, Route102_Text_TianaIntro, Route102_Text_TianaDefeated
-// 	msgbox Route102_Text_TianaPostBattle, MSGBOX_AUTOCLOSE
-// 	end
-
 script PAHome_Battle_Billy {
-	trainerbattle_single(TRAINER_MK_BILLY, "Welcome to the house..\nLet's battle.", "Damn I got bodied.. $")
+	trainerbattle_single(TRAINER_MK_BILLY, PAHouse_Text_BillyIntro, PAHouse_Text_BillyDefeat)
 	specialvar(VAR_RESULT, GetBattleOutcome)
 
 	if (var(VAR_RESULT) == B_OUTCOME_WON) {
@@ -141,7 +136,8 @@ script PAHome_Battle_Billy {
 
 
 script PAHome_Battle_Matt {
-	trainerbattle_single(TRAINER_MK_MATT, "Welcome to the house..\nLet's battle.", "Damn I got bodied.. $")
+	trainerbattle_single(TRAINER_MK_MATT, PAHouse_Text_MattIntro, PAHouse_Text_MattDefeat)
+
 	specialvar(VAR_RESULT, GetBattleOutcome)
 
 	if (var(VAR_RESULT) == B_OUTCOME_WON) {
@@ -152,12 +148,13 @@ script PAHome_Battle_Matt {
 }
 
 script PAHome_Battle_Chunga {
-	trainerbattle_single(TRAINER_MK_CHUNGA, "Welcome to the house..\nLet's battle.", "Damn I got bodied.. $")
+	trainerbattle_single(TRAINER_MK_CHUNGA, PAHouse_Text_ChungaIntro, PAHouse_Text_ChungaDefeat)
+
 	specialvar(VAR_RESULT, GetBattleOutcome)
 
 	if (var(VAR_RESULT) == B_OUTCOME_WON) {
 		setflag(FLAG_BEAT_PA_CHUNGA)
 	}
-	
+
 	end
 }
