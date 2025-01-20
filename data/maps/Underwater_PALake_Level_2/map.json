@@ -3,10 +3,10 @@
   "name": "Underwater_PALake_Level_2",
   "layout": "LAYOUT_UNDERWATER_PALAKE_LEVEL_2",
   "music": "MUS_ABANDONED_SHIP",
-  "region_map_section": "MAPSEC_PA_LAKE",
+  "region_map_section": "MAPSEC_UNDERWATER_PA_LAKE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_OCEAN_ROUTE",
+  "map_type": "MAP_TYPE_UNDERWATER",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
@@ -54,6 +54,13 @@
       "y": 4,
       "elevation": 0,
       "dest_map": "MAP_UNDERWATER_PALAKE_LEVEL_3",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERWATER_PALAKE",
       "dest_warp_id": "0"
     }
   ],

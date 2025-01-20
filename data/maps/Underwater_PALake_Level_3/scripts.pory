@@ -1,6 +1,10 @@
 const WAILMER_PA = 2
 
-mapscripts Underwater_PALake_Level_3_MapScripts {}
+mapscripts Underwater_PALake_Level_3_MapScripts {
+	MAP_SCRIPT_ON_LOAD {
+		warp(MAP_UNDERWATER_PALAKE)
+	}
+}
 
 script PAUnderwater_Wailmer_Triggers {
 	msgbox("The...lost...phone...$", MSGBOX_AUTOCLOSE)
