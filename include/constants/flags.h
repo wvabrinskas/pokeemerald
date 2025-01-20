@@ -1227,8 +1227,8 @@
 #define FLAG_ITEM_PA_LAKE_BILLY_RAYBANS                             0x496 // Picked up Billy's Raybans
 #define FLAG_ITEM_PA_LAKE_CHUNGAS_HAT                               0x497 // Picked up Chunga's Hat
 #define FLAG_ITEM_PA_LAKE_MATT_PHONE                                0x498 // Picked up Matt's Phone
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
+#define FLAG_ITEM_PA_LAKE_GREAT_BALL                                0x499 // Picked up Great Ball
+#define FLAG_ITEM_PA_HOME_FULL_HEAL                                 0x49A // Picked up Full Heal in PA House
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag

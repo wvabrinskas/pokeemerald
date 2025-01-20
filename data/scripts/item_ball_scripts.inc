@@ -666,6 +666,10 @@ PAHome_LowerFirePit_ItemBall::
 	finditem ITEM_FIRE_STONE
 	end
 
+PAHome_FullHeal_ItemBall::
+	finditem ITEM_FULL_HEAL
+	end
+
 PALake_UpperIsland_ItemBall::
 	finditem ITEM_HYPER_POTION
 	end
@@ -680,4 +684,8 @@ PALake_ChungasHat_Underwater_ItemBall::
 
 PALake_MattPhone_Underwater_ItemBall::
 	finditem ITEM_MATT_PHONE
+	end
+
+PALake_GreatBall_Underwater_ItemBall::
+	finditem ITEM_GREAT_BALL
 	end

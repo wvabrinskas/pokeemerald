@@ -41,18 +41,22 @@ PAUnderwater_Wailmer_Battle_2:
 
 PAUnderwater_Battle_Complete::
 # 26 "data/maps/Underwater_PALake_Level_3/scripts.pory"
-	call PAHome_Hide_Wailmers
+	fadescreen FADE_TO_BLACK
 # 27 "data/maps/Underwater_PALake_Level_3/scripts.pory"
-	msgbox PAUnderwater_Battle_Complete_Text_0, MSGBOX_AUTOCLOSE
+	call PAHome_Hide_Wailmers
 # 28 "data/maps/Underwater_PALake_Level_3/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 29 "data/maps/Underwater_PALake_Level_3/scripts.pory"
+	msgbox PAUnderwater_Battle_Complete_Text_0, MSGBOX_AUTOCLOSE
+# 30 "data/maps/Underwater_PALake_Level_3/scripts.pory"
 	waitmessage
 	return
 
 
 PAHome_Hide_Wailmers::
-# 33 "data/maps/Underwater_PALake_Level_3/scripts.pory"
+# 35 "data/maps/Underwater_PALake_Level_3/scripts.pory"
 	removeobject 2
-# 34 "data/maps/Underwater_PALake_Level_3/scripts.pory"
+# 36 "data/maps/Underwater_PALake_Level_3/scripts.pory"
 	setflag FLAG_DEFEATED_WAILMER_PA
 	return
 
@@ -62,5 +66,5 @@ PAUnderwater_Wailmer_Triggers_Text_0:
 	.string "The...lost...phone...$"
 
 PAUnderwater_Battle_Complete_Text_0:
-# 27 "data/maps/Underwater_PALake_Level_3/scripts.pory"
+# 29 "data/maps/Underwater_PALake_Level_3/scripts.pory"
 	.string "You may obtain the lost phone..$"

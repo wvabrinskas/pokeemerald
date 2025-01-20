@@ -3,7 +3,7 @@ mapscripts Route420_MapScripts {}
 
 script Route420_Sign {
   lock
-	msgbox("Route 420 - PA House", MSGBOX_SIGN)
+	msgbox("Route 420 - PA HOUSE", MSGBOX_SIGN)
   waitmessage
   release
 	end

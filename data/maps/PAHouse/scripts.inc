@@ -213,7 +213,7 @@ PAHome_Battle_Complete_Text_0:
 
 PAHome_Sign_Text_0:
 # 96 "data/maps/PAHouse/scripts.pory"
-	.string "Welcome to the PA House!$"
+	.string "Welcome to the PA HOUSE!$"
 
 PAHome_Porcubro_Text_0:
 # 111 "data/maps/PAHouse/scripts.pory"

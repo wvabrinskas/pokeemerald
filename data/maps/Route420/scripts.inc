@@ -16,4 +16,4 @@ Route420_Sign::
 
 Route420_Sign_Text_0:
 # 6 "data/maps/Route420/scripts.pory"
-	.string "Route 420 - PA House$"
+	.string "Route 420 - PA HOUSE$"

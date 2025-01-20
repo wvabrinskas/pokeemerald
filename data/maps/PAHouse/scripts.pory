@@ -93,7 +93,7 @@ script PAHome_Battle_Complete {
 
 script PAHome_Sign {
 	lock 
-  msgbox("Welcome to the PA House!$", MSGBOX_SIGN)
+  msgbox("Welcome to the PA HOUSE!$", MSGBOX_SIGN)
 	waitmessage
 	release
   end
@@ -130,5 +130,34 @@ script PAHome_Lake_Sign {
 
 script PAHome_Battle_Billy {
 	trainerbattle_single(TRAINER_MK_BILLY, "Welcome to the house..\nLet's battle.", "Damn I got bodied.. $")
+	specialvar(VAR_RESULT, GetBattleOutcome)
+
+	if (var(VAR_RESULT) == B_OUTCOME_WON) {
+		setflag(FLAG_BEAT_PA_BILLY)
+	}
+
+	end
+}
+
+
+script PAHome_Battle_Matt {
+	trainerbattle_single(TRAINER_MK_MATT, "Welcome to the house..\nLet's battle.", "Damn I got bodied.. $")
+	specialvar(VAR_RESULT, GetBattleOutcome)
+
+	if (var(VAR_RESULT) == B_OUTCOME_WON) {
+		setflag(FLAG_BEAT_PA_MATT)
+	}
+
+	end
+}
+
+script PAHome_Battle_Chunga {
+	trainerbattle_single(TRAINER_MK_CHUNGA, "Welcome to the house..\nLet's battle.", "Damn I got bodied.. $")
+	specialvar(VAR_RESULT, GetBattleOutcome)
+
+	if (var(VAR_RESULT) == B_OUTCOME_WON) {
+		setflag(FLAG_BEAT_PA_CHUNGA)
+	}
+	
 	end
 }
