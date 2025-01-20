@@ -4474,7 +4474,7 @@
     {
       "id": "LAYOUT_UNDERWATER_PALAKE_LEVEL_3",
       "name": "Underwater_PALake_Level_3_Layout",
-      "width": 9,
+      "width": 16,
       "height": 9,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Underwater",

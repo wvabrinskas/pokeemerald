@@ -12,7 +12,13 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_PALAKE",
+      "offset": 0,
+      "direction": "emerge"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -43,15 +49,8 @@
   ],
   "warp_events": [
     {
-      "x": 4,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_UNDERWATER_PALAKE_LEVEL_2",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 4,
-      "y": 7,
+      "x": 12,
+      "y": 4,
       "elevation": 0,
       "dest_map": "MAP_UNDERWATER_PALAKE_LEVEL_2",
       "dest_warp_id": "1"
