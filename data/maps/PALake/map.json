@@ -134,7 +134,7 @@
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "PALake_Event_Pikachu",
       "flag": "0"
     },
     {
@@ -164,6 +164,13 @@
       "y": 31,
       "elevation": 0,
       "dest_map": "MAP_PAHOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_PALAKE_SECRECT_CAVE",
       "dest_warp_id": "0"
     }
   ],

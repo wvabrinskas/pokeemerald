@@ -81,6 +81,7 @@
 #define MAP_UNDERWATER_PALAKE         (1 | (3 << 8))
 #define MAP_UNDERWATER_PALAKE_LEVEL_2 (2 | (3 << 8))
 #define MAP_UNDERWATER_PALAKE_LEVEL_3 (3 | (3 << 8))
+#define MAP_PALAKE_SECRECT_CAVE       (4 | (3 << 8))
 
 // gMapGroup_IndoorOldale
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (4 << 8))

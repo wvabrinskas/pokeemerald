@@ -1073,3 +1073,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Underwater_PALake_Level_2/scripts.inc"
 
 	.include "data/maps/Underwater_PALake_Level_3/scripts.inc"
+
+	.include "data/maps/PALake_Secrect_Cave/scripts.inc"

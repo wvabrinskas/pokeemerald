@@ -18,3 +18,7 @@ script PALake_EventScript_John {
 	end
 }
 
+script PALake_Event_Pikachu {
+	msgbox(PALake_Text_Pikachu, MSGBOX_NPC)
+	end
+}

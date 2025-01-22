@@ -25,3 +25,9 @@ PALake_EventScript_John::
 	msgbox PALake_Text_JohnPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+
+PALake_Event_Pikachu::
+# 22 "data/maps/PALake/scripts.pory"
+	msgbox PALake_Text_Pikachu, MSGBOX_NPC
+	end
+

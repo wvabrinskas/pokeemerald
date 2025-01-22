@@ -4480,6 +4480,16 @@
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/Underwater_PALake_Level_3/border.bin",
       "blockdata_filepath": "data/layouts/Underwater_PALake_Level_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_PALAKE_SECRECT_CAVE",
+      "name": "PALake_Secrect_Cave_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MeteorFalls",
+      "border_filepath": "data/layouts/PALake_Secrect_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/PALake_Secrect_Cave/map.bin"
     }
   ]
 }
