@@ -25,21 +25,21 @@
       "height": 1
     },
     {
-    "map_section": "MAPSEC_PA_LAKE",
+      "map_section": "MAPSEC_PA_LAKE",
       "name": "LAKE N' BAKE",
-      "x": 0,
-      "y": 0,
+      "x": 7,
+      "y": 11,
       "width": 1,
       "height": 1
     },
     {
-    "map_section": "MAPSEC_UNDERWATER_PA_LAKE",
-        "name": "LAKE N' BAKE",
-        "x": 0,
-        "y": 0,
-        "width": 1,
-        "height": 1
-      },
+      "map_section": "MAPSEC_UNDERWATER_PA_LAKE",
+      "name": "LAKE N' BAKE",
+      "x": 7,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
     {
       "map_section": "MAPSEC_OLDALE_TOWN",
       "name": "OLDALE TOWN",
@@ -563,7 +563,6 @@
     {
       "map_section": "MAPSEC_AQUA_HIDEOUT_OLD",
       "name": "{AQUA} HIDEOUT",
-      "name_clone": true,
       "x": 19,
       "y": 3,
       "width": 1,
@@ -828,7 +827,6 @@
     {
       "map_section": "MAPSEC_ROUTE_4_POKECENTER",
       "name": "ROUTE 4",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,
@@ -837,7 +835,6 @@
     {
       "map_section": "MAPSEC_ROUTE_10_POKECENTER",
       "name": "ROUTE 10",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1078,7 +1075,6 @@
     {
       "map_section": "MAPSEC_UNDERGROUND_PATH_2",
       "name": "UNDERGROUND PATH",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1095,7 +1091,6 @@
     {
       "map_section": "MAPSEC_KANTO_VICTORY_ROAD",
       "name": "VICTORY ROAD",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1128,7 +1123,6 @@
     {
       "map_section": "MAPSEC_KANTO_SAFARI_ZONE",
       "name": "SAFARI ZONE",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1473,7 +1467,6 @@
     {
       "map_section": "MAPSEC_TRAINER_TOWER_2",
       "name": "TRAINER TOWER",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,

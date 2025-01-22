@@ -11811,9 +11811,9 @@
                 "species": ""
               },
               {
-                "min_level": 35,
-                "max_level": 50,
-                "species": ""
+                "min_level": 8,
+                "max_level": 12,
+                "species": "SPECIES_CHIKORITA"
               }
             ]
           },
