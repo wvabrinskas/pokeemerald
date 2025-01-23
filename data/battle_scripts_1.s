@@ -232,7 +232,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCalmMind               @ EFFECT_CALM_MIND
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
-	.4byte BattleScript_EffectBaked             	 @ EFFECT_BAKED
+	.4byte BattleScript_EffectBaked             	   @ EFFECT_BAKED
 	.4byte BattleScript_EffectBakedHit               @ EFFECT_BAKED_HIT
 
 BattleScript_EffectHit::
@@ -909,6 +909,7 @@ BattleScript_EffectConfuse::
 	jumpifability BS_TARGET, ABILITY_OWN_TEMPO, BattleScript_OwnTempoPrevents
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	jumpifstatus2 BS_TARGET, STATUS2_CONFUSION, BattleScript_AlreadyConfused
+	jumpifstatusExtra BS_TARGET, STATUSEXTRA_BAKED, BattleScript_AlreadyBaked
 	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
 	jumpifsideaffecting BS_TARGET, SIDE_STATUS_SAFEGUARD, BattleScript_SafeguardProtected
 	attackanimation
@@ -925,6 +926,7 @@ BattleScript_EffectBaked::
 	ppreduce
 	jumpifability BS_TARGET, ABILITY_OWN_TEMPO, BattleScript_OwnTempoPrevents
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
+	jumpifstatus2 BS_TARGET, STATUS2_CONFUSION, BattleScript_AlreadyConfused
 	jumpifstatusExtra BS_TARGET, STATUSEXTRA_BAKED, BattleScript_AlreadyBaked
 	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
 	jumpifsideaffecting BS_TARGET, SIDE_STATUS_SAFEGUARD, BattleScript_SafeguardProtected

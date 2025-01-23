@@ -11772,22 +11772,22 @@
               },
               {
                 "min_level": 10,
-                "max_level": 30,
+                "max_level": 14,
                 "species": "SPECIES_KAKUNA"
               },
               {
                 "min_level": 10,
-                "max_level": 20,
+                "max_level": 12,
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 10,
-                "max_level": 30,
+                "min_level": 14,
+                "max_level": 14,
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 31,
-                "max_level": 40,
+                "min_level": 15,
+                "max_level": 15,
                 "species": "SPECIES_PIDGEY"
               },
               {
