@@ -385,7 +385,7 @@ gBattleAnims_StatusConditions::
 	.4byte Status_Freeze                    @ B_ANIM_STATUS_FRZ
 	.4byte Status_Curse                     @ B_ANIM_STATUS_CURSED
 	.4byte Status_Nightmare                 @ B_ANIM_STATUS_NIGHTMARE
-	.4byte Status_Baked					    @ B_ANIM_STATUS_BAKED
+	.4byte Status_Baked					            @ B_ANIM_STATUS_BAKED
 
 	.align 2
 gBattleAnims_General::

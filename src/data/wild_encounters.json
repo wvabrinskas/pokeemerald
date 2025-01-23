@@ -11499,44 +11499,44 @@
             "encounter_rate": 20,
             "mons": [
               {
-                "min_level": 5,
+                "min_level": 10,
                 "max_level": 16,
                 "species": "SPECIES_PIKACHU"
               },
               {
                 "min_level": 16,
-                "max_level": 32,
+                "max_level": 28,
                 "species": "SPECIES_TAUROS"
               },
               {
                 "min_level": 12,
-                "max_level": 100,
+                "max_level": 28,
                 "species": "SPECIES_BEEDRILL"
               },
               {
                 "min_level": 15,
-                "max_level": 50,
-                "species": "SPECIES_VENOMOTH"
+                "max_level": 20,
+                "species": "SPECIES_KAKUNA"
               },
               {
                 "min_level": 15,
-                "max_level": 50,
+                "max_level": 24,
                 "species": "SPECIES_ZIGZAGOON"
               },
               {
-                "min_level": 25,
-                "max_level": 50,
-                "species": "SPECIES_POLITOED"
+                "min_level": 14,
+                "max_level": 24,
+                "species": "SPECIES_ZIGZAGOON"
               },
               {
-                "min_level": 5,
+                "min_level": 10,
                 "max_level": 16,
-                "species": "SPECIES_TREECKO"
+                "species": "SPECIES_ABRA"
               },
               {
-                "min_level": 5,
-                "max_level": 16,
-                "species": "SPECIES_MUDKIP"
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_BUTTERFREE"
               },
               {
                 "min_level": 5,
@@ -11549,14 +11549,14 @@
                 "species": "SPECIES_BAGON"
               },
               {
-                "min_level": 45,
-                "max_level": 60,
-                "species": "SPECIES_MEWTWO"
+                "min_level": 10,
+                "max_level": 24,
+                "species": "SPECIES_EKANS"
               },
               {
-                "min_level": 45,
-                "max_level": 60,
-                "species": "SPECIES_MEW"
+                "min_level": 100,
+                "max_level": 100,
+                "species": "SPECIES_BEEDRILL"
               }
             ]
           }

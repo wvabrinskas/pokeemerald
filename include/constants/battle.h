@@ -115,6 +115,7 @@
 
 // Volatile extra status ailments. Follow the status2 pattern.
 // basically extra status2 ailments but status2 is a 32bit int and it's full
+// this collides with the status2 bitfield, so we should use a different bitfield for extra status ailments
 #define STATUSEXTRA_BAKED                 (1 << 0 | 1 << 1 | 1 << 2)
 #define STATUSEXTRA_BAKED_TURN(num)       ((num) << 0)
 
