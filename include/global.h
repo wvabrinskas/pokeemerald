@@ -1079,4 +1079,10 @@ struct MapPosition
     s8 elevation;
 };
 
+enum StatusType {
+    STATUS_TYPE_1,
+    STATUS_TYPE_2,
+    STATUS_TYPE_EXTRA
+};
+
 #endif // GUARD_GLOBAL_H
