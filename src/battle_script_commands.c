@@ -580,7 +580,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_finishturn,                              //0xF7
     Cmd_trainerslideout,                         //0xF8
     Cmd_jumpifstatusExtra,                       //0xF9
-    Cmd_statusExtraAnimation,                        //0xFA
+    Cmd_statusExtraAnimation,                    //0xFA
 };
 
 struct StatFractions

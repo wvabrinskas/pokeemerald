@@ -449,10 +449,6 @@ void InitAndLaunchChosenStatusAnimation(enum StatusType type, u32 status)
     }
     else if (type == STATUS_TYPE_2)
     {
-        DebugPrintf("Status_2: %d", status);
-        DebugPrintf("Status & STATUS2_CONFUSION: %d", status & STATUS2_CONFUSION);
-        DebugPrintf("STATUS2_CONFUSION: %d", STATUS2_CONFUSION);
-        
         if (status & STATUS2_INFATUATION)
             LaunchStatusAnimation(gActiveBattler, B_ANIM_STATUS_INFATUATION);
         else if (status & STATUS2_CONFUSION)
@@ -468,15 +464,9 @@ void InitAndLaunchChosenStatusAnimation(enum StatusType type, u32 status)
     }
     else if (type == STATUS_TYPE_EXTRA)
     {
-        DebugPrintf("Status_Extra: %d", status);
-        DebugPrintf("Status & STATUSEXTRA_BAKED: %d", status & STATUSEXTRA_BAKED);
-        DebugPrintf("STATUSEXTRA_BAKED: %d", STATUSEXTRA_BAKED);
-
         if (status & STATUSEXTRA_BAKED) {
-            DebugPrintf("Baked");
             LaunchStatusAnimation(gActiveBattler, B_ANIM_STATUS_BAKED);
         } else { // no animation
-            DebugPrintf("No animation");
             gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].statusAnimActive = 0;
         }
     }

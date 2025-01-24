@@ -593,7 +593,7 @@
 	.endm
 
 	.macro statusExtraAnimation battler:req, statusExtra:req
-	.byte 0x65
+	.byte 0xFA // needs to match the function address in battle_script_commands.c
 	.byte \battler
 	.4byte \statusExtra
 	.endm
