@@ -418,36 +418,13 @@ static void SpriteCB_TrainerSlideVertical(struct Sprite *sprite)
 
 #undef sSpeedX
 
-//    struct BattlePokemon *battlePokemon = (struct BattlePokemon *)&gBattleBufferA[gActiveBattler][3];
-
 void InitAndLaunchChosenStatusAnimationFromBuffer() {
+    // bits are set in `battle_controllers.c`
+    enum StatusType type = (enum StatusType)gBattleBufferA[gActiveBattler][1];
+
     u32 status = gBattleBufferA[gActiveBattler][2] | (gBattleBufferA[gActiveBattler][3] << 8) | (gBattleBufferA[gActiveBattler][4] << 16) | (gBattleBufferA[gActiveBattler][5] << 24);
-    u32 extraStatus = (gBattleBufferA[gActiveBattler][7] << 8 | gBattleBufferA[gActiveBattler][8] << 16 | gBattleBufferA[gActiveBattler][9] << 24);
-    bool8 isStatus2 = (bool8)gBattleBufferA[gActiveBattler][1];
-    bool8 isExtraStatus = (bool8)(extraStatus != 0);
-    enum StatusType type;
-    u32 statusToSend;
 
-    if (isExtraStatus) {
-        type = STATUS_TYPE_EXTRA;
-    } else if (isStatus2) {
-        type = STATUS_TYPE_2;
-    } else {
-        type = STATUS_TYPE_1;
-    }
-
-    if (type == STATUS_TYPE_1 || type == STATUS_TYPE_2)
-        statusToSend = status;
-        
-    else if (type == STATUS_TYPE_EXTRA)
-    {
-        statusToSend = extraStatus;
-        
-    } else {
-        statusToSend = status;
-    }
-
-    InitAndLaunchChosenStatusAnimation(type, statusToSend);
+    InitAndLaunchChosenStatusAnimation(type, status);
 }
 
 void InitAndLaunchChosenStatusAnimation(enum StatusType type, u32 status)
@@ -470,6 +447,10 @@ void InitAndLaunchChosenStatusAnimation(enum StatusType type, u32 status)
     }
     else if (type == STATUS_TYPE_2)
     {
+        DebugPrintf("Status: %d", status);
+        DebugPrintf("Status & STATUS2_CONFUSION: %d", status & STATUS2_CONFUSION);
+        DebugPrintf("STATUS2_CONFUSION: %d", STATUS2_CONFUSION);
+        
         if (status & STATUS2_INFATUATION)
             LaunchStatusAnimation(gActiveBattler, B_ANIM_STATUS_INFATUATION);
         else if (status & STATUS2_CONFUSION)
@@ -485,10 +466,17 @@ void InitAndLaunchChosenStatusAnimation(enum StatusType type, u32 status)
     }
     else if (type == STATUS_TYPE_EXTRA)
     {
-        if (status & STATUSEXTRA_BAKED)
+        DebugPrintf("Status: %d", status);
+        DebugPrintf("Status & STATUSEXTRA_BAKED: %d", status & STATUSEXTRA_BAKED);
+        DebugPrintf("STATUSEXTRA_BAKED: %d", STATUSEXTRA_BAKED);
+
+        if (status & STATUSEXTRA_BAKED) {
+            DebugPrintf("Baked");
             LaunchStatusAnimation(gActiveBattler, B_ANIM_STATUS_BAKED);
-        else // no animation
+        } else { // no animation
+            DebugPrintf("No animation");
             gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].statusAnimActive = 0;
+        }
     }
 }
 

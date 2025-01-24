@@ -5796,7 +5796,7 @@ static void Cmd_statusanimation(void)
             && gDisableStructs[gActiveBattler].substituteHP == 0
             && !(gHitMarker & HITMARKER_NO_ANIMATIONS))
         {
-            BtlController_EmitStatusAnimation(BUFFER_A, FALSE, gBattleMons[gActiveBattler].status1);
+            BtlController_EmitStatusAnimation(BUFFER_A, STATUS_TYPE_1, gBattleMons[gActiveBattler].status1);
             MarkBattlerForControllerExec(gActiveBattler);
         }
         gBattlescriptCurrInstr += 2;
@@ -5815,7 +5815,7 @@ static void Cmd_status2animation(void)
             && gDisableStructs[gActiveBattler].substituteHP == 0
             && !(gHitMarker & HITMARKER_NO_ANIMATIONS))
         {
-            BtlController_EmitStatusAnimation(BUFFER_A, TRUE, gBattleMons[gActiveBattler].status2 & wantedToAnimate);
+            BtlController_EmitStatusAnimation(BUFFER_A, STATUS_TYPE_2, gBattleMons[gActiveBattler].status2 & wantedToAnimate);
             MarkBattlerForControllerExec(gActiveBattler);
         }
         gBattlescriptCurrInstr += 6;
@@ -5834,7 +5834,7 @@ static void Cmd_statusExtraAnimation(void)
             && gDisableStructs[gActiveBattler].substituteHP == 0
             && !(gHitMarker & HITMARKER_NO_ANIMATIONS))
         {
-            BtlController_EmitStatusAnimation(BUFFER_A, TRUE, gBattleMons[gActiveBattler].statusExtra & wantedToAnimate);
+            BtlController_EmitStatusAnimation(BUFFER_A, STATUS_TYPE_EXTRA, gBattleMons[gActiveBattler].statusExtra & wantedToAnimate);
             MarkBattlerForControllerExec(gActiveBattler);
         }
         gBattlescriptCurrInstr += 6;
