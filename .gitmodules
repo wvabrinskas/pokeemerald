@@ -1,5 +1,3 @@
-// https://github.com/pret/agbcc
-
 [submodule "agbcc"]
 	path = agbcc
 	url = https://github.com/pret/agbcc.git
