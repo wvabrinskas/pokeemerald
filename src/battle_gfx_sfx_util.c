@@ -449,7 +449,7 @@ void InitAndLaunchChosenStatusAnimation(enum StatusType type, u32 status)
     }
     else if (type == STATUS_TYPE_2)
     {
-        DebugPrintf("Status: %d", status);
+        DebugPrintf("Status_2: %d", status);
         DebugPrintf("Status & STATUS2_CONFUSION: %d", status & STATUS2_CONFUSION);
         DebugPrintf("STATUS2_CONFUSION: %d", STATUS2_CONFUSION);
         
@@ -468,7 +468,7 @@ void InitAndLaunchChosenStatusAnimation(enum StatusType type, u32 status)
     }
     else if (type == STATUS_TYPE_EXTRA)
     {
-        DebugPrintf("Status: %d", status);
+        DebugPrintf("Status_Extra: %d", status);
         DebugPrintf("Status & STATUSEXTRA_BAKED: %d", status & STATUSEXTRA_BAKED);
         DebugPrintf("STATUSEXTRA_BAKED: %d", STATUSEXTRA_BAKED);
 

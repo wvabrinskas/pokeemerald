@@ -10185,6 +10185,15 @@ ConfusionEffect:
 	createsprite gConfusionDuckSpriteTemplate, ANIM_TARGET, 2, 0, -15, 204, 3, 90
 	return
 
+BakedEffect:
+	loopsewithpan SE_M_DIZZY_PUNCH, SOUND_PAN_TARGET, 13, 6
+	createsprite gBakedLeafSpriteTemplate, ANIM_TARGET, 2, 0, -15, 0, 3, 90
+	createsprite gBakedLeafSpriteTemplate, ANIM_TARGET, 2, 0, -15, 51, 3, 90
+	createsprite gBakedLeafSpriteTemplate, ANIM_TARGET, 2, 0, -15, 102, 3, 90
+	createsprite gBakedLeafSpriteTemplate, ANIM_TARGET, 2, 0, -15, 153, 3, 90
+	createsprite gBakedLeafSpriteTemplate, ANIM_TARGET, 2, 0, -15, 204, 3, 90
+	return
+
 SetPsychicBackground:
 	fadetobg BG_PSYCHIC
 	waitbgfadeout
@@ -10256,8 +10265,8 @@ Status_Confusion:
 	end
 
 Status_Baked:
-	loadspritegfx ANIM_TAG_DUCK
-	call ConfusionEffect
+	loadspritegfx ANIM_TAG_LEAF
+	call BakedEffect
 	end
 
 Status_Burn:

@@ -70,6 +70,17 @@ const struct SpriteTemplate gConfusionDuckSpriteTemplate =
     .callback = AnimConfusionDuck,
 };
 
+const struct SpriteTemplate gBakedLeafSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_LEAF,
+    .paletteTag = ANIM_TAG_LEAF,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = sAnims_ConfusionDuck,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimConfusionDuck,
+};
+
 const struct SpriteTemplate gSimplePaletteBlendSpriteTemplate =
 {
     .tileTag = 0,
