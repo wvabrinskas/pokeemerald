@@ -420,6 +420,8 @@ static void SpriteCB_TrainerSlideVertical(struct Sprite *sprite)
 
 void InitAndLaunchChosenStatusAnimationFromBuffer() {
     // bits are set in `battle_controllers.c`
+
+    // TODO: might have other entries into this as on mid turn extra tatus animations are incorreect for some reason
     enum StatusType type = (enum StatusType)gBattleBufferA[gActiveBattler][1];
 
     u32 status = gBattleBufferA[gActiveBattler][2] | (gBattleBufferA[gActiveBattler][3] << 8) | (gBattleBufferA[gActiveBattler][4] << 16) | (gBattleBufferA[gActiveBattler][5] << 24);

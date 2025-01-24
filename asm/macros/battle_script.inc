@@ -598,10 +598,10 @@
 	.4byte \statusExtra
 	.endm
 
-	.macro chosenstatusanimation battler:req, isStatus2:req, status:req
+	.macro chosenstatusanimation battler:req, type:req, status:req
 	.byte 0x66
 	.byte \battler
-	.byte \isStatus2
+	.byte \type
 	.4byte \status
 	.endm
 
