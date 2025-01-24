@@ -1385,15 +1385,15 @@
 	.endm
 
 	.macro chosenstatus1animation battler:req, status:req
-	chosenstatusanimation \battler, 0x0, \status
+	chosenstatusanimation \battler, 0, \status
 	.endm
 
 	.macro chosenstatus2animation battler:req, status:req
-	chosenstatusanimation \battler, 0x1, \status
+	chosenstatusanimation \battler, 1, \status
 	.endm
 
 	.macro chosenstatusExtraAnimation battler:req, status:req
-	chosenstatusanimation \battler, 0x2, \status
+	chosenstatusanimation \battler, 2, \status
 	.endm
 
 	.macro sethword dst:req, value:req

@@ -1080,9 +1080,9 @@ struct MapPosition
 };
 
 enum StatusType {
-    STATUS_TYPE_1 = 0x0,
-    STATUS_TYPE_2 = 0x1,
-    STATUS_TYPE_EXTRA = 0x2
+    STATUS_TYPE_1 = 0,
+    STATUS_TYPE_2 = 1,
+    STATUS_TYPE_EXTRA = 2
 };
 
 #endif // GUARD_GLOBAL_H
