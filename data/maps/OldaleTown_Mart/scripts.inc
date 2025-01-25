@@ -40,7 +40,13 @@ OldaleTown_Mart_Pokemart_Basic:
 	.2byte ITEM_PARALYZE_HEAL
 # 21 "data/maps/OldaleTown_Mart/scripts.pory"
 	.2byte ITEM_AWAKENING
-	pokemartlistend
+# 22 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_NONE
+# 23 "data/maps/OldaleTown_Mart/scripts.pory"
+	release
+# 24 "data/maps/OldaleTown_Mart/scripts.pory"
+	end
+# 25 "data/maps/OldaleTown_Mart/scripts.pory"
 
 # 26 "data/maps/OldaleTown_Mart/scripts.pory"
 OldaleTown_Mart_ExpandedItems::
@@ -68,7 +74,13 @@ OldaleTown_Mart_Pokemart_Expanded:
 	.2byte ITEM_PARALYZE_HEAL
 # 38 "data/maps/OldaleTown_Mart/scripts.pory"
 	.2byte ITEM_AWAKENING
-	pokemartlistend
+# 39 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_NONE
+# 40 "data/maps/OldaleTown_Mart/scripts.pory"
+	release
+# 41 "data/maps/OldaleTown_Mart/scripts.pory"
+	end
+# 42 "data/maps/OldaleTown_Mart/scripts.pory"
 
 # 43 "data/maps/OldaleTown_Mart/scripts.pory"
 OldaleTown_Mart_EventScript_Woman::
@@ -130,25 +142,3 @@ OldaleTown_Mart_Text_RestoreHPWithPotion:
 	.string "To prevent your POKéMON from fainting,\n"
 # 72 "data/maps/OldaleTown_Mart/scripts.pory"
 	.string "restore its HP with a POTION.$"
-
-OldaleTown_Mart_Luke::
-# 76 "data/maps/OldaleTown_Mart/scripts.pory"
-	openluke Littleroot_Luke_Items, gText_Luke_Littleroot
-	end
-
-
-	.align 2
-# 80 "data/maps/OldaleTown_Mart/scripts.pory"
-OldaleTown_Mart_Luke_Items:
-# 81 "data/maps/OldaleTown_Mart/scripts.pory"
-	.2byte ITEM_LAVA_COOKIE
-# 82 "data/maps/OldaleTown_Mart/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
-# 83 "data/maps/OldaleTown_Mart/scripts.pory"
-	.2byte ITEM_RARE_CANDY
-# 84 "data/maps/OldaleTown_Mart/scripts.pory"
-	.2byte ITEM_LEMONADE
-# 85 "data/maps/OldaleTown_Mart/scripts.pory"
-	.2byte ITEM_BERRY_JUICE
-	pokemartlistend
-
