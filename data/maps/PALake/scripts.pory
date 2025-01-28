@@ -31,10 +31,10 @@ script PALake_Event_MakeleyPower {
 		setflag(FLAG_PA_LAKE_MAKELEY)
 		removeobject(MAKELEY_PA)
 		fadescreen(FADE_FROM_BLACK)
-		msgbox("You are now deserving...", MSGBOX_DEFAULT)
+		msgbox("You are now deserving...", MSGBOX_NPC)
 	} else {
 		clearflag(FLAG_PA_LAKE_MAKELEY)
-		msgbox("The power of Makeley awaits... \pBut only to those deserving....", MSGBOX_SIGN)
+		msgbox("The power of Makeley awaits... \pBut only to those deserving....", MSGBOX_NPC)
 	}
 	end
 }

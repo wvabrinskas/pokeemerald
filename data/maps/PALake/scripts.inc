@@ -39,7 +39,7 @@ PALake_Event_MakeleyPower_3:
 # 36 "data/maps/PALake/scripts.pory"
 	clearflag FLAG_PA_LAKE_MAKELEY
 # 37 "data/maps/PALake/scripts.pory"
-	msgbox PALake_Event_MakeleyPower_Text_1, MSGBOX_SIGN
+	msgbox PALake_Event_MakeleyPower_Text_1, MSGBOX_NPC
 PALake_Event_MakeleyPower_1:
 	end
 
@@ -53,7 +53,7 @@ PALake_Event_MakeleyPower_2:
 # 33 "data/maps/PALake/scripts.pory"
 	fadescreen FADE_FROM_BLACK
 # 34 "data/maps/PALake/scripts.pory"
-	msgbox PALake_Event_MakeleyPower_Text_0, MSGBOX_DEFAULT
+	msgbox PALake_Event_MakeleyPower_Text_0, MSGBOX_NPC
 	goto PALake_Event_MakeleyPower_1
 
 PALake_Event_MakeleyPower_4:
