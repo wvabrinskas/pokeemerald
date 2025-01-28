@@ -12543,40 +12543,40 @@ static const struct TrainerMonItemCustomMoves sParty_MK_Chunga[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_MK_Tiana[] = {
     {
-    .iv = 0,
+    .iv = 30,
     .lvl = 25,
     .species = SPECIES_WINGULL,
     },
     {
-    .iv = 0,
+    .iv = 30,
     .lvl = 25,
     .species = SPECIES_WAILMER,
     },
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_SHARPEDO,
+    .iv = 30,
+    .lvl = 35,
+    .species = SPECIES_WAILORD,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_MK_Jake[] = {
     {
-    .iv = 0,
+    .iv = 30,
     .lvl = 20,
     .species = SPECIES_SWABLU,
     },
     {
-    .iv = 0,
+    .iv = 30,
     .lvl = 18,
     .species = SPECIES_MAGIKARP,
     },
     {
-    .iv = 0,
+    .iv = 30,
     .lvl = 18,
     .species = SPECIES_MAGIKARP,
     },
     {
-    .iv = 0,
+    .iv = 30,
     .lvl = 27,
     .species = SPECIES_GYARADOS,
     }
@@ -12584,17 +12584,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MK_Jake[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_MK_John[] = {
     {
-    .iv = 0,
+    .iv = 30,
     .lvl = 20,
     .species = SPECIES_CASCOON,
     },
     {
-    .iv = 0,
+    .iv = 30,
     .lvl = 17,
     .species = SPECIES_KAKUNA,
     },
     {
-    .iv = 0,
+    .iv = 30,
     .lvl = 28,
     .species = SPECIES_BEEDRILL,
     }
