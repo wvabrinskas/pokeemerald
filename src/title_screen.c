@@ -27,6 +27,7 @@ enum {
     TAG_VERSION = 1000,
     TAG_PRESS_START_COPYRIGHT,
     TAG_LOGO_SHINE,
+    TAG_MKI_VERSION,
 };
 
 #define VERSION_BANNER_RIGHT_TILEOFFSET 64
@@ -35,6 +36,12 @@ enum {
 #define VERSION_BANNER_Y 2
 #define VERSION_BANNER_Y_GOAL 66
 #define START_BANNER_X 128
+
+#define MKI_BANNER_RIGHT_TILEOFFSET 64
+#define MKI_BANNER_LEFT_X 103
+#define MKI_BANNER_RIGHT_X 167
+#define MKI_BANNER_Y 2
+#define MKI_BANNER_Y_GOAL 90
 
 #define CLEAR_SAVE_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_UP)
 #define RESET_RTC_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_LEFT)
@@ -54,6 +61,8 @@ static void UpdateLegendaryMarkingColor(u8);
 
 static void SpriteCB_VersionBannerLeft(struct Sprite *sprite);
 static void SpriteCB_VersionBannerRight(struct Sprite *sprite);
+static void SpriteCB_MkiVersionBannerLeft(struct Sprite *sprite);
+static void SpriteCB_MkiVersionBannerRight(struct Sprite *sprite);
 static void SpriteCB_PressStartCopyrightBanner(struct Sprite *sprite);
 static void SpriteCB_PokemonLogoShine(struct Sprite *sprite);
 
@@ -184,12 +193,101 @@ static const struct SpriteTemplate sVersionBannerRightSpriteTemplate =
     .callback = SpriteCB_VersionBannerRight,
 };
 
+// MKI Version
+static const struct OamData sMkiVersionBannerLeftOamData =
+{
+    .y = DISPLAY_HEIGHT,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_8BPP,
+    .shape = SPRITE_SHAPE(64x32),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(64x32),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 0,
+    .affineParam = 0,
+};
+
+static const struct OamData sMkiVersionBannerRightOamData =
+{
+    .y = DISPLAY_HEIGHT,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_8BPP,
+    .shape = SPRITE_SHAPE(64x32),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(64x32),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 0,
+    .affineParam = 0,
+};
+
+static const union AnimCmd sMkiVersionBannerLeftAnimSequence[] =
+{
+    ANIMCMD_FRAME(0, 30),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sMkiVersionBannerRightAnimSequence[] =
+{
+    ANIMCMD_FRAME(VERSION_BANNER_RIGHT_TILEOFFSET, 30),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sMkiVersionBannerLeftAnimTable[] =
+{
+    sMkiVersionBannerLeftAnimSequence,
+};
+
+static const union AnimCmd *const sMkiVersionBannerRightAnimTable[] =
+{
+    sMkiVersionBannerRightAnimSequence,
+};
+
+static const struct SpriteTemplate sMkiVersionBannerLeftSpriteTemplate =
+{
+    .tileTag = TAG_MKI_VERSION,
+    .paletteTag = TAG_MKI_VERSION,
+    .oam = &sMkiVersionBannerLeftOamData,
+    .anims = sMkiVersionBannerLeftAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCB_MkiVersionBannerLeft,
+};
+
+static const struct SpriteTemplate sMkiVersionBannerRightSpriteTemplate =
+{
+    .tileTag = TAG_MKI_VERSION,
+    .paletteTag = TAG_MKI_VERSION,
+    .oam = &sMkiVersionBannerRightOamData,
+    .anims = sMkiVersionBannerRightAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCB_MkiVersionBannerRight,
+};
+
 static const struct CompressedSpriteSheet sSpriteSheet_EmeraldVersion[] =
 {
     {
         .data = gTitleScreenEmeraldVersionGfx,
         .size = 0x1000,
         .tag = TAG_VERSION
+    },
+    {},
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_MkiVersion[] =
+{
+    {
+        .data = gTitleScreenMkiVersionGfx,
+        .size = 0x1000, // don't know if this needs to match
+        .tag = TAG_MKI_VERSION
     },
     {},
 };
@@ -398,6 +496,37 @@ static void SpriteCB_VersionBannerRight(struct Sprite *sprite)
     else
     {
         if (sprite->y != VERSION_BANNER_Y_GOAL)
+            sprite->y++;
+    }
+}
+
+static void SpriteCB_MkiVersionBannerLeft(struct Sprite *sprite)
+{
+    if (gTasks[sprite->sParentTaskId].tSkipToNext)
+    {
+        sprite->oam.objMode = ST_OAM_OBJ_NORMAL;
+        sprite->y = MKI_BANNER_Y_GOAL;
+    }
+    else
+    {
+        if (sprite->y != MKI_BANNER_Y_GOAL)
+            sprite->y++;
+        if (sprite->sAlphaBlendIdx != 0)
+            sprite->sAlphaBlendIdx--;
+        SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[sprite->sAlphaBlendIdx]);
+    }
+}
+
+static void SpriteCB_MkiVersionBannerRight(struct Sprite *sprite)
+{
+    if (gTasks[sprite->sParentTaskId].tSkipToNext)
+    {
+        sprite->oam.objMode = ST_OAM_OBJ_NORMAL;
+        sprite->y = MKI_BANNER_Y_GOAL;
+    }
+    else
+    {
+        if (sprite->y != MKI_BANNER_Y_GOAL)
             sprite->y++;
     }
 }
@@ -613,8 +742,11 @@ void CB2_InitTitleScreen(void)
         LoadCompressedSpriteSheet(&sSpriteSheet_EmeraldVersion[0]);
         LoadCompressedSpriteSheet(&sSpriteSheet_PressStart[0]);
         LoadCompressedSpriteSheet(&sPokemonLogoShineSpriteSheet[0]);
+        LoadCompressedSpriteSheet(&sSpriteSheet_MkiVersion[0]);
+
         LoadPalette(gTitleScreenEmeraldVersionPal, OBJ_PLTT_ID(0), PLTT_SIZE_4BPP);
         LoadSpritePalette(&sSpritePalette_PressStart[0]);
+
         gMain.state = 2;
         break;
     case 2:
@@ -718,6 +850,15 @@ static void Task_TitleScreenPhase1(u8 taskId)
 
         // Create right side of version banner
         spriteId = CreateSprite(&sVersionBannerRightSpriteTemplate, VERSION_BANNER_RIGHT_X, VERSION_BANNER_Y, 0);
+        gSprites[spriteId].sParentTaskId = taskId;
+
+        // Create left side of MKI version banner
+        spriteId = CreateSprite(&sMkiVersionBannerLeftSpriteTemplate, MKI_BANNER_LEFT_X, MKI_BANNER_Y, 0);
+        gSprites[spriteId].sAlphaBlendIdx = ARRAY_COUNT(gTitleScreenAlphaBlend);
+        gSprites[spriteId].sParentTaskId = taskId;
+
+        // Create right side of MKI version banner
+        spriteId = CreateSprite(&sMkiVersionBannerRightSpriteTemplate, MKI_BANNER_RIGHT_X, MKI_BANNER_Y, 0);
         gSprites[spriteId].sParentTaskId = taskId;
 
         gTasks[taskId].tCounter = 144;
