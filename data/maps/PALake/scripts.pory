@@ -34,11 +34,11 @@ script PALake_Event_Pikachu {
 
 script PALake_Event_MakeleyPower {
 	if (flag(FLAG_ITEM_PA_LAKE_CHUNGAS_HAT) && flag(FLAG_ITEM_PA_LAKE_BILLY_RAYBANS) && flag(FLAG_ITEM_PA_LAKE_MATT_PHONE)) {
+		msgbox(PALake_Text_Pikachu_Cave, MSGBOX_NPC)
 		fadescreen(FADE_TO_BLACK)
 		setflag(FLAG_PA_LAKE_MAKELEY)
 		removeobject(MAKELEY_PA)
 		fadescreen(FADE_FROM_BLACK)
-		msgbox(PALake_Text_Pikachu_Cave, MSGBOX_NPC)
 	} else {
 		clearflag(FLAG_PA_LAKE_MAKELEY)
 		msgbox(PALake_Text_Pikachu_Cave_No_Items, MSGBOX_NPC)
