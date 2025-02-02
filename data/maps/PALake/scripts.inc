@@ -57,15 +57,15 @@ PALake_Event_MakeleyPower_1:
 
 PALake_Event_MakeleyPower_2:
 # 37 "data/maps/PALake/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 38 "data/maps/PALake/scripts.pory"
-	setflag FLAG_PA_LAKE_MAKELEY
-# 39 "data/maps/PALake/scripts.pory"
-	removeobject 11
-# 40 "data/maps/PALake/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 41 "data/maps/PALake/scripts.pory"
 	msgbox PALake_Text_Pikachu_Cave, MSGBOX_NPC
+# 38 "data/maps/PALake/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 39 "data/maps/PALake/scripts.pory"
+	setflag FLAG_PA_LAKE_MAKELEY
+# 40 "data/maps/PALake/scripts.pory"
+	removeobject 11
+# 41 "data/maps/PALake/scripts.pory"
+	fadescreen FADE_FROM_BLACK
 	goto PALake_Event_MakeleyPower_1
 
 PALake_Event_MakeleyPower_4:
