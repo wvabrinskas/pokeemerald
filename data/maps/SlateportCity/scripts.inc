@@ -2757,19 +2757,19 @@ SlateportCity_Text_TakingBattleTentChallenge:
 
 SlateportCity_Luke::
 # 1382 "data/maps/SlateportCity/scripts.pory"
+	faceplayer
+# 1383 "data/maps/SlateportCity/scripts.pory"
 	openluke SlateportCity_Luke_Items, gText_Luke_Littleroot
 	end
 
 
 	.align 2
-# 1386 "data/maps/SlateportCity/scripts.pory"
-SlateportCity_Luke_Items:
 # 1387 "data/maps/SlateportCity/scripts.pory"
-	.2byte ITEM_LAVA_COOKIE
+SlateportCity_Luke_Items:
 # 1388 "data/maps/SlateportCity/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_LAVA_COOKIE
 # 1389 "data/maps/SlateportCity/scripts.pory"
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_MOOMOO_MILK
 # 1390 "data/maps/SlateportCity/scripts.pory"
 	.2byte ITEM_LEMONADE
 # 1391 "data/maps/SlateportCity/scripts.pory"

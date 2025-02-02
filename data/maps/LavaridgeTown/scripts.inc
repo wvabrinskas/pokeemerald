@@ -819,19 +819,19 @@ LavaridgeTown_Text_HerbShopSign:
 
 LavaridgeTown_Luke::
 # 414 "data/maps/LavaridgeTown/scripts.pory"
+	faceplayer
+# 415 "data/maps/LavaridgeTown/scripts.pory"
 	openluke LavaridgeTown_Luke_Items, gText_Luke_Littleroot
 	end
 
 
 	.align 2
-# 418 "data/maps/LavaridgeTown/scripts.pory"
-LavaridgeTown_Luke_Items:
 # 419 "data/maps/LavaridgeTown/scripts.pory"
-	.2byte ITEM_LAVA_COOKIE
+LavaridgeTown_Luke_Items:
 # 420 "data/maps/LavaridgeTown/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_LAVA_COOKIE
 # 421 "data/maps/LavaridgeTown/scripts.pory"
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_MOOMOO_MILK
 # 422 "data/maps/LavaridgeTown/scripts.pory"
 	.2byte ITEM_LEMONADE
 # 423 "data/maps/LavaridgeTown/scripts.pory"

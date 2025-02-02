@@ -871,19 +871,19 @@ MossdeepCity_Text_SootopolisNewGymLeader:
 
 MossdeepCity_Luke::
 # 439 "data/maps/MossdeepCity/scripts.pory"
+	faceplayer
+# 440 "data/maps/MossdeepCity/scripts.pory"
 	openluke MossdeepCity_Luke_Items, gText_Luke_Littleroot
 	end
 
 
 	.align 2
-# 443 "data/maps/MossdeepCity/scripts.pory"
-MossdeepCity_Luke_Items:
 # 444 "data/maps/MossdeepCity/scripts.pory"
-	.2byte ITEM_LAVA_COOKIE
+MossdeepCity_Luke_Items:
 # 445 "data/maps/MossdeepCity/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_LAVA_COOKIE
 # 446 "data/maps/MossdeepCity/scripts.pory"
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_MOOMOO_MILK
 # 447 "data/maps/MossdeepCity/scripts.pory"
 	.2byte ITEM_LEMONADE
 # 448 "data/maps/MossdeepCity/scripts.pory"

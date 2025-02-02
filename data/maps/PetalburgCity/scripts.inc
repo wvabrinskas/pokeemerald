@@ -1537,19 +1537,19 @@ PetalburgCity_Text_ImLookingForTalentedTrainers:
 
 PetalburgCity_Luke::
 # 773 "data/maps/PetalburgCity/scripts.pory"
+	faceplayer
+# 774 "data/maps/PetalburgCity/scripts.pory"
 	openluke PetalburgCity_Luke_Items, gText_Luke_Littleroot
 	end
 
 
 	.align 2
-# 777 "data/maps/PetalburgCity/scripts.pory"
-PetalburgCity_Luke_Items:
 # 778 "data/maps/PetalburgCity/scripts.pory"
-	.2byte ITEM_LAVA_COOKIE
+PetalburgCity_Luke_Items:
 # 779 "data/maps/PetalburgCity/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_LAVA_COOKIE
 # 780 "data/maps/PetalburgCity/scripts.pory"
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_MOOMOO_MILK
 # 781 "data/maps/PetalburgCity/scripts.pory"
 	.2byte ITEM_LEMONADE
 # 782 "data/maps/PetalburgCity/scripts.pory"

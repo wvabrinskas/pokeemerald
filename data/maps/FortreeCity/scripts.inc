@@ -313,19 +313,19 @@ FortreeCity_Text_GymSign:
 
 FortreeCity_Luke::
 # 161 "data/maps/FortreeCity/scripts.pory"
+	faceplayer
+# 162 "data/maps/FortreeCity/scripts.pory"
 	openluke FortreeCity_Luke_Items, gText_Luke_Littleroot
 	end
 
 
 	.align 2
-# 165 "data/maps/FortreeCity/scripts.pory"
-FortreeCity_Luke_Items:
 # 166 "data/maps/FortreeCity/scripts.pory"
-	.2byte ITEM_LAVA_COOKIE
+FortreeCity_Luke_Items:
 # 167 "data/maps/FortreeCity/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_LAVA_COOKIE
 # 168 "data/maps/FortreeCity/scripts.pory"
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_MOOMOO_MILK
 # 169 "data/maps/FortreeCity/scripts.pory"
 	.2byte ITEM_LEMONADE
 # 170 "data/maps/FortreeCity/scripts.pory"

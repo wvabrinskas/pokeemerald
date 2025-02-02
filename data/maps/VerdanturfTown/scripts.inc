@@ -255,19 +255,19 @@ VerdanturfTown_Text_RusturfTunnelSign:
 
 VerdanturfTown_Luke::
 # 131 "data/maps/VerdanturfTown/scripts.pory"
+	faceplayer
+# 132 "data/maps/VerdanturfTown/scripts.pory"
 	openluke VerdanturfTown_Luke_Items, gText_Luke_Littleroot
 	end
 
 
 	.align 2
-# 135 "data/maps/VerdanturfTown/scripts.pory"
-VerdanturfTown_Luke_Items:
 # 136 "data/maps/VerdanturfTown/scripts.pory"
-	.2byte ITEM_LAVA_COOKIE
+VerdanturfTown_Luke_Items:
 # 137 "data/maps/VerdanturfTown/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_LAVA_COOKIE
 # 138 "data/maps/VerdanturfTown/scripts.pory"
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_MOOMOO_MILK
 # 139 "data/maps/VerdanturfTown/scripts.pory"
 	.2byte ITEM_LEMONADE
 # 140 "data/maps/VerdanturfTown/scripts.pory"

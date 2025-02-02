@@ -2601,21 +2601,21 @@ RustboroCity_Text_YouCanHave2On2Battle:
 
 RustboroCity_Luke::
 # 1304 "data/maps/RustboroCity/scripts.pory"
+	faceplayer
+# 1305 "data/maps/RustboroCity/scripts.pory"
 	openluke RustboroCity_Luke_Items, gText_Luke_Littleroot
 	end
 
 
 	.align 2
-# 1308 "data/maps/RustboroCity/scripts.pory"
-RustboroCity_Luke_Items:
 # 1309 "data/maps/RustboroCity/scripts.pory"
-	.2byte ITEM_TM51
+RustboroCity_Luke_Items:
 # 1310 "data/maps/RustboroCity/scripts.pory"
-	.2byte ITEM_LAVA_COOKIE
+	.2byte ITEM_TM51
 # 1311 "data/maps/RustboroCity/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_LAVA_COOKIE
 # 1312 "data/maps/RustboroCity/scripts.pory"
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_MOOMOO_MILK
 # 1313 "data/maps/RustboroCity/scripts.pory"
 	.2byte ITEM_LEMONADE
 # 1314 "data/maps/RustboroCity/scripts.pory"

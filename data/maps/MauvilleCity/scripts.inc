@@ -1337,19 +1337,19 @@ MauvilleCity_Text_BeenCheckingOutTV:
 
 MauvilleCity_Luke::
 # 672 "data/maps/MauvilleCity/scripts.pory"
+	faceplayer
+# 673 "data/maps/MauvilleCity/scripts.pory"
 	openluke MauvilleCity_Luke_Items, gText_Luke_Littleroot
 	end
 
 
 	.align 2
-# 676 "data/maps/MauvilleCity/scripts.pory"
-MauvilleCity_Luke_Items:
 # 677 "data/maps/MauvilleCity/scripts.pory"
-	.2byte ITEM_LAVA_COOKIE
+MauvilleCity_Luke_Items:
 # 678 "data/maps/MauvilleCity/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_LAVA_COOKIE
 # 679 "data/maps/MauvilleCity/scripts.pory"
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_MOOMOO_MILK
 # 680 "data/maps/MauvilleCity/scripts.pory"
 	.2byte ITEM_LEMONADE
 # 681 "data/maps/MauvilleCity/scripts.pory"

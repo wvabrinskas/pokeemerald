@@ -3455,19 +3455,19 @@ SootopolisCity_Text_DazzledByMentor:
 
 SootopolisCity_Luke::
 # 1731 "data/maps/SootopolisCity/scripts.pory"
+	faceplayer
+# 1732 "data/maps/SootopolisCity/scripts.pory"
 	openluke SootopolisCity_Luke_Items, gText_Luke_Littleroot
 	end
 
 
 	.align 2
-# 1735 "data/maps/SootopolisCity/scripts.pory"
-SootopolisCity_Luke_Items:
 # 1736 "data/maps/SootopolisCity/scripts.pory"
-	.2byte ITEM_LAVA_COOKIE
+SootopolisCity_Luke_Items:
 # 1737 "data/maps/SootopolisCity/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_LAVA_COOKIE
 # 1738 "data/maps/SootopolisCity/scripts.pory"
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_MOOMOO_MILK
 # 1739 "data/maps/SootopolisCity/scripts.pory"
 	.2byte ITEM_LEMONADE
 # 1740 "data/maps/SootopolisCity/scripts.pory"

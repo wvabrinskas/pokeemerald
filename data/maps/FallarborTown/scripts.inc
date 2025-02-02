@@ -191,19 +191,19 @@ FallarborTown_Text_MoveTutorSign:
 
 FallarborTown_Luke::
 # 99 "data/maps/FallarborTown/scripts.pory"
+	faceplayer
+# 100 "data/maps/FallarborTown/scripts.pory"
 	openluke FallarborTown_Luke_Items, gText_Luke_Littleroot
 	end
 
 
 	.align 2
-# 103 "data/maps/FallarborTown/scripts.pory"
-FallarborTown_Luke_Items:
 # 104 "data/maps/FallarborTown/scripts.pory"
-	.2byte ITEM_LAVA_COOKIE
+FallarborTown_Luke_Items:
 # 105 "data/maps/FallarborTown/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_LAVA_COOKIE
 # 106 "data/maps/FallarborTown/scripts.pory"
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_MOOMOO_MILK
 # 107 "data/maps/FallarborTown/scripts.pory"
 	.2byte ITEM_LEMONADE
 # 108 "data/maps/FallarborTown/scripts.pory"

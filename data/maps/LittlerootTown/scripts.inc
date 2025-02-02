@@ -2043,19 +2043,19 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 
 LittlerootTown_Luke::
 # 1026 "data/maps/LittlerootTown/scripts.pory"
+	faceplayer
+# 1027 "data/maps/LittlerootTown/scripts.pory"
 	openluke Littleroot_Luke_Items, gText_Luke_Littleroot
 	end
 
 
 	.align 2
-# 1030 "data/maps/LittlerootTown/scripts.pory"
-Littleroot_Luke_Items:
 # 1031 "data/maps/LittlerootTown/scripts.pory"
-	.2byte ITEM_LAVA_COOKIE
+Littleroot_Luke_Items:
 # 1032 "data/maps/LittlerootTown/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_LAVA_COOKIE
 # 1033 "data/maps/LittlerootTown/scripts.pory"
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_MOOMOO_MILK
 # 1034 "data/maps/LittlerootTown/scripts.pory"
 	.2byte ITEM_LEMONADE
 # 1035 "data/maps/LittlerootTown/scripts.pory"
@@ -2080,4 +2080,4 @@ Littleroot_Route420_Sign::
 
 Littleroot_Route420_Sign_Text_0:
 # 1042 "data/maps/LittlerootTown/scripts.pory"
-	.string "Littleroot - Route 420$"
+	.string "Bayside - Route 420$"

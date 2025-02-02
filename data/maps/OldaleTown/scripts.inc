@@ -803,19 +803,19 @@ OldaleTown_Text_TownSign:
 
 OldaleTown_Luke::
 # 405 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 406 "data/maps/OldaleTown/scripts.pory"
 	openluke OldaleTown_Luke_Items, gText_Luke_Littleroot
 	end
 
 
 	.align 2
-# 409 "data/maps/OldaleTown/scripts.pory"
-OldaleTown_Luke_Items:
 # 410 "data/maps/OldaleTown/scripts.pory"
-	.2byte ITEM_LAVA_COOKIE
+OldaleTown_Luke_Items:
 # 411 "data/maps/OldaleTown/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
+	.2byte ITEM_LAVA_COOKIE
 # 412 "data/maps/OldaleTown/scripts.pory"
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_MOOMOO_MILK
 # 413 "data/maps/OldaleTown/scripts.pory"
 	.2byte ITEM_LEMONADE
 # 414 "data/maps/OldaleTown/scripts.pory"
