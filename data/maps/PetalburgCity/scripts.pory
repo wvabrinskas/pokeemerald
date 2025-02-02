@@ -770,6 +770,7 @@ PetalburgCity_Text_ImLookingForTalentedTrainers:
 `
 
 script PetalburgCity_Luke {
+	faceplayer()
 	openluke(PetalburgCity_Luke_Items, gText_Luke_Littleroot)
 	end
 }
@@ -777,7 +778,6 @@ script PetalburgCity_Luke {
 mart PetalburgCity_Luke_Items {
 	ITEM_LAVA_COOKIE
 	ITEM_MOOMOO_MILK
-	ITEM_RARE_CANDY
 	ITEM_LEMONADE
 	ITEM_BERRY_JUICE
 	ITEM_FULL_HEAL

@@ -411,6 +411,7 @@ LavaridgeTown_Text_HerbShopSign:
 `
 
 script LavaridgeTown_Luke {
+	faceplayer()
 	openluke(LavaridgeTown_Luke_Items, gText_Luke_Littleroot)
   end
 }
@@ -418,7 +419,6 @@ script LavaridgeTown_Luke {
 mart LavaridgeTown_Luke_Items {
 	ITEM_LAVA_COOKIE
 	ITEM_MOOMOO_MILK
-	ITEM_RARE_CANDY
 	ITEM_LEMONADE
 	ITEM_BERRY_JUICE
 	ITEM_FULL_HEAL

@@ -669,6 +669,7 @@ MauvilleCity_Text_BeenCheckingOutTV:
 `
 
 script MauvilleCity_Luke {
+	faceplayer()
 	openluke(MauvilleCity_Luke_Items, gText_Luke_Littleroot)
 	end
 }
@@ -676,7 +677,6 @@ script MauvilleCity_Luke {
 mart MauvilleCity_Luke_Items {
 	ITEM_LAVA_COOKIE
 	ITEM_MOOMOO_MILK
-	ITEM_RARE_CANDY
 	ITEM_LEMONADE
 	ITEM_BERRY_JUICE
 	ITEM_FULL_HEAL

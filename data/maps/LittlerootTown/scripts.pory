@@ -1023,6 +1023,7 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 `
 
 script LittlerootTown_Luke {
+	faceplayer()
 	openluke(Littleroot_Luke_Items, gText_Luke_Littleroot)
   end
 }
@@ -1030,7 +1031,6 @@ script LittlerootTown_Luke {
 mart Littleroot_Luke_Items {
 	ITEM_LAVA_COOKIE
 	ITEM_MOOMOO_MILK
-	ITEM_RARE_CANDY
 	ITEM_LEMONADE
 	ITEM_BERRY_JUICE
 	ITEM_FULL_HEAL
@@ -1039,7 +1039,7 @@ mart Littleroot_Luke_Items {
 
 script Littleroot_Route420_Sign {
 	lock
-	msgbox("Littleroot - Route 420", MSGBOX_SIGN)
+	msgbox("Bayside - Route 420", MSGBOX_SIGN)
 	waitmessage
 	release
 	end

@@ -685,3 +685,11 @@ PALake_MattPhone_Underwater_ItemBall::
 PALake_GreatBall_Underwater_ItemBall::
 	finditem ITEM_GREAT_BALL
 	end
+
+Route420_TopItemBall::
+	finditem ITEM_FULL_HEAL
+	end
+
+Route420_BottomItemBall::
+	finditem ITEM_RARE_CANDY
+	end

@@ -96,6 +96,7 @@ FallarborTown_Text_MoveTutorSign:
 `
 
 script FallarborTown_Luke {
+	faceplayer()
 	openluke(FallarborTown_Luke_Items, gText_Luke_Littleroot)
   end
 }
@@ -103,7 +104,6 @@ script FallarborTown_Luke {
 mart FallarborTown_Luke_Items {
 	ITEM_LAVA_COOKIE
 	ITEM_MOOMOO_MILK
-	ITEM_RARE_CANDY
 	ITEM_LEMONADE
 	ITEM_BERRY_JUICE
 	ITEM_FULL_HEAL

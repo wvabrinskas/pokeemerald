@@ -1728,6 +1728,7 @@ SootopolisCity_Text_DazzledByMentor:
 `
 
 script SootopolisCity_Luke {
+	faceplayer()
 	openluke(SootopolisCity_Luke_Items, gText_Luke_Littleroot)
 	end
 }
@@ -1735,7 +1736,6 @@ script SootopolisCity_Luke {
 mart SootopolisCity_Luke_Items {
 	ITEM_LAVA_COOKIE
 	ITEM_MOOMOO_MILK
-	ITEM_RARE_CANDY
 	ITEM_LEMONADE
 	ITEM_BERRY_JUICE
 	ITEM_FULL_HEAL

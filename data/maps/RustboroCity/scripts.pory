@@ -1301,6 +1301,7 @@ RustboroCity_Text_YouCanHave2On2Battle:
 `
 
 script RustboroCity_Luke {
+	faceplayer()
 	openluke(RustboroCity_Luke_Items, gText_Luke_Littleroot)
   end
 }
@@ -1309,7 +1310,6 @@ mart RustboroCity_Luke_Items {
 	ITEM_TM51
 	ITEM_LAVA_COOKIE
 	ITEM_MOOMOO_MILK
-	ITEM_RARE_CANDY
 	ITEM_LEMONADE
 	ITEM_BERRY_JUICE
 	ITEM_FULL_HEAL

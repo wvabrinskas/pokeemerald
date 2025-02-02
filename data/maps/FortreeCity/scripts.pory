@@ -158,6 +158,7 @@ FortreeCity_Text_GymSign:
 `
 
 script FortreeCity_Luke {
+	faceplayer()
 	openluke(FortreeCity_Luke_Items, gText_Luke_Littleroot)
 	end
 }
@@ -165,7 +166,6 @@ script FortreeCity_Luke {
 mart FortreeCity_Luke_Items {
 	ITEM_LAVA_COOKIE
 	ITEM_MOOMOO_MILK
-	ITEM_RARE_CANDY
 	ITEM_LEMONADE
 	ITEM_BERRY_JUICE
 	ITEM_FULL_HEAL

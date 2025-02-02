@@ -1379,6 +1379,7 @@ SlateportCity_Text_TakingBattleTentChallenge:
 `
 
 script SlateportCity_Luke {
+	faceplayer()
 	openluke(SlateportCity_Luke_Items, gText_Luke_Littleroot)
 	end
 }
@@ -1386,7 +1387,6 @@ script SlateportCity_Luke {
 mart SlateportCity_Luke_Items {
 	ITEM_LAVA_COOKIE
 	ITEM_MOOMOO_MILK
-	ITEM_RARE_CANDY
 	ITEM_LEMONADE
 	ITEM_BERRY_JUICE
 	ITEM_FULL_HEAL
