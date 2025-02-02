@@ -82,7 +82,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "PALake_Battle_Tiana",
+      "script": "PALake_Battle_Elliot",
       "flag": "0"
     },
     {
@@ -95,7 +95,7 @@
       "movement_range_y": 5,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "PALake_EventScript_Jake",
+      "script": "PALake_EventScript_Jd",
       "flag": "0"
     },
     {
@@ -108,7 +108,7 @@
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "PALake_Event_Boy1",
       "flag": "0"
     },
     {
@@ -121,7 +121,7 @@
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "PALake_Event_Girl1",
       "flag": "0"
     },
     {

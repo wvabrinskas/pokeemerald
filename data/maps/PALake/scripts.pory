@@ -1,15 +1,22 @@
 const MAKELEY_PA = 11
 
-mapscripts PALake_MapScripts {}
+mapscripts PALake_MapScripts {
+	MAP_SCRIPT_ON_LOAD {
+		if (flag(FLAG_PA_LAKE_MAKELEY)) {
+			removeobject(MAKELEY_PA)
+		}
+	}
+}
 
-script PALake_Battle_Tiana {
-	trainerbattle_single(TRAINER_MK_TIANA, PALake_Text_TianaIntro, PALake_Text_TianaDefeat)
+
+script PALake_Battle_Elliot {
+	trainerbattle_single(TRAINER_MK_ELLIOT, PALake_Text_TianaIntro, PALake_Text_TianaDefeat)
 	msgbox(PALake_Text_TianaPostBattle, MSGBOX_AUTOCLOSE)
 	end
 }
 
-script PALake_EventScript_Jake {
-	trainerbattle_single(TRAINER_MK_JAKE, PALake_Text_JakeIntro, PALake_Text_JakeDefeat)
+script PALake_EventScript_Jd {
+	trainerbattle_single(TRAINER_MK_JD, PALake_Text_JakeIntro, PALake_Text_JakeDefeat)
 	msgbox(PALake_Text_JakePostBattle, MSGBOX_AUTOCLOSE)
 	end
 }
@@ -31,11 +38,22 @@ script PALake_Event_MakeleyPower {
 		setflag(FLAG_PA_LAKE_MAKELEY)
 		removeobject(MAKELEY_PA)
 		fadescreen(FADE_FROM_BLACK)
-		msgbox("You are now deserving...", MSGBOX_NPC)
+		msgbox(PALake_Text_Pikachu_Cave, MSGBOX_NPC)
 	} else {
 		clearflag(FLAG_PA_LAKE_MAKELEY)
-		msgbox("The power of Makeley awaits... \pBut only to those deserving....", MSGBOX_NPC)
+		msgbox(PALake_Text_Pikachu_Cave_No_Items, MSGBOX_NPC)
 	}
+	end
+}
+
+script PALake_Event_Boy1 {
+	msgbox(PALake_Text_Boy1, MSGBOX_NPC)
+	end
+}
+
+
+script PALake_Event_Girl1 {
+	msgbox(PALake_Text_Girl1, MSGBOX_NPC)
 	end
 }
 

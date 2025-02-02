@@ -4841,10 +4841,3 @@ PALake_Text_JohnPostBattle:
 	.string "Bug POKéMON are everywhere!$"
 
 
-PALake_Text_Pikachu:
-	.string "CHU! \p"
-	.string "Boutta shock these HFN's$"
-
-
-
-

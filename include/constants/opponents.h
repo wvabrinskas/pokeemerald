@@ -859,8 +859,8 @@
 #define TRAINER_MK_BILLY                    855
 #define TRAINER_MK_MATT                     856
 #define TRAINER_MK_CHUNGA                   857
-#define TRAINER_MK_TIANA                    858
-#define TRAINER_MK_JAKE                     859
+#define TRAINER_MK_ELLIOT                    858
+#define TRAINER_MK_JD                     859
 #define TRAINER_MK_JOHN                     860
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows

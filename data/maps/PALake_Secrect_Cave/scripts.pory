@@ -1,1 +1,49 @@
 mapscripts PALake_Secrect_Cave_MapScripts {}
+
+script PALake_Secret_Cave_trigger {
+  if (var(VAR_TEMP_0) == 1) {
+    return
+  }
+	lockall()
+  msgbox(PALake_Secret_Cave_Text_1, MSGBOX_AUTOCLOSE)
+  releaseall()
+  setvar(VAR_TEMP_0, 1)
+}
+
+
+script PALake_Secret_Cave_OptionA {
+  msgbox(PALake_Secret_Cave_Wall_Text, MSGBOX_YESNO)
+  if (var(VAR_RESULT) == YES) {
+    msgbox(PALake_Secret_Cave_Incorrect_Text, MSGBOX_NPC)
+  } else {
+    closemessage()
+  }
+}
+
+script PALake_Secret_Cave_OptionB {
+  msgbox(PALake_Secret_Cave_Wall_Text, MSGBOX_YESNO)
+  if (var(VAR_RESULT) == YES) {
+    msgbox(PALake_Secret_Cave_Incorrect_Text, MSGBOX_NPC)
+  } else {
+    closemessage()
+  }
+}
+
+
+script PALake_Secret_Cave_OptionC {
+  msgbox(PALake_Secret_Cave_Wall_Text, MSGBOX_YESNO)
+  if (var(VAR_RESULT) == YES) {
+    msgbox(PALake_Secret_Cave_Correct_Text, MSGBOX_NPC)
+    call(PALake_Secret_Cave_Give_Item)
+  } else {
+    closemessage()
+  }
+}
+
+script PALake_Secret_Cave_Give_Item {
+  giveitem(ITEM_FULL_RESTORE, 10)
+}
+
+
+
+
