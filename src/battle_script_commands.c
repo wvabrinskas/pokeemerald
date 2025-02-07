@@ -3326,8 +3326,10 @@ static void Cmd_getexp(void)
             s32 viaSentIn;
 
             for (viaSentIn = 0, i = 0; i < PARTY_SIZE; i++)
-            {
-                if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE || GetMonData(&gPlayerParty[i], MON_DATA_HP) == 0)
+            {   
+                struct Pokemon *mon = &gPlayerParty[i];
+
+                if (IsLevelCapReached(mon) || GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE || GetMonData(mon, MON_DATA_HP) == 0)
                     continue;
                 if (gBitTable[i] & sentIn)
                     viaSentIn++;

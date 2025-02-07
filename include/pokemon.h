@@ -3,6 +3,22 @@
 
 #include "sprite.h"
 
+// level cap enum 
+
+enum LevelCap {
+    BADGE_1 = 15,
+    BADGE_2 = 19,
+    BADGE_3 = 25,
+    BADGE_4 = 32,
+    BADGE_5 = 33,
+    BADGE_6 = 38,
+    BADGE_7 = 45,
+    BADGE_8 = 51, 
+    ELITE = 58,
+    CHAMPION = 60
+};
+
+
 // Property labels for Get(Box)MonData / Set(Box)MonData
 enum {
     MON_DATA_PERSONALITY,
@@ -544,5 +560,6 @@ bool8 HasTwoFramesAnimation(u16 species);
 struct MonSpritesGfxManager *CreateMonSpritesGfxManager(u8 managerId, u8 mode);
 void DestroyMonSpritesGfxManager(u8 managerId);
 u8 *MonSpritesGfxManager_GetSpritePtr(u8 managerId, u8 spriteNum);
+bool8 IsLevelCapReached(struct Pokemon *mon);
 
 #endif // GUARD_POKEMON_H

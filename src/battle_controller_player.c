@@ -1157,12 +1157,21 @@ static void Task_GiveExpToMon(u8 taskId)
     u8 battlerId = gTasks[taskId].tExpTask_battler;
     s16 gainedExp = gTasks[taskId].tExpTask_gainedExp;
 
+    struct Pokemon *mon = &gPlayerParty[monId];
+
+    // check if level cap is reached
+    if (IsLevelCapReached(mon))
+    {
+        // do nothing. maybe show a message
+        DestroyTask(taskId);
+        return;
+    }
+
     if (IsDoubleBattle() == TRUE || monId != gBattlerPartyIndexes[battlerId]) // Give exp without moving the expbar.
     {
-        struct Pokemon *mon = &gPlayerParty[monId];
         u16 species = GetMonData(mon, MON_DATA_SPECIES);
-        u8 level = GetMonData(mon, MON_DATA_LEVEL);
         u32 currExp = GetMonData(mon, MON_DATA_EXP);
+        u8 level = GetMonData(mon, MON_DATA_LEVEL);
         u32 nextLvlExp = gExperienceTables[gSpeciesInfo[species].growthRate][level + 1];
 
         if (currExp + gainedExp >= nextLvlExp)

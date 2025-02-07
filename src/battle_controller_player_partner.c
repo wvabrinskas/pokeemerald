@@ -309,18 +309,28 @@ static void CompleteOnInactiveTextPrinter(void)
 #define tExpTask_bank       data[2]
 #define tExpTask_frames     data[10]
 
-static void Task_GiveExpToMon(u8 taskId)
+static void Task_GiveExpToMon(u8 taskId) // Level Cap at battle end
 {
     u32 monId = (u8)(gTasks[taskId].tExpTask_monId);
     u8 battlerId = gTasks[taskId].tExpTask_bank;
     s16 gainedExp = gTasks[taskId].tExpTask_gainedExp;
 
+    struct Pokemon *mon = &gPlayerParty[monId];
+
+    // check if level cap is reached
+    if (IsLevelCapReached(mon))
+    {
+        // do nothing. maybe show a message
+        DestroyTask(taskId);
+        return;
+    }
+
+    // give exp
     if (IsDoubleBattle() == TRUE || monId != gBattlerPartyIndexes[battlerId]) // give exp without the expbar
     {
-        struct Pokemon *mon = &gPlayerParty[monId];
         u16 species = GetMonData(mon, MON_DATA_SPECIES);
-        u8 level = GetMonData(mon, MON_DATA_LEVEL);
         u32 currExp = GetMonData(mon, MON_DATA_EXP);
+        u8 level = GetMonData(mon, MON_DATA_LEVEL);
         u32 nextLvlExp = gExperienceTables[gSpeciesInfo[species].growthRate][level + 1];
 
         if (currExp + gainedExp >= nextLvlExp)

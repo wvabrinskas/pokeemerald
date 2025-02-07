@@ -7163,3 +7163,32 @@ u8 *MonSpritesGfxManager_GetSpritePtr(u8 managerId, u8 spriteNum)
         return gfx->spritePointers[spriteNum];
     }
 }
+
+
+bool8 IsLevelCapReached(struct Pokemon *mon)
+{
+    if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE)
+        return FALSE;
+
+    u8 level = GetMonData(mon, MON_DATA_LEVEL);
+
+    if (FlagGet(FLAG_BADGE01_GET) == FALSE) {
+        return level >= BADGE_1;
+    } else if (FlagGet(FLAG_BADGE02_GET) == FALSE) {
+        return level >= BADGE_2;
+    } else if (FlagGet(FLAG_BADGE03_GET) == FALSE) {
+        return level >= BADGE_3;
+    } else if (FlagGet(FLAG_BADGE04_GET) == FALSE) {
+        return level >= BADGE_4;
+    } else if (FlagGet(FLAG_BADGE05_GET) == FALSE) {
+        return level >= BADGE_5;
+    } else if (FlagGet(FLAG_BADGE06_GET) == FALSE) {
+        return level >= BADGE_6;
+    } else if (FlagGet(FLAG_BADGE07_GET) == FALSE) {
+        return level >= BADGE_7;
+    } else if (FlagGet(FLAG_BADGE08_GET) == FALSE) {
+        return level >= BADGE_8;
+    }
+    
+    return FALSE;
+}
