@@ -4892,7 +4892,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 
             // Rare Candy
             if ((itemEffect[i] & ITEM3_LEVEL_UP)
-             && GetMonData(mon, MON_DATA_LEVEL, NULL) != MAX_LEVEL)
+             && GetMonData(mon, MON_DATA_LEVEL, NULL) != MAX_LEVEL && !IsLevelCapReached(mon))
             {
                 dataUnsigned = gExperienceTables[gSpeciesInfo[GetMonData(mon, MON_DATA_SPECIES, NULL)].growthRate][GetMonData(mon, MON_DATA_LEVEL, NULL) + 1];
                 SetMonData(mon, MON_DATA_EXP, &dataUnsigned);
@@ -7167,10 +7167,10 @@ u8 *MonSpritesGfxManager_GetSpritePtr(u8 managerId, u8 spriteNum)
 
 bool8 IsLevelCapReached(struct Pokemon *mon)
 {
+    u8 level = GetMonData(mon, MON_DATA_LEVEL);
+
     if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE)
         return FALSE;
-
-    u8 level = GetMonData(mon, MON_DATA_LEVEL);
 
     if (FlagGet(FLAG_BADGE01_GET) == FALSE) {
         return level >= BADGE_1;
