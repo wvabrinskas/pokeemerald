@@ -317,14 +317,6 @@ static void Task_GiveExpToMon(u8 taskId) // Level Cap at battle end
 
     struct Pokemon *mon = &gPlayerParty[monId];
 
-    // check if level cap is reached
-    if (IsLevelCapReached(mon))
-    {
-        // do nothing. maybe show a message
-        DestroyTask(taskId);
-        return;
-    }
-
     // give exp
     if (IsDoubleBattle() == TRUE || monId != gBattlerPartyIndexes[battlerId]) // give exp without the expbar
     {

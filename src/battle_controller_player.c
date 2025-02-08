@@ -1159,14 +1159,6 @@ static void Task_GiveExpToMon(u8 taskId)
 
     struct Pokemon *mon = &gPlayerParty[monId];
 
-    // check if level cap is reached
-    if (IsLevelCapReached(mon))
-    {
-        // do nothing. maybe show a message
-        DestroyTask(taskId);
-        return;
-    }
-
     if (IsDoubleBattle() == TRUE || monId != gBattlerPartyIndexes[battlerId]) // Give exp without moving the expbar.
     {
         u16 species = GetMonData(mon, MON_DATA_SPECIES);

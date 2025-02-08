@@ -3329,7 +3329,7 @@ static void Cmd_getexp(void)
             {   
                 struct Pokemon *mon = &gPlayerParty[i];
 
-                if (IsLevelCapReached(mon) || GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE || GetMonData(mon, MON_DATA_HP) == 0)
+                if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE || GetMonData(mon, MON_DATA_HP) == 0 || IsLevelCapReached(mon))
                     continue;
                 if (gBitTable[i] & sentIn)
                     viaSentIn++;
@@ -3346,7 +3346,12 @@ static void Cmd_getexp(void)
             }
 
             calculatedExp = gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
-
+            
+            /*if (IsLevelCapReached(&gPlayerParty[gBattleStruct->expGetterMonId])) {
+                *exp = 0;
+                gExpShareExp = 0;
+            }
+            else */ 
             if (viaExpShare) // at least one mon is getting exp via exp share
             {
                 *exp = SAFE_DIV(calculatedExp / 2, viaSentIn);
@@ -3386,7 +3391,7 @@ static void Cmd_getexp(void)
                 gBattleScripting.getexpState = 5;
                 gBattleMoveDamage = 0; // used for exp
             }
-            else if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) == MAX_LEVEL)
+            else if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) == MAX_LEVEL || IsLevelCapReached(&gPlayerParty[gBattleStruct->expGetterMonId]))
             {
                 *(&gBattleStruct->sentInPokes) >>= 1;
                 gBattleScripting.getexpState = 5;
