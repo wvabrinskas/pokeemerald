@@ -2228,7 +2228,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
             // Choose random OT IDs until one that results in a non-shiny Pokémon
             value = Random32();
             shinyValue = GET_SHINY_VALUE(value, personality);
-        } while (shinyValue < SHINY_ODDS);
+        } while (shinyValue < GetShinyOdds());
     }
     else if (otIdType == OT_ID_PRESET)
     {
@@ -6526,7 +6526,7 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
         return gMonPaletteTable[SPECIES_NONE].data;
 
     shinyValue = GET_SHINY_VALUE(otId, personality);
-    if (shinyValue < SHINY_ODDS)
+    if (shinyValue < GetShinyOdds())
         return gMonShinyPaletteTable[species].data;
     else
         return gMonPaletteTable[species].data;
@@ -6545,7 +6545,7 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
     u32 shinyValue;
 
     shinyValue = GET_SHINY_VALUE(otId, personality);
-    if (shinyValue < SHINY_ODDS)
+    if (shinyValue < GetShinyOdds())
         return &gMonShinyPaletteTable[species];
     else
         return &gMonPaletteTable[species];
@@ -6721,7 +6721,7 @@ bool8 IsShinyOtIdPersonality(u32 otId, u32 personality)
 {
     bool8 retVal = FALSE;
     u32 shinyValue = GET_SHINY_VALUE(otId, personality);
-    if (shinyValue < SHINY_ODDS)
+    if (shinyValue < GetShinyOdds())
         retVal = TRUE;
     return retVal;
 }
@@ -7164,6 +7164,19 @@ u8 *MonSpritesGfxManager_GetSpritePtr(u8 managerId, u8 spriteNum)
     }
 }
 
+u32 GetShinyOdds() {
+    struct Pokemon *mon = NULL;
+    if (gPlayerPartyCount > 0)
+        mon = &gPlayerParty[0];
+    else
+        return SHINY_ODDS;
+
+    if (GetMonData(mon, MON_DATA_HELD_ITEM) == ITEM_HARVEY_TEETH) {
+        return SHINY_ODDS_SPECIAL;
+    }
+
+    return SHINY_ODDS;
+}
 
 bool8 IsLevelCapReached(struct Pokemon *mon)
 {
