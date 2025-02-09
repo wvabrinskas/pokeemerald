@@ -3387,6 +3387,8 @@ extern const u32 gItemIconPalette_LuxuryBall[];
 extern const u32 gItemIcon_PremierBall[];
 extern const u32 gItemIcon_MattPhone[];
 extern const u32 gItemIconPalette_MattPhone[];
+extern const u32 gItemIcon_ChungaHat[];
+extern const u32 gItemIconPalette_ChungaHat[];
 // Medicine
 extern const u32 gItemIcon_Potion[];
 extern const u32 gItemIconPalette_Potion[];

@@ -244,7 +244,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_THICK_CLUB] = {gItemIcon_ThickClub, gItemIconPalette_ThickClub},
     [ITEM_STICK] = {gItemIcon_Stick, gItemIconPalette_Stick},
     // NEW ITEMS
-    [ITEM_CHUNGA_HAT] = {gItemIcon_Scarf, gItemIconPalette_GreenScarf},
+    [ITEM_CHUNGA_HAT] = {gItemIcon_ChungaHat, gItemIconPalette_ChungaHat},
     [ITEM_MATT_PHONE] = {gItemIcon_MattPhone, gItemIconPalette_MattPhone},
     [ITEM_BILLY_RAYBANS] = {gItemIcon_BlackGlasses, gItemIconPalette_BlackTypeEnhancingItem},
     // ????????

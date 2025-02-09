@@ -27,6 +27,9 @@ const u32 gItemIconPalette_NetBall[] = INCBIN_U32("graphics/items/icon_palettes/
 const u32 gItemIcon_MattPhone[] = INCBIN_U32("graphics/items/icons/matt_phone.4bpp.lz");
 const u32 gItemIconPalette_MattPhone[] = INCBIN_U32("graphics/items/icon_palettes/matt_phone.gbapal.lz");
 
+const u32 gItemIcon_ChungaHat[] = INCBIN_U32("graphics/items/icons/chunga_hat.4bpp.lz");
+const u32 gItemIconPalette_ChungaHat[] = INCBIN_U32("graphics/items/icon_palettes/chunga_hat.gbapal.lz");
+
 const u32 gItemIcon_DiveBall[] = INCBIN_U32("graphics/items/icons/dive_ball.4bpp.lz");
 const u32 gItemIconPalette_DiveBall[] = INCBIN_U32("graphics/items/icon_palettes/dive_ball.gbapal.lz");
 
