@@ -480,6 +480,9 @@ const u32 gItemIconPalette_MiracleSeed[] = INCBIN_U32("graphics/items/icon_palet
 const u32 gItemIcon_BlackGlasses[] = INCBIN_U32("graphics/items/icons/black_glasses.4bpp.lz");
 const u32 gItemIconPalette_BlackTypeEnhancingItem[] = INCBIN_U32("graphics/items/icon_palettes/black_type_enhancing_item.gbapal.lz");
 
+const u32 gItemIcon_HarveyTeeth[] = INCBIN_U32("graphics/items/icons/harvey_teeth.4bpp.lz");
+const u32 gItemIconPalette_HarveyTeeth[] = INCBIN_U32("graphics/items/icon_palettes/harvey_teeth.gbapal.lz");
+
 const u32 gItemIcon_BlackBelt[] = INCBIN_U32("graphics/items/icons/black_belt.4bpp.lz");
 
 const u32 gItemIcon_Magnet[] = INCBIN_U32("graphics/items/icons/magnet.4bpp.lz");

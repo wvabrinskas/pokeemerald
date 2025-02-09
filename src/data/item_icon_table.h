@@ -247,8 +247,8 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_CHUNGA_HAT] = {gItemIcon_ChungaHat, gItemIconPalette_ChungaHat},
     [ITEM_MATT_PHONE] = {gItemIcon_MattPhone, gItemIconPalette_MattPhone},
     [ITEM_BILLY_RAYBANS] = {gItemIcon_BlackGlasses, gItemIconPalette_BlackTypeEnhancingItem},
+    [ITEM_HARVEY_TEETH] = {gItemIcon_HarveyTeeth, gItemIconPalette_HarveyTeeth},
     // ????????
-    [ITEM_0E5] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0E6] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0E7] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0E8] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},

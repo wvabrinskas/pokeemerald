@@ -1568,3 +1568,8 @@ static const u8 sBillyRaybansDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
     "WATER-type moves.");
+
+static const u8 sHarveyTeethDesc[] = _(
+    "Increases the shiny\n"
+    "chance when held \n"
+    "in the first slot.");

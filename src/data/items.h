@@ -2788,6 +2788,19 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
+    [ITEM_HARVEY_TEETH] =
+    {
+        .name = _("HARVEY TEETH"),
+        .itemId = ITEM_HARVEY_TEETH,
+        .price = 100,
+        .holdEffect = HOLD_EFFECT_DARK_POWER, // TODO Increase shiny chance
+        .holdEffectParam = 10,
+        .description = sHarveyTeethDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
     [ITEM_MATT_PHONE] =
     {
         .name = _("MATTS PHONE"),
@@ -2809,17 +2822,6 @@ const struct Item gItems[] =
         .holdEffect = HOLD_EFFECT_WATER_POWER,
         .holdEffectParam = 10,
         .description = sBillyRaybansDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-    },
-
-    [ITEM_0E5] =
-    {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

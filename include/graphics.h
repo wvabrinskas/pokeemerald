@@ -3681,6 +3681,8 @@ extern const u32 gItemIconPalette_HardStone[];
 extern const u32 gItemIcon_MiracleSeed[];
 extern const u32 gItemIconPalette_MiracleSeed[];
 extern const u32 gItemIcon_BlackGlasses[];
+extern const u32 gItemIcon_HarveyTeeth[];
+extern const u32 gItemIconPalette_HarveyTeeth[];
 extern const u32 gItemIconPalette_BlackTypeEnhancingItem[];
 extern const u32 gItemIcon_BlackBelt[];
 extern const u32 gItemIconPalette_BlackTypeEnhancingItem[];

@@ -1,29 +1,52 @@
-mapscripts PALake_Secrect_Cave_MapScripts {}
+mapscripts PALake_Secrect_Cave_MapScripts {
+  MAP_SCRIPT_ON_TRANSITION {
+    if (flag(FLAG_PA_LAKE_GOT_HARVEY_TEETH)) {
+      setvar(VAR_TEMP_0, 1) // DISABLE TRIGGER
+      return
+    }
+  }
+}
+
 
 script PALake_Secret_Cave_trigger {
+  if (flag(FLAG_PA_LAKE_GOT_HARVEY_TEETH)) {
+    releaseall()
+    return
+  }
+
   if (var(VAR_TEMP_0) == 1) {
     return
   }
 	lockall()
   msgbox(PALake_Secret_Cave_Text_1, MSGBOX_AUTOCLOSE)
   releaseall()
+
   setvar(VAR_TEMP_0, 1)
 }
 
 
 script PALake_Secret_Cave_OptionA {
+  if (flag(FLAG_PA_LAKE_GOT_HARVEY_TEETH)) {
+    return
+  }
+
   msgbox(PALake_Secret_Cave_Wall_Text, MSGBOX_YESNO)
   if (var(VAR_RESULT) == YES) {
-    msgbox(PALake_Secret_Cave_Incorrect_Text, MSGBOX_NPC)
+    msgbox(PALake_Secret_Cave_Incorrect_Text, MSGBOX_AUTOCLOSE)
   } else {
     closemessage()
   }
 }
 
 script PALake_Secret_Cave_OptionB {
+
+  if (flag(FLAG_PA_LAKE_GOT_HARVEY_TEETH)) {
+    return
+  }
+
   msgbox(PALake_Secret_Cave_Wall_Text, MSGBOX_YESNO)
   if (var(VAR_RESULT) == YES) {
-    msgbox(PALake_Secret_Cave_Incorrect_Text, MSGBOX_NPC)
+    msgbox(PALake_Secret_Cave_Incorrect_Text, MSGBOX_AUTOCLOSE)
   } else {
     closemessage()
   }
@@ -31,9 +54,14 @@ script PALake_Secret_Cave_OptionB {
 
 
 script PALake_Secret_Cave_OptionC {
+
+  if (flag(FLAG_PA_LAKE_GOT_HARVEY_TEETH)) {
+    return
+  }
+
   msgbox(PALake_Secret_Cave_Wall_Text, MSGBOX_YESNO)
   if (var(VAR_RESULT) == YES) {
-    msgbox(PALake_Secret_Cave_Correct_Text, MSGBOX_NPC)
+    msgbox(PALake_Secret_Cave_Correct_Text, MSGBOX_AUTOCLOSE)
     call(PALake_Secret_Cave_Give_Item)
   } else {
     closemessage()
@@ -41,7 +69,14 @@ script PALake_Secret_Cave_OptionC {
 }
 
 script PALake_Secret_Cave_Give_Item {
-  giveitem(ITEM_FULL_RESTORE, 10)
+  if (flag(FLAG_PA_LAKE_GOT_HARVEY_TEETH)) {
+    return
+  }
+  
+  setflag(FLAG_PA_LAKE_GOT_HARVEY_TEETH)
+  
+  giveitem(ITEM_HARVEY_TEETH, 1)
+  closemessage()
 }
 
 

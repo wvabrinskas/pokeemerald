@@ -3,6 +3,14 @@ const MAKELEY_PA = 11
 mapscripts PALake_MapScripts {
 	MAP_SCRIPT_ON_LOAD {
 		if (flag(FLAG_PA_LAKE_MAKELEY)) {
+			setflag(FLAG_PA_LAKE_MAKELEY)
+			removeobject(MAKELEY_PA)
+		}
+	}
+
+	MAP_SCRIPT_ON_TRANSITION {
+		if (flag(FLAG_PA_LAKE_MAKELEY)) {
+			setflag(FLAG_PA_LAKE_MAKELEY)
 			removeobject(MAKELEY_PA)
 		}
 	}
@@ -10,6 +18,7 @@ mapscripts PALake_MapScripts {
 
 
 script PALake_Battle_Elliot {
+
 	trainerbattle_single(TRAINER_MK_ELLIOT, PALake_Text_TianaIntro, PALake_Text_TianaDefeat)
 	msgbox(PALake_Text_TianaPostBattle, MSGBOX_AUTOCLOSE)
 	end
