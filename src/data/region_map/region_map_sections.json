@@ -13,13 +13,13 @@
       "name": "ROUTE 420",
       "x": 5,
       "y": 11,
-      "width": 2,
+      "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_PA_HOUSE",
       "name": "PA HOUSE",
-      "x": 6,
+      "x": 7,
       "y": 11,
       "width": 1,
       "height": 1
@@ -27,7 +27,7 @@
     {
       "id": "MAPSEC_PA_LAKE",
       "name": "LAKE N' BAKE",
-      "x": 7,
+      "x": 8,
       "y": 11,
       "width": 1,
       "height": 1
@@ -35,7 +35,7 @@
     {
       "id": "MAPSEC_UNDERWATER_PA_LAKE",
       "name": "LAKE N' BAKE",
-      "x": 7,
+      "x": 8,
       "y": 11,
       "width": 1,
       "height": 1
