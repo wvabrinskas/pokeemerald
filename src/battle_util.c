@@ -2044,7 +2044,7 @@ u8 AtkCanceler_UnableToUseMove(void)
                 }
                 effect = 1;
             }
-            gBattleStruct->atkCancellerTracker++;
+            gBattleStruct->atkCancelerTracker++;
             break; 
         case CANCELER_ASLEEP: // check being asleep
             if (gBattleMons[gBattlerAttacker].status1 & STATUS1_SLEEP)

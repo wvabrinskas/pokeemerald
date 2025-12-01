@@ -134,9 +134,9 @@
     },
     {
       "id": "HEAL_LOCATION_PA_HOUSE",
-      "map": "PAHOUSE",
-      "x": 23,
-      "y": 7
+      "map": "MAP_PAHOUSE",
+      "x": 25,
+      "y": 15
     }
   ]
 }

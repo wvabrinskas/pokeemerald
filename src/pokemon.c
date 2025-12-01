@@ -4936,9 +4936,9 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                 retVal = FALSE;
             }
             if ((itemEffect[i] & ITEM3_BAKED)  // heal baked
-             && gMain.inBattle && battlerId != MAX_BATTLERS_COUNT && (gBattleMons[battlerId].statusExtra & STATUSEXTRA_BAKED))
+             && gMain.inBattle && battler != MAX_BATTLERS_COUNT && (gBattleMons[battler].statusExtra & STATUSEXTRA_BAKED))
             {
-                gBattleMons[battlerId].statusExtra &= ~STATUSEXTRA_BAKED;
+                gBattleMons[battler].statusExtra &= ~STATUSEXTRA_BAKED;
                 retVal = FALSE;
             }
             break;

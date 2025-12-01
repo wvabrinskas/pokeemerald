@@ -274,12 +274,9 @@ generated: $(AUTO_GEN_TARGETS)
 %.s:   ;
 %.png: ;
 %.pal: ;
-<<<<<<< HEAD
+%.wav: ;
 %.aif: ;
 %.pory: ;
-=======
-%.wav: ;
->>>>>>> master
 
 %.1bpp:   %.png  ; $(GFX) $< $@
 %.4bpp:   %.png  ; $(GFX) $< $@
